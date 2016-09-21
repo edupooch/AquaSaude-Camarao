@@ -15,6 +15,11 @@ import br.gov.rs.fepagro.aquasaude_camarao.R;
 import br.gov.rs.fepagro.aquasaude_camarao.modelo.Doenca;
 import br.gov.rs.fepagro.aquasaude_camarao.modelo.ListaDoencas;
 
+
+/**
+ * Classe que define a activity de descrição das doenças, com uma foto no topo
+ * estilo ScrollingActivity.
+ */
 public class DoencaScrollingActivity extends AppCompatActivity {
 
     @Override
@@ -51,34 +56,13 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-// Botão de voltar
+        // Botão de voltar
         ActionBar supportActionBar = getSupportActionBar();
         assert supportActionBar != null;
         supportActionBar.setDisplayHomeAsUpEnabled(true);
 
-
-        //-------------escrevendo as informações--------------------------------------------------//
         setTitle(doenca.getNome());
 
-
-//        TextView textAgente = (TextView) findViewById(R.id.text_agente);
-//        assert textAgente != null;
-//        textAgente.setText(doenca.getAgente());
-//        TextView textSinais = (TextView) findViewById(R.id.text_sinais);
-//        assert textSinais != null;
-//        textSinais.setText(doenca.getSinaisClinicos());
-//        TextView textPrevencao = (TextView) findViewById(R.id.text_prevencao);
-//        assert textPrevencao != null;
-//        textPrevencao.setText(doenca.getPrevencao());
-//
-//        if (doenca.getAtencao() != null) {
-//            View tituloAtencao = findViewById(R.id.titulo_atencao);
-//            assert tituloAtencao != null;
-//            tituloAtencao.setVisibility(View.VISIBLE);
-//            TextView textAtencao = (TextView) findViewById(R.id.text_sinais_atencao);
-//            assert textAtencao != null;
-//            textAtencao.setText(doenca.getAtencao());
-//        }
 
         //-------------listener para aumentar e diminuir o layout clicado-------------------------//
         int[] layouts = {R.id.layout_agente, R.id.layout_sinais, R.id.layout_imagens, R.id.layout_prevencao};

@@ -37,7 +37,7 @@
                     android:layout_gravity="center"
                     android:padding="5dp"
                     android:src="@drawable/icon_agente"
-                    android:tint="#FFFFFF" />
+                    android:tint="#FFFFFF"/>
 
                 <TextView
                     android:layout_width="wrap_content"
