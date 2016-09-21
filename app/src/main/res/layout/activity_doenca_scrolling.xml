@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="br.gov.rs.fepagro.aquasaude_camarao.controle.DoencaScrollingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/imagem_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/content_padrao"
+        layout="@layout/content_doenca_scrolling"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/content_smb"
+        layout="@layout/content_doenca_wssv_scrolling"
+        android:visibility="gone" />
+    <include
+        android:id="@+id/content_mni"
+        layout="@layout/content_doenca_imnv_scrolling"
+        android:visibility="gone" />
+    <include
+        android:id="@+id/content_nhp"
+        layout="@layout/content_doenca_nhp_scrolling"
+        android:visibility="gone" />
+    <include
+        android:id="@+id/content_nih"
+        layout="@layout/content_doenca_ihhnv_scrolling"
+        android:visibility="gone" />
+
+</android.support.design.widget.CoordinatorLayout>

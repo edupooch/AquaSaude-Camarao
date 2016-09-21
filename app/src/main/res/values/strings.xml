@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">AquaSaúde - Camarão</string>
+    <string name="action_settings">Configurações</string>
+
+
+    <string name="titulo_agente">Agente</string>
+    <string name="titulo_sinais">Sinais Clínicos</string>
+    <string name="titulo_prevencao">Prevenção</string>
+    <string name="titulo_imagens">Imagens</string>
+    <string name="atencao">ATENÇÃO:</string>
+
+
+    <string name="wssv_nome">Síndrome da Mancha Branca</string>
+    <string name="wssv_agente">
+        " A síndrome da mancha branca é causada por um vírus denominado Vírus da mancha branca,"
+        "pertencente à família Nimaviridae e gênero Whispovirus.\n A nomenclatura foi aprovada no"
+        "Comitê Internacional de Taxonomia Viral (ICTV) sob depósito cujo nome é White spotsyndrome"
+        "vírus 1."</string>
+    <string name="wssv_sinais">
+        " A Infecção pode causar a doença ou não, dependendo de fatores ainda mal compreendidos, mas"
+        "relacionados com a tolerância de espécies e causas ambientais.\n"
+        "Manchas brancas embutidas dentro do exoesqueleto é o sinal clínico mais comumente observado."
+        "Todavia, outras enfermidades podem causar manchas brancas na carapaça do camarão.\n"
+        "Altos graus de variação de cor, com predomínio de avermelhada ou camarão descoloridos rosada"
+        "são vistos em populações doentes."
+    </string>
+    <string name="wssv_sinais_atencao">
+        "Mudanças de comportamento são sinais que devem ser observados atentamente, pois pode ser esperado uma elevada taxa de mortalidade na população:"
+    </string>
+    <string name="wssv_atencao_sinal_1">"Se o camarão parece letárgico"</string>
+    <string name="wssv_atencao_sinal_2">"Se a cor muda para rosa ou marrom-avermelhada"</string>
+    <string name="wssv_atencao_sinal_3">Se os animais se reúnem em torno das bordas dos cultivos na superfície da água</string>
+    <string name="wssv_atencao_sinal_4">Se há uma rápida redução no consumo alimentar</string>
+    <string name="wssv_atencao_sinal_conclusao">"Pode ser esperado uma elevada taxa de mortalidade na população."</string>
+
+    <string name="wssv_prevencao">
+        " Práticas gerais de manejo são as melhores medidas para prevenção do vírus da mancha "
+        "branca. Evite altas densidades nas estações frias. Previra usar animais \"livre de patógenos "
+        "específicos\" (SPF) ou povoar com animais testados PCR-negativos. Opte por utilizar água "
+        "biossegura e sistemas de policultivo com camarão e peixes."</string>
+
+
+    <string name="imnv_nome">"Mionecrose Infecciosa"</string>
+    <string name="imnv_agente">
+        " Vírus da mionecrose infecciosa (IMNV) é um membro da família Totiviridae."</string>
+    <string name="imnv_sinais">
+        " Na fase aguda da doença, o animal apresenta extensas áreas de necrose brancas nos"
+        "músculos, nota-se a perda da transparência na região da cauda, podendo se apresentar"
+        "necrótica e avermelhada em alguns camarões. Animais severamente afetados tornam-se moribundos"
+        "e a mortalidade pode ser alta e repentina após um evento de estresse."
+    </string>
+    <string name="imnv_prevencao">
+        " Prefira usar animais testados e negativos para IMNV através da técnica de reação em cadeia"
+        "reversa da polimerase (RT-PCR). Prefira usar animais livres de patógenos específicos (SPF)."
+        "Se houver infecção, realize vazio sanitário conforme recomendações da OIE e MAPA."
+        "Utilizar linhagens resistentes de camarões também é uma boa alternativa de prevenção ao IMNV."
+    </string>
+
+
+    <string name="ihhnv_nome">"Necrose Infecciosa Hipodermal e Hematopoiética"</string>
+    <string name="ihhnv_agente">
+        " "</string>
+    <string name="ihhnv_sinais">
+        " "
+    </string>
+    <string name="ihhnv_prevencao">
+        " "
+    </string>
+
+
+    <string name="nhp_nome">"Hepatopancreatite necrosante"</string>
+    <string name="nhp_agente">
+        " "</string>
+    <string name="nhp_sinais">
+        " "
+    </string>
+    <string name="nhp_prevencao">
+        " "
+    </string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title_activity_doenca_scrolling">Doença</string>
+
+    <string name="equipe_nomes">
+        " Coordenadora:\n"
+        "Dra. Lissandra Souto Cavalli (Fepagro)\n\n"
+        "Desenvolvimento do Aplicativo:\n"
+        "Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n\n"
+
+        "Equipe:\n"
+        "Dra. Lissandra Souto Cavalli (Fepagro)\n"
+        "Dr. Silvio Cazella (UFCSPA)\n"
+        "Dra. Maria Helena Firmino (Fepagro)\n"
+        "Dr. Benito Brito (Fepagro)\n"
+        "Dra. Kelly Tagliari Brito (Fepagro)\n"
+        "Dr. Marco Aurélio Rotta (Fepagro)\n"
+        "Dra. Andrea F. da Rocha (Fepagro)"
+
+    </string>
+    <string name="icone">Ícone</string>
+    <string name="institui_es">INSTITUIÇÕES</string>
+    <string name="equipe">EQUIPE</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_jogo">JogoActivity</string>
+    <string name="title_activity_jogo2">Jogo2Activity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+</resources>
