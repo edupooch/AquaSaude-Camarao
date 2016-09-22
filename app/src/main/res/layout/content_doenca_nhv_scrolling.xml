@@ -54,7 +54,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="@string/imnv_agente" />
+
+                android:text="@string/nhv_agente" />
         </LinearLayout>
         <!--sinais clinicos-->
         <LinearLayout
@@ -66,7 +67,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:padding="10dp"
-                android:text="@string/imnv_sinais" />
+                android:text="@string/nhv_sinais" />
 
         </LinearLayout>
         <!--imagens-->
@@ -175,7 +175,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="@string/imnv_prevencao" />
+                android:text="@string/nhv_prevencao" />
         </LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

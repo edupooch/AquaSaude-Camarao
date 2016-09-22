@@ -54,7 +54,7 @@
         android:visibility="gone" />
     <include
         android:id="@+id/content_nhp"
-        layout="@layout/content_doenca_nhp_scrolling"
+        layout="@layout/content_doenca_nhv_scrolling"
         android:visibility="gone" />
     <include
         android:id="@+id/content_nih"

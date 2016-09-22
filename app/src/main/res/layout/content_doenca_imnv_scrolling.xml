@@ -53,7 +53,6 @@
                 android:id="@+id/text_agente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:padding="10dp"
                 android:text="@string/imnv_agente" />
         </LinearLayout>
@@ -184,7 +183,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:gravity="center"
                 android:text="@string/imnv_prevencao" />
         </LinearLayout>
     </LinearLayout>

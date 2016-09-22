@@ -57,7 +57,7 @@
     </string>
 
 
-    <string name="ihhnv_nome">"Necrose Infecciosa Hipodermal e Hematopoiética"</string>
+    <string name="ihhnv_nome">"Necrose Hipodermal e Hematopoiética"</string>
     <string name="ihhnv_agente">
         " "</string>
     <string name="ihhnv_sinais">
@@ -68,14 +68,24 @@
     </string>
 
 
-    <string name="nhp_nome">"Hepatopancreatite necrosante"</string>
-    <string name="nhp_agente">
-        " "</string>
-    <string name="nhp_sinais">
-        " "
+    <string name="nhv_nome">"Hepatopancreatite necrosante"</string>
+    <string name="nhv_agente">
+        " Hepatopancreatite Necrosante é uma doença bacteriana causada por uma bactéria gram-"
+        "negativa, do tipo Rickettsia, que acomete o hepatopâncreas."</string>
+    <string name="nhv_sinais">
+        " Sinais clínicos incluem: letargia, ingestão de alimentos reduzida, hepatopâncreas atrofiados e"
+        "pálidos, anorexia, trato digestivo vazio, elevada conversão alimentar, crescimento reduzido"
+        "perceptível. Exoesqueleto amolecido, corpo flácido, cutícula frouxa, brânquias escurecidas,"
+        "lesões ulcerativas cutícula."
     </string>
-    <string name="nhp_prevencao">
-        " "
+    <string name="nhv_prevencao">
+        " Segundo a OIE, o melhor tratamento para NHP é utilização de antibióticos (oxitetraciclina e"
+        "florfenicol 50%) se a doença for detectada na fase inicial."
+        "É importante detectar precocemente para evitar canibalismo e iniciar tratamento rápido."
+        "Usar cal hidratada para tratar fundo dos tanques reduz incidência de NHP. Secagem"
+        "prolongada ao sol do fundo dos viveiros, desinfecção de equipamentos com hipoclorito de"
+        "cálcio são medidas preventivas importantes."
+        "Uso de animais livre de patógenos (SPF) é uma medida preventiva eficaz."
     </string>
 
 

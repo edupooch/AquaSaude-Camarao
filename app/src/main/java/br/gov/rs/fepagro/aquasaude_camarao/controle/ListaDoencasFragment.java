@@ -30,7 +30,6 @@ public class ListaDoencasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.content_lista_doencas, container, false);
 
-
         GridLayout gridLayout = (GridLayout) myView.findViewById(R.id.GridLayout);
         ArrayList<Doenca> doencas = new ListaDoencas(getActivity().getApplicationContext()).getDoencas();
 
@@ -53,13 +52,9 @@ public class ListaDoencasFragment extends Fragment {
                             DoencaScrollingActivity.class);
                     intent.putExtra("id_doenca", doenca.getId());
                     getActivity().startActivity(intent);
-
                 }
             });
-
         }
-
-
         return myView;
     }
 }
