@@ -59,12 +59,22 @@
 
     <string name="ihhnv_nome">"Necrose Hipodermal e Hematopoiética"</string>
     <string name="ihhnv_agente">
-        " "</string>
+        " A infecção hipodermal e necrose hematopoiética é causada por um parvovírus não-"
+        "envelopado. O vírus da infecção hipodermal e necrose hematopoiética (IHHNV) está sob"
+        "análise no Comitê Internacional de Taxonomia de Vírus (ICTV), classificado atualmente na"
+        "família Parvoviridae, gênero Brevidensovirus, espécie Penaeus stylirostris densovirus (PstDNV)."
+    </string>
+
     <string name="ihhnv_sinais">
-        " "
+        "O sinal clínico crônico mais evidente é a síndrome do rostro deformado (RDS), no qual altas"
+        "mortalidades são infrequentes. Crescimento reduzido e deformidades na carapação são"
+        "comuns."
+        "\nEm alguns casos, pode apresentar mortalidades próximas de 100 %."
     </string>
     <string name="ihhnv_prevencao">
-        " "
+        "Rastreamento prévio de IHHNV por PCR para descartar infecção pelo vírus antes de povoar
+        "tanques e viveiros.Boas práticas de manejo.Animais livres de doença específica podem ser"
+        "uma medida, mas não é a mais eficaz neste caso."
     </string>
 
 
@@ -119,6 +129,15 @@
     <string name="title_activity_jogo">JogoActivity</string>
     <string name="title_activity_jogo2">Jogo2Activity</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="sobre_descricao">
+        "O objetivo do AquaSaúde é trazer melhorias para a aquicultura brasileira através da"
+        "disponibilização de"
+        "informações sobre sanidade de animais aquáticos de forma ágil e de fácil compreensão."
+        "Com o desenvolvimento do aplicativo, informações científicas que estavam distribuídas em"
+        "inglês e em diferentes locais da internet agora estão disponíveis facilmente e de forma"
+        "off-line aos produtores e demais interessados."
+
+    </string>
 
 
 </resources>

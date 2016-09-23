@@ -57,7 +57,7 @@
         layout="@layout/content_doenca_nhv_scrolling"
         android:visibility="gone" />
     <include
-        android:id="@+id/content_nih"
+        android:id="@+id/content_ihhnv"
         layout="@layout/content_doenca_ihhnv_scrolling"
         android:visibility="gone" />
 

@@ -14,14 +14,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:text="O projeto foi criado com o objetivo de levar a a informação científica de forma acessível para os aquicultores do Brasil" />
+            android:text="@string/sobre_descricao" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/equipe"
+            android:layout_gravity="center"
             android:textStyle="bold" />
 
         <View
@@ -42,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_gravity="center"
             android:text="@string/institui_es"
             android:textStyle="bold" />
 
@@ -53,7 +54,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:src="@drawable/icon_logos"
+            android:src="@drawable/logos2"
             />
 
         <!--<GridLayout-->

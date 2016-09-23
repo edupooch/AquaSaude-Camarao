@@ -40,11 +40,11 @@ public class DoencaScrollingActivity extends AppCompatActivity {
             case ListaDoencas.INDICE_IMNV:
                 view = findViewById(R.id.content_mni);
                 break;
-            case ListaDoencas.INDICE_NHV:
+            case ListaDoencas.INDICE_NHP:
                 view = findViewById(R.id.content_nhp);
                 break;
             case ListaDoencas.INDICE_IHHNV:
-                view = findViewById(R.id.content_nih);
+                view = findViewById(R.id.content_ihhnv);
                 break;
             default:
                 view = findViewById(R.id.content_padrao);

@@ -14,24 +14,24 @@ public class ListaDoencas {
     public static final int INDICE_WSSV = 0;
     public static final int INDICE_IMNV = 1;
     public static final int INDICE_IHHNV = 2;
-    public static final int INDICE_NHV = 3;
+    public static final int INDICE_NHP = 3;
 
     static ArrayList<Doenca> doencas;
 
     public ListaDoencas(Context context) {
         doencas = new ArrayList<>();
 
-        Doenca smb = new Doenca(INDICE_WSSV,context.getString(R.string.wssv_nome),R.drawable.mancha_branca);
-        doencas.add(INDICE_WSSV, smb);
+        Doenca wssv = new Doenca(INDICE_WSSV,context.getString(R.string.wssv_nome),R.drawable.mancha_branca);
+        doencas.add(INDICE_WSSV, wssv);
 
-        Doenca mni = new Doenca(INDICE_IMNV,context.getString(R.string.imnv_nome),R.drawable.foto_padrao);
-        doencas.add(INDICE_IMNV, mni);
+        Doenca imnv = new Doenca(INDICE_IMNV,context.getString(R.string.imnv_nome),R.drawable.foto_padrao);
+        doencas.add(INDICE_IMNV, imnv);
 
-        Doenca nih = new Doenca(INDICE_IHHNV,context.getString(R.string.ihhnv_nome),R.drawable.foto_padrao);
-        doencas.add(INDICE_IHHNV, nih);
+        Doenca ihhnv = new Doenca(INDICE_IHHNV,context.getString(R.string.ihhnv_nome),R.drawable.foto_padrao);
+        doencas.add(INDICE_IHHNV, ihhnv);
 
-        Doenca nhv = new Doenca(INDICE_NHV,context.getString(R.string.nhv_nome),R.drawable.foto_padrao);
-        doencas.add(INDICE_NHV, nhv);
+        Doenca nhp = new Doenca(INDICE_NHP,context.getString(R.string.nhv_nome),R.drawable.foto_padrao);
+        doencas.add(INDICE_NHP, nhp);
     }
 
     public ArrayList<Doenca> getDoencas() {
