@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude_camarao.controle;
+package br.gov.rs.fepagro.aquasaude.controle;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -11,9 +11,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import br.gov.rs.fepagro.aquasaude_camarao.R;
-import br.gov.rs.fepagro.aquasaude_camarao.modelo.Doenca;
-import br.gov.rs.fepagro.aquasaude_camarao.modelo.ListaDoencas;
+import br.gov.rs.fepagro.aquasaude.R;
+import br.gov.rs.fepagro.aquasaude.modelo.Doenca;
+import br.gov.rs.fepagro.aquasaude.modelo.ListaDoencas;
 
 
 /**

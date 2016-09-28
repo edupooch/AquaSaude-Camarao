@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude_camarao;
+package br.gov.rs.fepagro.aquasaude;
 
 import org.junit.Test;
 

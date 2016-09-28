@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="br.gov.rs.fepagro.aquasaude_camarao.controle.Jogo2Activity">
+    tools:context="br.gov.rs.fepagro.aquasaude.controle.Jogo2Activity">
 
 
 

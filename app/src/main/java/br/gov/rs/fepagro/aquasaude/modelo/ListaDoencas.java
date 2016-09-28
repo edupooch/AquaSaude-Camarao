@@ -1,10 +1,10 @@
-package br.gov.rs.fepagro.aquasaude_camarao.modelo;
+package br.gov.rs.fepagro.aquasaude.modelo;
 
 import android.content.Context;
 
 import java.util.ArrayList;
 
-import br.gov.rs.fepagro.aquasaude_camarao.R;
+import br.gov.rs.fepagro.aquasaude.R;
 
 /**
  * Created by eduardo-pooch on 19/08/2016.

@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude_camarao.modelo;
+package br.gov.rs.fepagro.aquasaude.modelo;
 
 import java.util.ArrayList;
 

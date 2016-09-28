@@ -1,8 +1,6 @@
-package br.gov.rs.fepagro.aquasaude_camarao.modelo;
+package br.gov.rs.fepagro.aquasaude.modelo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by eduardo-pooch on 18/08/2016.

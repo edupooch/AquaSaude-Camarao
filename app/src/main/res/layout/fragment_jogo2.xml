@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.gov.rs.fepagro.aquasaude_camarao.controle.Jogo2Activity$PlaceholderFragment">
+    tools:context="br.gov.rs.fepagro.aquasaude.controle.Jogo2Activity$PlaceholderFragment">
 
     <TextView
         android:id="@+id/section_label"

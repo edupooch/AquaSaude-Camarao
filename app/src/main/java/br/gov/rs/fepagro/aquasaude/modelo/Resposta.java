@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude_camarao.modelo;
+package br.gov.rs.fepagro.aquasaude.modelo;
 
 /**
  * Created by eduardo-pooch on 14/09/2016.

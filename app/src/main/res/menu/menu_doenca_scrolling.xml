@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="br.gov.rs.fepagro.aquasaude_camarao.controle.DoencaScrollingActivity">
+    tools:context="br.gov.rs.fepagro.aquasaude.controle.DoencaScrollingActivity">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

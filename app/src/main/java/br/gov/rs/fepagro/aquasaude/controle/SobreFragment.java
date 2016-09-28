@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude_camarao.controle;
+package br.gov.rs.fepagro.aquasaude.controle;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import br.gov.rs.fepagro.aquasaude_camarao.R;
+import br.gov.rs.fepagro.aquasaude.R;
 
 /**
  * Created by eduardo-pooch on 01/09/2016.

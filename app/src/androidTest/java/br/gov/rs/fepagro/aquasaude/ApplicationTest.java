@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude_camarao;
+package br.gov.rs.fepagro.aquasaude;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

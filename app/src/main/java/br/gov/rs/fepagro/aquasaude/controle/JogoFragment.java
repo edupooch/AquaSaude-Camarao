@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude_camarao.controle;
+package br.gov.rs.fepagro.aquasaude.controle;
 
 
 import android.app.Fragment;
@@ -12,7 +12,7 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
-import br.gov.rs.fepagro.aquasaude_camarao.R;
+import br.gov.rs.fepagro.aquasaude.R;
 
 public class JogoFragment extends Fragment {
 
