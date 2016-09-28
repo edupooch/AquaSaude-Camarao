@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="15dp"
         android:paddingTop="20dp">
 
         <!--agente-->
@@ -61,7 +61,7 @@
         <LinearLayout
             android:id="@+id/layout_sinais"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
             android:orientation="vertical">

@@ -31,7 +31,6 @@ public class JogoFragment extends Fragment {
                 }
             }
         });
-
         return view;
     }
 

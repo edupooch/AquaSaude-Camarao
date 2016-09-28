@@ -18,6 +18,14 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Para um monitoramento efetivo da sanidade da produção, é importante conhecer as principais doenças de camarão já encontradas na América do Sul:"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            />
+
         <GridLayout
             android:id="@+id/GridLayout"
             android:layout_width="wrap_content"

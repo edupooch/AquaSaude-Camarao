@@ -44,7 +44,7 @@ public class NavigationActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //Começar com a lista de doenças aberta
-        navigationView.setCheckedItem(R.id.item_doencas);
+        navigationView.setCheckedItem(R.id.item_doencas_camarao);
         getFragmentManager().beginTransaction()
                 .replace(R.id.content_frame, new ListaDoencasFragment())
                 .commit();
@@ -73,21 +73,30 @@ public class NavigationActivity extends AppCompatActivity
             }
         }
         //---------------------------------------------------------------------------------------//
-        if (id == R.id.item_doencas) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, new ListaDoencasFragment())
-                    .commit();
-        } else if (id == R.id.nav_jogo) {
-            escondeSombra();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, new JogoFragment())
-                    .commit();
-        } else if (id == R.id.nav_sobre) {
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, new SobreFragment())
-                    .commit();
-
+        switch (id) {
+            case R.id.item_doencas_camarao:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, new ListaDoencasFragment())
+                        .commit();
+                break;
+            case R.id.item_boas_praticas:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, new BoasPraticasFragment())
+                        .commit();
+                break;
+            case R.id.nav_jogo:
+                escondeSombra();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, new JogoFragment())
+                        .commit();
+                break;
+            case R.id.nav_sobre:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, new SobreFragment())
+                        .commit();
+                break;
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         assert drawer != null;

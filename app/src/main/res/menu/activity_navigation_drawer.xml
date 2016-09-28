@@ -2,37 +2,44 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/item_doencas"
+            android:id="@+id/item_doencas_camarao"
             android:icon="@drawable/icon_camarao"
-            android:title="Doenças de Camarão" />
+            android:title="Camarão" />
+
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/item_doencas_peixes"
+            android:icon="@drawable/icon_peixe"
+            android:title="Peixes" />
+
+        <item
+            android:id="@+id/item_boas_praticas"
             android:icon="@drawable/icon_boas_praticas"
             android:title="Boas Práticas" />
 
         <item
             android:id="@+id/nav_jogo"
             android:icon="@drawable/icon_game"
-            android:title="Jogo" />
-
-        <item
-            android:id="@+id/nav_sobre"
-            android:icon="@drawable/icon_sobre"
-            android:title="Sobre" />
-
+            android:title="Jogos" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Mais Informações">
         <menu>
+
+            <item
+                android:id="@+id/nav_sobre"
+                android:icon="@drawable/icon_sobre"
+                android:title="Sobre" />
+
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Compartilhar" />
             <item
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Fale Conosco" />
         </menu>
     </item>
 
