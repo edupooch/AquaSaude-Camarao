@@ -47,7 +47,7 @@ public class DoencaScrollingActivity extends AppCompatActivity {
                 view = findViewById(R.id.content_ihhnv);
                 break;
             default:
-                view = findViewById(R.id.content_padrao);
+                view = null;
                 break;
         }
         assert view != null;

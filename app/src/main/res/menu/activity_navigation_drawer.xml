@@ -37,8 +37,8 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Compartilhar" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:id="@+id/nav_email"
+                android:icon="@drawable/icon_email"
                 android:title="Fale Conosco" />
         </menu>
     </item>

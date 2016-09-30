@@ -1,6 +1,8 @@
 package br.gov.rs.fepagro.aquasaude.controle;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -27,8 +29,10 @@ public class NavigationActivity extends AppCompatActivity
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
         assert drawer != null;
         drawer.setDrawerListener(toggle);
         toggle.syncState();
@@ -67,19 +71,17 @@ public class NavigationActivity extends AppCompatActivity
         android.app.FragmentManager fragmentManager = getFragmentManager();
         int id = item.getItemId();
         //---------------------METODOS PARA TROCAR A SOMBRA -------------------------------------//
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (!temSombraNaAppBar()) {
-                mostraSombra();
-            }
-        }
+
         //---------------------------------------------------------------------------------------//
         switch (id) {
             case R.id.item_doencas_camarao:
+                mostraSombra();
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, new ListaDoencasFragment())
                         .commit();
                 break;
             case R.id.item_boas_praticas:
+                mostraSombra();
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, new BoasPraticasFragment())
                         .commit();
@@ -94,6 +96,10 @@ public class NavigationActivity extends AppCompatActivity
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, new SobreFragment())
                         .commit();
+                break;
+            case R.id.nav_email:
+                String[] endereco = {"aquassaude@gmail.com"};
+                composeEmail(endereco, "Aplicativo AquaSaúde");
                 break;
         }
 
@@ -127,5 +133,14 @@ public class NavigationActivity extends AppCompatActivity
         }
     }
 
+    public void composeEmail(String[] addresses, String subject) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:"));
+        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 
 }
