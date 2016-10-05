@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="br.gov.rs.fepagro.aquasaude.controle.ChecklistActivity"
+    tools:showIn="@layout/activity_checklist">
+
+
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/checklist_selecione"
+        android:layout_marginTop="10dp"
+
+        />
+<View
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#666"
+    />
+
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:layout_marginTop="20dp"
+        android:text="Adquirir Pós-Larvas/Larvas/ Alevinos de alta qualidade e livres de patógenos em laboratórios confiáveis"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:layout_marginTop="10dp"
+        android:text="Visita ao laboratório antes de adquirir as Pós-Larvas/Larvas/ Alevinos para checar a integridade dos animais"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:layout_marginTop="10dp"
+        android:text="Avaliar a qualidade das Pós-Larvas/Larvas/ Alevinos na aquisição"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:layout_marginTop="10dp"
+        android:text="Cuidados com o transporte e recepção das Pós-Larvas/Larvas/Alevinos."
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:layout_marginTop="10dp"
+        android:text="A água captada para o abastecimento dos berçários passa por uma filtração"
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:layout_marginTop="10dp"
+        android:text="É realizada a limpeza dos berçários imediatamente após a despesca."
+        />
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:layout_marginTop="10dp"
+        android:text="É realizada uma sanitização (aplicação de produtos químicos) dos tanques berçário por pessoas especializadas antes da recepção dos animais novos."
+        />
+</LinearLayout>

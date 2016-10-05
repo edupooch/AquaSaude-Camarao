@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="br.gov.rs.fepagro.aquasaude.controle.NavigationActivity"
+            android:name=".controle.NavigationActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,26 +19,30 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="br.gov.rs.fepagro.aquasaude.controle.DoencaScrollingActivity"
+            android:name=".controle.DoencaScrollingActivity"
             android:label="@string/title_activity_doenca_scrolling"
-            android:parentActivityName="br.gov.rs.fepagro.aquasaude.controle.NavigationActivity"
+            android:parentActivityName=".controle.NavigationActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.gov.rs.fepagro.aquasaude.controle.NavigationActivity" />
         </activity>
         <activity
-            android:name="br.gov.rs.fepagro.aquasaude.controle.JogoActivity"
+            android:name=".controle.JogoActivity"
             android:label="@string/title_activity_jogo"
-            android:parentActivityName="br.gov.rs.fepagro.aquasaude.controle.NavigationActivity"
+            android:parentActivityName=".controle.NavigationActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.gov.rs.fepagro.aquasaude.controle.NavigationActivity" />
         </activity>
         <activity
-            android:name="br.gov.rs.fepagro.aquasaude.controle.Jogo2Activity"
+            android:name=".controle.Jogo2Activity"
             android:label="@string/title_activity_jogo2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".controle.ChecklistActivity"
+            android:label="@string/title_activity_checklist"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
