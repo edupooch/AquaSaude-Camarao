@@ -22,6 +22,7 @@ import br.gov.rs.fepagro.aquasaude.modelo.ListaDoencas;
  */
 public class DoencaScrollingActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

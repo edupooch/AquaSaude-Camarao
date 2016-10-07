@@ -14,6 +14,7 @@
         android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:padding="25dp"
+        android:onClick="rotate"
         android:src="@drawable/icon_camarao2"
         android:tint="@color/branco" />
 
@@ -57,11 +58,12 @@
 
             </LinearLayout>
             <Button
+                android:id="@+id/btComecarJogo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:background="@color/colorPrimary"
-                android:text="COMEÇAR"
+                android:text="@string/comecar"
                 android:layout_alignParentBottom="true"
                 android:textColor="@color/branco" />
         </RelativeLayout>

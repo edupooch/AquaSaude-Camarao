@@ -13,6 +13,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 
 import br.gov.rs.fepagro.aquasaude.R;
 
@@ -70,9 +74,6 @@ public class NavigationActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         android.app.FragmentManager fragmentManager = getFragmentManager();
         int id = item.getItemId();
-        //---------------------METODOS PARA TROCAR A SOMBRA -------------------------------------//
-
-        //---------------------------------------------------------------------------------------//
         switch (id) {
             case R.id.item_doencas_camarao:
                 mostraSombra();
@@ -98,8 +99,8 @@ public class NavigationActivity extends AppCompatActivity
                         .commit();
                 break;
             case R.id.nav_email:
-                String[] endereco = {"aquassaude@gmail.com"};
-                composeEmail(endereco, "Aplicativo AquaSaúde");
+
+                enviarEmail();
                 break;
         }
 
@@ -110,6 +111,10 @@ public class NavigationActivity extends AppCompatActivity
         return true;
     }
 
+    /**
+     * [VIEW]
+     * Ativa a sombra da app bar
+     */
     private void mostraSombra() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AppBarLayout bar = (AppBarLayout) findViewById(R.id.app_bar_layout);
@@ -118,13 +123,10 @@ public class NavigationActivity extends AppCompatActivity
         }
     }
 
-    @SuppressLint("NewApi")
-    private boolean temSombraNaAppBar() {
-        AppBarLayout bar = (AppBarLayout) findViewById(R.id.app_bar_layout);
-        assert bar != null;
-        return bar.getElevation() != 0;
-    }
-
+    /**
+     * [VIEW]
+     * Esconde a sombra da app bar para o fragment de escolher jogo
+     */
     private void escondeSombra() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AppBarLayout bar = (AppBarLayout) findViewById(R.id.app_bar_layout);
@@ -133,14 +135,33 @@ public class NavigationActivity extends AppCompatActivity
         }
     }
 
-    public void composeEmail(String[] addresses, String subject) {
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:"));
-        intent.putExtra(Intent.EXTRA_EMAIL, addresses);
-        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
+
+    /**
+     * Método para enviar o email para o aquassaude@gmail.com
+     */
+    public void enviarEmail() {
+        String[] emails = {"aquassaude@gmail.com"};
+        String assunto = "Aplicativo AquaSaúde";
+        Intent intentEmail = new Intent(Intent.ACTION_SENDTO);
+        intentEmail.setData(Uri.parse("mailto:"));
+        intentEmail.putExtra(Intent.EXTRA_EMAIL, emails);
+        intentEmail.putExtra(Intent.EXTRA_SUBJECT, assunto);
+        if (intentEmail.resolveActivity(getPackageManager()) != null) {
+            startActivity(intentEmail);
         }
     }
 
+    /**
+     * Método para fazer uma animação de rotacioar uma view chamado no atributo onClick do XML na
+     * escolha do jogo
+     *
+     * @param view que será rotacionado
+     */
+    public void rotate(View view) {
+        RotateAnimation rotate = new RotateAnimation(0, -360, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setDuration(1000);
+        rotate.setInterpolator(new LinearInterpolator());
+
+        view.startAnimation(rotate);
+    }
 }

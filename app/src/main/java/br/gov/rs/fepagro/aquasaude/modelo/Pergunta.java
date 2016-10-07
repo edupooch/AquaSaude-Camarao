@@ -6,22 +6,22 @@ import java.util.ArrayList;
  * Created by eduardo-pooch on 14/09/2016.
  */
 public class Pergunta {
-    String pergunta;
-    ArrayList<Resposta> respostas;
+    String titulo;
+    ArrayList<RespostaImagem> respostas;
 
-    public String getPergunta() {
-        return pergunta;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setPergunta(String pergunta) {
-        this.pergunta = pergunta;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public ArrayList<Resposta> getRespostas() {
+    public ArrayList<RespostaImagem> getRespostas() {
         return respostas;
     }
 
-    public void setRespostas(ArrayList<Resposta> respostas) {
+    public void setRespostas(ArrayList<RespostaImagem> respostas) {
         this.respostas = respostas;
     }
 }
