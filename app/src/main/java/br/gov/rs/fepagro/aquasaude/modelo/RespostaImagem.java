@@ -7,7 +7,8 @@ public class RespostaImagem {
     boolean certa;
     int resIdFoto;
 
-    public void Resposta(int resIdFoto, boolean certa) {
+
+    public RespostaImagem(int resIdFoto, boolean certa) {
         this.resIdFoto = resIdFoto;
         this.certa = certa;
     }

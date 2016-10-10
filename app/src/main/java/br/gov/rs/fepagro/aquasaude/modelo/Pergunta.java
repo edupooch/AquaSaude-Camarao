@@ -9,6 +9,11 @@ public class Pergunta {
     String titulo;
     ArrayList<RespostaImagem> respostas;
 
+    public Pergunta(String titulo, ArrayList<RespostaImagem> respostas) {
+        this.titulo = titulo;
+        this.respostas = respostas;
+    }
+
     public String getTitulo() {
         return titulo;
     }

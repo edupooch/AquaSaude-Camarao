@@ -5,20 +5,68 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.gov.rs.fepagro.aquasaude.R;
+
 /**
  * Created by eduardo-pooch on 07/10/2016.
  */
 public class ListaPerguntas {
 
-    public static  List<Pergunta> listaPerguntas = new ArrayList<>();
+    private List<Pergunta> listaPerguntasCamarao;
 
-    public void ListaPerguntasCamarao(Context context){
-        Pergunta pergunta1 = new Pergunta();
-        pergunta1.setTitulo("Qual das imagens abaixo tem Mionecrose Infecciosa?");
-        ArrayList<RespostaImagem> respostas = new ArrayList<>(4);
+    public ListaPerguntas(Context context){
+        listaPerguntasCamarao = new ArrayList<>();
+        ArrayList<RespostaImagem> respostas;
+        Pergunta pergunta;
 
+        //Pergunta 1
+        respostas = new ArrayList<>(4);
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        pergunta = new Pergunta("Pergunta 1", respostas);
+        listaPerguntasCamarao.add(pergunta);
 
-        RespostaImagem resposta1 = new RespostaImagem();
-        respostas.add(resposta1);
+        //Pergunta 2
+        respostas = new ArrayList<>(4);
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        pergunta = new Pergunta("Pergunta 2", respostas);
+        listaPerguntasCamarao.add(pergunta);
+
+        //Pergunta 2
+        respostas = new ArrayList<>(4);
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        pergunta = new Pergunta("Pergunta 3", respostas);
+        listaPerguntasCamarao.add(pergunta);
+
+        //Pergunta 2
+        respostas = new ArrayList<>(4);
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        pergunta = new Pergunta("Pergunta 4", respostas);
+        listaPerguntasCamarao.add(pergunta);
+
+        //Pergunta 2
+        respostas = new ArrayList<>(4);
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        pergunta = new Pergunta("Pergunta 5", respostas);
+        listaPerguntasCamarao.add(pergunta);
     }
+
+    public List<Pergunta> getListaPerguntas() {
+        return listaPerguntasCamarao;
+    }
+
 }

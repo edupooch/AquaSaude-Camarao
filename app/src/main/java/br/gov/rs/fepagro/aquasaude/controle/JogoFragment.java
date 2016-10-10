@@ -8,10 +8,6 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
-import android.view.animation.RotateAnimation;
-import android.widget.ImageView;
 
 import br.gov.rs.fepagro.aquasaude.R;
 
@@ -25,7 +21,7 @@ public class JogoFragment extends Fragment {
         botao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentComecaJogo = new Intent(getActivity(),Jogo2Activity.class);
+                Intent intentComecaJogo = new Intent(getActivity(),JogoActivity.class);
                 startActivity(intentComecaJogo);
             }
         });

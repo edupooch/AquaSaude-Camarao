@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.gov.rs.fepagro.aquasaude.controle.Jogo2Activity$PlaceholderFragment">
+    tools:context=".controle.JogoActivity$PlaceholderFragment">
 
     <TextView
         android:id="@+id/section_label"
@@ -48,6 +48,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="layout_resposta_1"
                         android:id="@+id/layout_resposta_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -70,6 +71,7 @@
 
 
                         <RadioButton
+                            android:tag="radio1"
                             android:id="@+id/radio_resposta_1"
                             android:layout_width="wrap_content"
                             android:layout_height="35dp"
@@ -79,6 +81,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="layout_resposta_2"
                         android:id="@+id/layout_resposta_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -100,6 +103,7 @@
                             android:src="@drawable/foto_padrao" />
 
                         <RadioButton
+                            android:tag="radio2"
                             android:id="@+id/radio_resposta_2"
                             android:layout_width="wrap_content"
                             android:layout_height="35dp"
@@ -117,6 +121,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:tag="layout_resposta_3"
                         android:id="@+id/layout_resposta_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -139,6 +144,7 @@
 
 
                         <RadioButton
+                            android:tag="radio3"
                             android:id="@+id/radio_resposta_3"
                             android:layout_width="wrap_content"
                             android:layout_height="35dp"
@@ -148,6 +154,7 @@
                     </LinearLayout>
 
                     <LinearLayout
+                        android:tag="layout_resposta_4"
                         android:id="@+id/layout_resposta_4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -169,6 +176,7 @@
                             android:src="@drawable/foto_padrao" />
 
                         <RadioButton
+                            android:tag="radio4"
                             android:id="@+id/radio_resposta_4"
                             android:layout_width="wrap_content"
                             android:layout_height="35dp"
@@ -184,11 +192,13 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/bt_responde"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginEnd="25dp"
         android:layout_marginStart="25dp"
+
         android:background="@color/colorPrimaryDark"
         android:text="Confirmar"
         android:textColor="@color/branco" />
