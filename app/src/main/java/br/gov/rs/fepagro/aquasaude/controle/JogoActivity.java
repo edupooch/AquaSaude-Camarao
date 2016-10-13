@@ -8,12 +8,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -23,16 +26,17 @@ import br.gov.rs.fepagro.aquasaude.modelo.Pergunta;
 
 public class JogoActivity extends AppCompatActivity {
 
+    public static final int ULTIMA_PERGUNTA = 4;
+    public static final int NENHUMA_RESPOSTA_SELECIONADA = -1;
     //TODO: Passar a tela somente com o link do botão
     public static ViewPager mViewPager;
-    public List<Pergunta> listaPerguntas;
+    public static List<Pergunta> listaPerguntas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jogo);
         listaPerguntas = new ListaPerguntas(getApplicationContext()).getListaPerguntas();
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,6 +55,7 @@ public class JogoActivity extends AppCompatActivity {
     public static class PlaceholderFragment extends Fragment {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private static final int NUMERO_DE_RESPOSTAS = 4;
 
         public PlaceholderFragment() {
 
@@ -68,20 +73,50 @@ public class JogoActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             //View principal
-            View rootView = inflater.inflate(R.layout.fragment_jogo, container, false);
+            final View rootView = inflater.inflate(R.layout.fragment_jogo, container, false);
             //Número da pergunta, primeira = 0
             final int numPergunta = getArguments().getInt(ARG_SECTION_NUMBER) - 1;
-
+            //Pergunta oject
+            final Pergunta pergunta = listaPerguntas.get(numPergunta);
+            //Título da página - titulo da pergunta
             TextView textPergunta = (TextView) rootView.findViewById(R.id.text_pergunta);
+            textPergunta.setText(pergunta.getTitulo());
             configuraRadioButtons(rootView);
-
-
+            //Imagem das respostas
+            int[] imageViewResId = {R.id.foto_resposta_1, R.id.foto_resposta_2, R.id.foto_resposta_3, R.id.foto_resposta_4};
+            for (int i = 0; i < NUMERO_DE_RESPOSTAS; i++) {
+                ImageView imagem = (ImageView) rootView.findViewById(imageViewResId[i]);
+                imagem.setImageResource(pergunta.getRespostas().get(i).getResIdFoto());
+            }
+            //Ação do botão de responder
             View btResponde = rootView.findViewById(R.id.bt_responde);
             btResponde.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mViewPager.setCurrentItem(numPergunta + 1);
+                    //Pega a resposta selecionada pelo usuário
+                    int respostaSelecionada = getRespostaSelecionada(rootView);
+
+                    //VERIFICAR se o usuário acertou ou não
+                    if (respostaSelecionada != NENHUMA_RESPOSTA_SELECIONADA) {
+                        if (pergunta.getRespostas().get(respostaSelecionada).isCerta()) {
+                            //ACERTOU A RESPOSTA
+                            Toast.makeText(getContext(), "Acertou", Toast.LENGTH_SHORT).show();
+                        } else {
+                            //ERROU A RESPOSTA
+                            Toast.makeText(getContext(), "Errou", Toast.LENGTH_SHORT).show();
+                        }
+
+                        if (numPergunta == ULTIMA_PERGUNTA) {
+                            //Termina a activity na última pergunta
+                            getActivity().finish();
+                        } else {
+                            //Passa para a próxima página
+                            mViewPager.setCurrentItem(numPergunta + 1);
+                        }
+                    }
                 }
+
+
             });
 
             return rootView;
@@ -113,6 +148,22 @@ public class JogoActivity extends AppCompatActivity {
                 layout.setOnClickListener(onRadioClick);
                 radio.setOnClickListener(onRadioClick);
             }
+        }
+
+        /**
+         * Verifica os radioButtons da view e retorna o número da resposta que está selecionada
+         * @param rootView para pegar os radioButons da view
+         * @return 0-3 para numeros de respostas e -1 para nenhuma selecionada
+         */
+        private int getRespostaSelecionada(View rootView) {
+            int[] radioButtonsResId = {R.id.radio_resposta_1, R.id.radio_resposta_2, R.id.radio_resposta_3, R.id.radio_resposta_4};
+            for (int i = 0; i < NUMERO_DE_RESPOSTAS; i++) {
+                RadioButton radioButton = (RadioButton) rootView.findViewById(radioButtonsResId[i]);
+                if (radioButton.isChecked()) {
+                    return i;
+                }
+            }
+            return NENHUMA_RESPOSTA_SELECIONADA;
         }
     }
 

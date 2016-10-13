@@ -17,4 +17,7 @@ public class RespostaImagem {
         return certa;
     }
 
+    public int getResIdFoto() {
+        return resIdFoto;
+    }
 }

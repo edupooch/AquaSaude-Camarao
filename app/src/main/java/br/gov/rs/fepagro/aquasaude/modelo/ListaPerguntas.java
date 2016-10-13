@@ -21,7 +21,7 @@ public class ListaPerguntas {
 
         //Pergunta 1
         respostas = new ArrayList<>(4);
-        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
+        respostas.add(new RespostaImagem(R.drawable.mancha_branca, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
@@ -30,18 +30,18 @@ public class ListaPerguntas {
 
         //Pergunta 2
         respostas = new ArrayList<>(4);
-        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.logo_ufcspa, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         pergunta = new Pergunta("Pergunta 2", respostas);
         listaPerguntasCamarao.add(pergunta);
 
         //Pergunta 2
         respostas = new ArrayList<>(4);
-        respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
+        respostas.add(new RespostaImagem(R.drawable.mancha_branca, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
-        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.logo_cnpq, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         pergunta = new Pergunta("Pergunta 3", respostas);
         listaPerguntasCamarao.add(pergunta);

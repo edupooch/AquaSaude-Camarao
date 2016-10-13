@@ -37,6 +37,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="5dp"
+                    android:layout_marginBottom="15dp"
                     android:text="Qual das imagens abaixo apresenta um camarão com Sindrome da Mancha Branca?"
                     android:textColor="#fff"
                     android:textSize="22sp" />
