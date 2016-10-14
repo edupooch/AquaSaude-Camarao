@@ -151,6 +151,8 @@
     <string name="title_activity_checklist">ChecklistActivity</string>
     <string name="checklist_selecione">Selecione os procedimentos que são realizados na sua produção e verifique qual o nível de biossegurança aplicado.</string>
     <string name="comecar">COMEÇAR</string>
+    <string name="proxima">Próxima</string>
+    <string name="confirmar">Confirmar</string>
 
 
 </resources>

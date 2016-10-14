@@ -11,11 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".controle.JogoActivity$PlaceholderFragment">
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,6 +22,7 @@
             android:layout_height="wrap_content">
 
             <LinearLayout
+                android:id="@+id/layout_game"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -49,12 +45,45 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:tag="layout_resposta_1"
-                        android:id="@+id/layout_resposta_1"
+                        android:tag="layout_resposta_0"
+                        android:id="@+id/layout_resposta_0"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card"
+                        android:orientation="vertical"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/foto_resposta_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="160dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/foto_padrao" />
+
+
+                        <RadioButton
+                            android:tag="radio0"
+                            android:id="@+id/radio_resposta_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:textColor="#555"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:tag="layout_resposta_1"
+                        android:id="@+id/layout_resposta_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/card"
                         android:orientation="vertical"
@@ -70,42 +99,9 @@
                             android:scaleType="centerCrop"
                             android:src="@drawable/foto_padrao" />
 
-
                         <RadioButton
                             android:tag="radio1"
                             android:id="@+id/radio_resposta_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:textColor="#555"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:tag="layout_resposta_2"
-                        android:id="@+id/layout_resposta_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/card"
-                        android:orientation="vertical"
-                        android:paddingEnd="10dp"
-                        android:paddingStart="10dp"
-                        android:paddingTop="10dp">
-
-                        <ImageView
-                            android:id="@+id/foto_resposta_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="160dp"
-                            android:layout_gravity="center"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/foto_padrao" />
-
-                        <RadioButton
-                            android:tag="radio2"
-                            android:id="@+id/radio_resposta_2"
                             android:layout_width="wrap_content"
                             android:layout_height="35dp"
                             android:layout_gravity="center"
@@ -122,12 +118,45 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:tag="layout_resposta_3"
-                        android:id="@+id/layout_resposta_3"
+                        android:tag="layout_resposta_2"
+                        android:id="@+id/layout_resposta_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/card"
+                        android:orientation="vertical"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/foto_resposta_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="160dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/foto_padrao" />
+
+
+                        <RadioButton
+                            android:tag="radio2"
+                            android:id="@+id/radio_resposta_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:textColor="#555"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:tag="layout_resposta_3"
+                        android:id="@+id/layout_resposta_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/card"
                         android:orientation="vertical"
@@ -143,42 +172,9 @@
                             android:scaleType="centerCrop"
                             android:src="@drawable/foto_padrao" />
 
-
                         <RadioButton
                             android:tag="radio3"
                             android:id="@+id/radio_resposta_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="35dp"
-                            android:layout_gravity="center"
-                            android:textColor="#555"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:tag="layout_resposta_4"
-                        android:id="@+id/layout_resposta_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/card"
-                        android:orientation="vertical"
-                        android:paddingEnd="10dp"
-                        android:paddingStart="10dp"
-                        android:paddingTop="10dp">
-
-                        <ImageView
-                            android:id="@+id/foto_resposta_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="160dp"
-                            android:layout_gravity="center"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/foto_padrao" />
-
-                        <RadioButton
-                            android:tag="radio4"
-                            android:id="@+id/radio_resposta_4"
                             android:layout_width="wrap_content"
                             android:layout_height="35dp"
                             android:layout_gravity="center"
@@ -201,7 +197,7 @@
         android:layout_marginStart="25dp"
 
         android:background="@color/colorPrimaryDark"
-        android:text="Confirmar"
+        android:text="@string/confirmar"
         android:textColor="@color/branco" />
 
 </LinearLayout>
