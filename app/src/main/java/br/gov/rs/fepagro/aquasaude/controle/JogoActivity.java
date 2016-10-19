@@ -1,6 +1,7 @@
 package br.gov.rs.fepagro.aquasaude.controle;
 
 import android.content.DialogInterface;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +20,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
@@ -29,17 +31,20 @@ import br.gov.rs.fepagro.aquasaude.modelo.RespostaImagem;
 
 public class JogoActivity extends AppCompatActivity {
 
-    public static final int ULTIMA_PERGUNTA = 4;
     public static final int NENHUMA_RESPOSTA_SELECIONADA = -1;
 
     public static ViewPager mViewPager;
     public static List<Pergunta> listaPerguntas;
 
+    public static ArrayList<Boolean> acertos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jogo);
+
         listaPerguntas = new ListaPerguntas(getApplicationContext()).getListaPerguntas();
+        acertos = new ArrayList<>(listaPerguntas.size());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,7 +62,7 @@ public class JogoActivity extends AppCompatActivity {
     public static class PlaceholderFragment extends Fragment {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
-        private static final int NUMERO_DE_RESPOSTAS = 4;
+        private static final int NUMERO_DE_ALTERNATIVAS = 4;
 
         public PlaceholderFragment() {
         }
@@ -85,7 +90,7 @@ public class JogoActivity extends AppCompatActivity {
             configuraRadioButtons(rootView);
             //Imagem das respostas
             int[] imageViewResId = {R.id.foto_resposta_0, R.id.foto_resposta_1, R.id.foto_resposta_2, R.id.foto_resposta_3};
-            for (int i = 0; i < NUMERO_DE_RESPOSTAS; i++) {
+            for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
                 ImageView imagem = (ImageView) rootView.findViewById(imageViewResId[i]);
                 imagem.setImageResource(pergunta.getRespostas().get(i).getResIdFoto());
             }
@@ -110,36 +115,34 @@ public class JogoActivity extends AppCompatActivity {
 
                             if (pergunta.getRespostas().get(respostaSelecionada).isCerta()) {
                                 //ACERTOU A RESPOSTA
+                                acertos.add(numPergunta, true);
+                                //o fundo da questao selecionada fica verde
                                 View layout = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
                                 layout.setBackgroundResource(R.drawable.card_verde);
-                                Toast.makeText(getContext(), "Acertou", Toast.LENGTH_SHORT).show();
                             } else {
                                 //ERROU A RESPOSTA
+                                acertos.add(numPergunta, false);
+
+                                //animação de balançar a view
                                 Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
-                                // rootView.setAnimation(animation);
                                 rootView.findViewById(R.id.layout_game).startAnimation(animation);
+
+                                //deixa o fundo da selecionada vermelho
                                 int respostaCerta = getRespostaCerta(numPergunta);
                                 View layoutSelecionado = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
                                 layoutSelecionado.setBackgroundResource(R.drawable.card_vermelho);
 
+                                //o fundo da questão certa fica verde
                                 View layoutCerta = rootView.findViewWithTag("layout_resposta_" + respostaCerta);
                                 layoutCerta.setBackgroundResource(R.drawable.card_verde);
-
-                                Toast.makeText(getContext(), "Errou", Toast.LENGTH_SHORT).show();
                             }
                         }
 
                     } else {
                         // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
 
-                        //passar a página
-                        if (numPergunta == ULTIMA_PERGUNTA) {
-                            //Termina a activity na última pergunta
-                            getActivity().finish();
-                        } else {
                             //Passa para a próxima página
                             mViewPager.setCurrentItem(numPergunta + 1);
-                        }
                     }
                 }
             });
@@ -151,7 +154,7 @@ public class JogoActivity extends AppCompatActivity {
          * @param rootView view principal
          */
         private void bloqueiaRadios(View rootView) {
-            for (int j = 0; j < NUMERO_DE_RESPOSTAS; j++) {
+            for (int j = 0; j < NUMERO_DE_ALTERNATIVAS; j++) {
                 RadioButton radio = (RadioButton) rootView.findViewWithTag("radio" + j);
                 radio.setClickable(false);
                 View layout = rootView.findViewWithTag("layout_resposta_" + j);
@@ -162,7 +165,7 @@ public class JogoActivity extends AppCompatActivity {
 
         private void configuraRadioButtons(final View rootView) {
             //Para cada resposta
-            for (int i = 0; i < NUMERO_DE_RESPOSTAS; i++) {
+            for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
                 final int nResposta = i;
                 View layout = rootView.findViewWithTag("layout_resposta_" + nResposta);
                 final RadioButton radio = (RadioButton) layout.findViewWithTag("radio" + nResposta);
@@ -174,7 +177,7 @@ public class JogoActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         radio.setChecked(true);
                         //Retira retira o check dos outros radio buttons
-                        for (int j = 0; j < NUMERO_DE_RESPOSTAS; j++) {
+                        for (int j = 0; j < NUMERO_DE_ALTERNATIVAS; j++) {
                             if (j != nResposta) {
                                 RadioButton outrosRadios =
                                         (RadioButton) rootView.findViewWithTag("radio" + j);
@@ -196,7 +199,7 @@ public class JogoActivity extends AppCompatActivity {
          */
         private int getRespostaSelecionada(View rootView) {
             int[] radioButtonsResId = {R.id.radio_resposta_0, R.id.radio_resposta_1, R.id.radio_resposta_2, R.id.radio_resposta_3};
-            for (int i = 0; i < NUMERO_DE_RESPOSTAS; i++) {
+            for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
                 RadioButton radioButton = (RadioButton) rootView.findViewById(radioButtonsResId[i]);
                 if (radioButton.isChecked()) {
                     return i;
@@ -206,7 +209,7 @@ public class JogoActivity extends AppCompatActivity {
         }
 
         public int getRespostaCerta(int numPergunta) {
-            for (int i = 0; i < NUMERO_DE_RESPOSTAS; i++) {
+            for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
                 RespostaImagem resposta = listaPerguntas.get(numPergunta).getRespostas().get(i);
                 if (resposta.isCerta()) {
                     return i;
@@ -227,13 +230,42 @@ public class JogoActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+            Log.d("app", "Posicao " + position);
+
+            if (position == listaPerguntas.size()){
+                //o último fragmente é o de resultados do jogo
+                return ResultadosJogoFragment.newInstace();
+            }
+
             return PlaceholderFragment.newInstance(position + 1);
         }
 
         @Override
         public int getCount() {
-            // Total de perguntas = 5
-            return listaPerguntas.size();
+            // Total de perguntas = 5 + 1 fragmente de resultados
+            return listaPerguntas.size() + 1;
+        }
+    }
+
+    public static class ResultadosJogoFragment extends Fragment {
+        @Nullable
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+            View view = inflater.inflate(R.layout.content_resultados, container, false);
+
+            //Finalizar activity no click do botão
+            view.findViewById(R.id.bt_finalizar_jogo).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getActivity().finish();
+                }
+            });
+            return view;
+        }
+
+        public static Fragment newInstace() {
+            ResultadosJogoFragment fragment = new ResultadosJogoFragment();
+            return fragment;
         }
     }
 
