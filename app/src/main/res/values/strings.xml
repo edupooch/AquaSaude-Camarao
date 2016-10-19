@@ -153,6 +153,10 @@
     <string name="comecar">COMEÇAR</string>
     <string name="proxima">Próxima</string>
     <string name="confirmar">Confirmar</string>
+    <string name="atencao_sair">Deseja sair do jogo?</string>
+    <string name="dialog_abandonar_voltar">O jogo será cancelado e todos os dados serão perdidos.</string>
+    <string name="dialog_yes">Sim</string>
+    <string name="dialog_no">Não</string>
 
 
 </resources>

@@ -1,5 +1,7 @@
 package br.gov.rs.fepagro.aquasaude.controle;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
@@ -104,6 +106,7 @@ public class JogoActivity extends AppCompatActivity {
 
                             //Muda o texto do botão para "Próxima"
                             btResponde.setText(R.string.proxima);
+                            bloqueiaRadios(rootView);
 
                             if (pergunta.getRespostas().get(respostaSelecionada).isCerta()) {
                                 //ACERTOU A RESPOSTA
@@ -112,8 +115,9 @@ public class JogoActivity extends AppCompatActivity {
                                 Toast.makeText(getContext(), "Acertou", Toast.LENGTH_SHORT).show();
                             } else {
                                 //ERROU A RESPOSTA
-//                                Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
-//                                rootView.findViewById(R.id.layout_game).setAnimation(animation);
+                                Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
+                                // rootView.setAnimation(animation);
+                                rootView.findViewById(R.id.layout_game).startAnimation(animation);
                                 int respostaCerta = getRespostaCerta(numPergunta);
                                 View layoutSelecionado = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
                                 layoutSelecionado.setBackgroundResource(R.drawable.card_vermelho);
@@ -125,21 +129,36 @@ public class JogoActivity extends AppCompatActivity {
                             }
                         }
 
-                        } else { // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
-                            //passar a página
-                            if (numPergunta == ULTIMA_PERGUNTA) {
-                                //Termina a activity na última pergunta
-                                getActivity().finish();
-                            } else {
-                                //Passa para a próxima página
-                                mViewPager.setCurrentItem(numPergunta + 1);
-                            }
+                    } else {
+                        // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
+
+                        //passar a página
+                        if (numPergunta == ULTIMA_PERGUNTA) {
+                            //Termina a activity na última pergunta
+                            getActivity().finish();
+                        } else {
+                            //Passa para a próxima página
+                            mViewPager.setCurrentItem(numPergunta + 1);
                         }
                     }
+                }
             });
-
             return rootView;
         }
+
+        /**
+         * Método que bloqueia os radio buttons após a confirmação da resposta
+         * @param rootView view principal
+         */
+        private void bloqueiaRadios(View rootView) {
+            for (int j = 0; j < NUMERO_DE_RESPOSTAS; j++) {
+                RadioButton radio = (RadioButton) rootView.findViewWithTag("radio" + j);
+                radio.setClickable(false);
+                View layout = rootView.findViewWithTag("layout_resposta_" + j);
+                layout.setClickable(false);
+            }
+        }
+
 
         private void configuraRadioButtons(final View rootView) {
             //Para cada resposta
@@ -176,7 +195,7 @@ public class JogoActivity extends AppCompatActivity {
          * @return 0-3 para numeros de respostas e -1 para nenhuma selecionada
          */
         private int getRespostaSelecionada(View rootView) {
-            int[] radioButtonsResId = {R.id.radio_resposta_0, R.id.radio_resposta_0, R.id.radio_resposta_2, R.id.radio_resposta_3};
+            int[] radioButtonsResId = {R.id.radio_resposta_0, R.id.radio_resposta_1, R.id.radio_resposta_2, R.id.radio_resposta_3};
             for (int i = 0; i < NUMERO_DE_RESPOSTAS; i++) {
                 RadioButton radioButton = (RadioButton) rootView.findViewById(radioButtonsResId[i]);
                 if (radioButton.isChecked()) {
@@ -196,6 +215,7 @@ public class JogoActivity extends AppCompatActivity {
             return -1;
         }
     }
+
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -215,5 +235,28 @@ public class JogoActivity extends AppCompatActivity {
             // Total de perguntas = 5
             return listaPerguntas.size();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setTitle(R.string.atencao_sair);
+        builder.setMessage(getString(R.string.dialog_abandonar_voltar));
+        builder.setPositiveButton(getString(R.string.dialog_yes), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+        builder.setNegativeButton(getString(R.string.dialog_no), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
+
     }
 }
