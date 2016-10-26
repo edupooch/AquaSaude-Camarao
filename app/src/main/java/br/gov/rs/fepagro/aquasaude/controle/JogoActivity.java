@@ -1,5 +1,6 @@
 package br.gov.rs.fepagro.aquasaude.controle;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
@@ -12,6 +13,7 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -22,6 +24,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
@@ -36,15 +39,14 @@ public class JogoActivity extends AppCompatActivity {
     public static ViewPager mViewPager;
     public static List<Pergunta> listaPerguntas;
 
-    public static ArrayList<Boolean> acertos;
+    public static boolean[] acertos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jogo);
-
         listaPerguntas = new ListaPerguntas(getApplicationContext()).getListaPerguntas();
-        acertos = new ArrayList<>(listaPerguntas.size());
+        acertos = new boolean[listaPerguntas.size()];
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -115,14 +117,14 @@ public class JogoActivity extends AppCompatActivity {
 
                             if (pergunta.getRespostas().get(respostaSelecionada).isCerta()) {
                                 //ACERTOU A RESPOSTA
-                                acertos.add(numPergunta, true);
+                                acertos[numPergunta] = true;
+
                                 //o fundo da questao selecionada fica verde
                                 View layout = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
                                 layout.setBackgroundResource(R.drawable.card_verde);
                             } else {
                                 //ERROU A RESPOSTA
-                                acertos.add(numPergunta, false);
-
+                                acertos[numPergunta] = false;
                                 //animação de balançar a view
                                 Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
                                 rootView.findViewById(R.id.layout_game).startAnimation(animation);
@@ -141,8 +143,8 @@ public class JogoActivity extends AppCompatActivity {
                     } else {
                         // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
 
-                            //Passa para a próxima página
-                            mViewPager.setCurrentItem(numPergunta + 1);
+                        //Passa para a próxima página
+                        mViewPager.setCurrentItem(numPergunta + 1);
                     }
                 }
             });
@@ -151,6 +153,7 @@ public class JogoActivity extends AppCompatActivity {
 
         /**
          * Método que bloqueia os radio buttons após a confirmação da resposta
+         *
          * @param rootView view principal
          */
         private void bloqueiaRadios(View rootView) {
@@ -230,9 +233,8 @@ public class JogoActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            Log.d("app", "Posicao " + position);
 
-            if (position == listaPerguntas.size()){
+            if (position == listaPerguntas.size()) {
                 //o último fragmente é o de resultados do jogo
                 return ResultadosJogoFragment.newInstace();
             }
@@ -242,16 +244,21 @@ public class JogoActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Total de perguntas = 5 + 1 fragmente de resultados
+            // Total de perguntas = 5 + 1 fragment de resultados
             return listaPerguntas.size() + 1;
         }
     }
 
     public static class ResultadosJogoFragment extends Fragment {
+        private View view;
+
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.content_resultados, container, false);
+            view = inflater.inflate(R.layout.content_resultados, container, false);
+
+
+
 
             //Finalizar activity no click do botão
             view.findViewById(R.id.bt_finalizar_jogo).setOnClickListener(new View.OnClickListener() {
@@ -263,9 +270,24 @@ public class JogoActivity extends AppCompatActivity {
             return view;
         }
 
+        @Override
+        public void onStart() {
+            super.onStart();
+
+//            int countAcertos = 0;
+//            for (boolean nota : acertos) {
+//                if (nota) {
+//                    countAcertos++;
+//                }
+//            }
+//            TextView textViewNota = (TextView) view.findViewById(R.id.text_nota);
+//            textViewNota.setText(String.valueOf(countAcertos));
+        }
+
+
+
         public static Fragment newInstace() {
-            ResultadosJogoFragment fragment = new ResultadosJogoFragment();
-            return fragment;
+            return new ResultadosJogoFragment();
         }
     }
 
@@ -289,6 +311,7 @@ public class JogoActivity extends AppCompatActivity {
         });
         AlertDialog alert = builder.create();
         alert.show();
+
 
     }
 }
