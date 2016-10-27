@@ -1,7 +1,7 @@
 package br.gov.rs.fepagro.aquasaude.controle;
 
-import android.content.Context;
 import android.content.DialogInterface;
+import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,9 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -23,8 +21,6 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
@@ -40,6 +36,7 @@ public class JogoActivity extends AppCompatActivity {
     public static List<Pergunta> listaPerguntas;
 
     public static boolean[] acertos;
+    private static SectionsPagerAdapter mSectionsPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +49,9 @@ public class JogoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        SectionsPagerAdapter mSectionsPagerAdapter =
+        mSectionsPagerAdapter =
                 new SectionsPagerAdapter(getSupportFragmentManager());
+
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (CustomViewPager) findViewById(R.id.container);
@@ -61,16 +59,18 @@ public class JogoActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
     }
 
-    public static class PlaceholderFragment extends Fragment {
+
+    public static class PerguntaFragment extends Fragment {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
         private static final int NUMERO_DE_ALTERNATIVAS = 4;
 
-        public PlaceholderFragment() {
+
+        public PerguntaFragment() {
         }
 
-        public static PlaceholderFragment newInstance(int sectionNumber) {
-            PlaceholderFragment fragment = new PlaceholderFragment();
+        public static PerguntaFragment newInstance(int sectionNumber) {
+            PerguntaFragment fragment = new PerguntaFragment();
             Bundle args = new Bundle();
             args.putInt(ARG_SECTION_NUMBER, sectionNumber);
             fragment.setArguments(args);
@@ -142,7 +142,10 @@ public class JogoActivity extends AppCompatActivity {
 
                     } else {
                         // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
-
+                        if (numPergunta == listaPerguntas.size() - 1) {
+                            //última pergunta
+                            ResultadosJogoFragment.calculaNota(); //atualiza a nota no fragment de resultados
+                        }
                         //Passa para a próxima página
                         mViewPager.setCurrentItem(numPergunta + 1);
                     }
@@ -232,14 +235,14 @@ public class JogoActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
+            // Return a PerguntaFragment (defined as a static inner class below).
 
             if (position == listaPerguntas.size()) {
-                //o último fragmente é o de resultados do jogo
+                //o último fragment é o de resultados do jogo
                 return ResultadosJogoFragment.newInstace();
             }
 
-            return PlaceholderFragment.newInstance(position + 1);
+            return PerguntaFragment.newInstance(position + 1);
         }
 
         @Override
@@ -251,14 +254,15 @@ public class JogoActivity extends AppCompatActivity {
 
     public static class ResultadosJogoFragment extends Fragment {
         private View view;
+        private static TextView textViewNota;
+
 
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             view = inflater.inflate(R.layout.content_resultados, container, false);
 
-
-
+            textViewNota = (TextView) view.findViewById(R.id.text_nota);
 
             //Finalizar activity no click do botão
             view.findViewById(R.id.bt_finalizar_jogo).setOnClickListener(new View.OnClickListener() {
@@ -270,20 +274,24 @@ public class JogoActivity extends AppCompatActivity {
             return view;
         }
 
+        /**
+         * Calcula a nota novamente na mudança de estado (por exemplo orientação alterada)
+         */
         @Override
-        public void onStart() {
-            super.onStart();
-
-//            int countAcertos = 0;
-//            for (boolean nota : acertos) {
-//                if (nota) {
-//                    countAcertos++;
-//                }
-//            }
-//            TextView textViewNota = (TextView) view.findViewById(R.id.text_nota);
-//            textViewNota.setText(String.valueOf(countAcertos));
+        public void onResume() {
+            super.onResume();
+            calculaNota();
         }
 
+        public static void calculaNota() {
+            int countAcertos = 0;
+            for (boolean nota : acertos) {
+                if (nota) {
+                    countAcertos++;
+                }
+            }
+            textViewNota.setText(String.valueOf(countAcertos));
+        }
 
 
         public static Fragment newInstace() {
@@ -291,6 +299,33 @@ public class JogoActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Salva o array de acertos no restart da activity, mudança de orientação da tela
+     *
+     * @param savedState bundle que salvará o array de booleans
+     */
+    @Override
+    public void onSaveInstanceState(Bundle savedState) {
+        savedState.putBooleanArray("acertos", acertos);
+        super.onSaveInstanceState(savedState);
+
+    }
+
+    /**
+     * Recupera o array de acertos na mudança de estado
+     *
+     * @param savedState bundle com o array de booleans acertos
+     */
+    @Override
+    protected void onRestoreInstanceState(Bundle savedState) {
+        super.onRestoreInstanceState(savedState);
+        acertos = savedState.getBooleanArray("acertos");
+    }
+
+    /**
+     * Exibe mensagem de alerta para abandonar o jogo, caso o usuario clique sim a activity é
+     * finalizada e volta para o menu principal
+     */
     @Override
     public void onBackPressed() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
