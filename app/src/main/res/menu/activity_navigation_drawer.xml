@@ -9,6 +9,7 @@
             android:title="Camarão" />
 
         <item
+            android:visible="false"
             android:id="@+id/item_doencas_peixes"
             android:icon="@drawable/icon_peixe"
             android:title="Peixes" />
@@ -36,6 +37,7 @@
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Compartilhar" />
+
             <item
                 android:id="@+id/nav_email"
                 android:icon="@drawable/icon_email"
