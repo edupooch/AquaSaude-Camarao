@@ -1,5 +1,7 @@
 package br.gov.rs.fepagro.aquasaude.controle;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -95,6 +97,38 @@ public class DoencaScrollingActivity extends AppCompatActivity {
 
     private int getPx(int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
+    }
+
+
+    public void abrirOieWssv(View view) {
+        Uri uri = Uri.parse("http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_wsd.htm"); // missing 'http://' will cause crashed
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    //-------------listener para aumentar e diminuir o layout clicado-------------------------//
+    public void abreLayout(View view) {
+        final LinearLayout layout = (LinearLayout) view;
+        assert layout != null;
+        layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
+                    TransitionManager.beginDelayedTransition(layout);
+
+                int marginTop = getPx(5);
+
+                if (layout.getLayoutParams().height == LinearLayout.LayoutParams.WRAP_CONTENT) {
+                    LinearLayout.LayoutParams posicao = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getPx(50));
+                    posicao.setMargins(0, marginTop, 0, 0);
+                    layout.setLayoutParams(posicao);
+                } else {
+                    LinearLayout.LayoutParams posicao = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                    posicao.setMargins(0, marginTop, 0, 0);
+                    layout.setLayoutParams(posicao);
+                }
+            }
+        });
     }
 
 

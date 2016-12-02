@@ -157,6 +157,17 @@
     <string name="dialog_abandonar_voltar">O jogo será cancelado e todos os dados serão perdidos.</string>
     <string name="dialog_yes">Sim</string>
     <string name="dialog_no">Não</string>
+    <string name="links">MAIS INFORMAÇÕES</string>
+    <string name="links_info">
+        "\n • OIE: World Organisation for Animal Health:\n    http://www.oie.int/ \n\n"
+        "• MAPA: Ministério da Agricultura:\n    http://agricultura.gov.br/ \n\n"
+        "• ABCCAM: Associação Brasileira de Carcinicultura:\n    http://abccam.com.br/ \n\n"
+
+    </string>
+    <string name="titulo_saiba_mais">Saiba Mais</string>
+    <string name="text_saiba_mais">Mais informações sobre a Síndrome da Mancha Branca:</string>
+    <string name="manual_oie_wssv">Manual OIE: WSSV\n(em inglês)</string>
+    <string name="logo_oie">Logo OIE</string>
 
 
 </resources>

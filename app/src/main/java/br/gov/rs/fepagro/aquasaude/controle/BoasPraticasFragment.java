@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
+import org.json.JSONObject;
+
 import br.gov.rs.fepagro.aquasaude.R;
 
 /**
@@ -27,6 +29,7 @@ public class BoasPraticasFragment extends Fragment {
             }
         });
         return view;
+
     }
 
 }
