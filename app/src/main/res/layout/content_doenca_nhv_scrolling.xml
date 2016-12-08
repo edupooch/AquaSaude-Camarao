@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:tag="scrollview"
     android:background="@color/background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="br.gov.rs.fepagro.aquasaude.controle.DoencaScrollingActivity">
@@ -219,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:gravity="center"
-                android:text="@string/text_saiba_mais" />
+                android:text="@string/text_saiba_mais_nhv" />
 
             <LinearLayout
                 android:layout_marginEnd="10dp"
@@ -227,7 +229,8 @@
                 android:layout_marginBottom="10dp"
                 android:background="#cfd8dc"
                 android:layout_width="match_parent"
-                android:onClick="abrirOieWssv"
+                android:onClick="abrirLinkDaTag"
+                android:tag="@string/link_nhv"
                 android:layout_height="wrap_content">
 
                 <ImageView
@@ -236,7 +239,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/icon_oie"
-                    android:onClick="abrirOieWssv"
+                    android:onClick="abrirLinkDaTag"
+                    android:tag="@string/link_nhv"
                     android:layout_margin="5dp" />
 
                 <TextView
@@ -245,9 +249,10 @@
                     android:textSize="17sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/manual_oie_wssv"
+                    android:text="@string/manual_oie"
                     android:layout_marginLeft="10dp"
-                    android:onClick="abrirOieWssv"
+                    android:onClick="abrirLinkDaTag"
+                    android:tag="@string/link_nhv"
                     />
 
             </LinearLayout>

@@ -125,7 +125,7 @@ public class JogoActivity extends AppCompatActivity {
                             } else {
                                 //ERROU A RESPOSTA
                                 acertos[numPergunta] = false;
-                                //animação de balançar a view
+                                //animação de balançar a viewContent
                                 Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
                                 rootView.findViewById(R.id.layout_game).startAnimation(animation);
 
@@ -157,7 +157,7 @@ public class JogoActivity extends AppCompatActivity {
         /**
          * Método que bloqueia os radio buttons após a confirmação da resposta
          *
-         * @param rootView view principal
+         * @param rootView viewContent principal
          */
         private void bloqueiaRadios(View rootView) {
             for (int j = 0; j < NUMERO_DE_ALTERNATIVAS; j++) {
@@ -198,9 +198,9 @@ public class JogoActivity extends AppCompatActivity {
         }
 
         /**
-         * Verifica os radioButtons da view e retorna o número da resposta que está selecionada
+         * Verifica os radioButtons da viewContent e retorna o número da resposta que está selecionada
          *
-         * @param rootView para pegar os radioButons da view
+         * @param rootView para pegar os radioButons da viewContent
          * @return 0-3 para numeros de respostas e -1 para nenhuma selecionada
          */
         private int getRespostaSelecionada(View rootView) {

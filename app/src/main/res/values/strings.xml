@@ -38,7 +38,7 @@
         "branca. Evite altas densidades nas estações frias. Previra usar animais \"livre de patógenos "
         "específicos\" (SPF) ou povoar com animais testados PCR-negativos. Opte por utilizar água "
         "biossegura e sistemas de policultivo com camarão e peixes."</string>
-
+    <string name="text_saiba_mais_wssv">Mais informações sobre a Síndrome da Mancha Branca:</string>
 
     <string name="imnv_nome">"Mionecrose Infecciosa"</string>
     <string name="imnv_agente">
@@ -55,7 +55,7 @@
         "Se houver infecção, realize vazio sanitário conforme recomendações da OIE e MAPA."
         "Utilizar linhagens resistentes de camarões também é uma boa alternativa de prevenção ao IMNV."
     </string>
-
+    <string name="text_saiba_mais_imnv">Mais informações sobre a Mionecrose Infecciosa:</string>
 
     <string name="ihhnv_nome">"Necrose Hipodermal e Hematopoiética"</string>
     <string name="ihhnv_agente">
@@ -76,7 +76,7 @@
         "tanques e viveiros.Boas práticas de manejo.Animais livres de doença específica podem ser"
         "uma medida, mas não é a mais eficaz neste caso."
     </string>
-
+    <string name="text_saiba_mais_ihhnv">Mais informações sobre a Necrose Hipodermal e Hematopoiética:</string>
 
     <string name="nhv_nome">"Hepatopancreatite necrosante"</string>
     <string name="nhv_agente">
@@ -97,7 +97,7 @@
         "cálcio são medidas preventivas importantes."
         "Uso de animais livre de patógenos (SPF) é uma medida preventiva eficaz."
     </string>
-
+    <string name="text_saiba_mais_nhv">Mais informações sobre a Hepatopancreatite Necrosante:</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -165,9 +165,13 @@
 
     </string>
     <string name="titulo_saiba_mais">Saiba Mais</string>
-    <string name="text_saiba_mais">Mais informações sobre a Síndrome da Mancha Branca:</string>
-    <string name="manual_oie_wssv">Manual OIE: WSSV\n(em inglês)</string>
+
+    <string name="manual_oie">Manual da OIE\n(em inglês)</string>
     <string name="logo_oie">Logo OIE</string>
+    <string name="link_wssv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_wsd.htm]]></string>
+    <string name="link_ihhnv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_ihhn.htm]]></string>
+    <string name="link_imnv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_infectious_myonecrosis.htm]]></string>
+    <string name="link_nhv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_necrotising_hepatopancreatitis.htm]]></string>
 
 
 </resources>

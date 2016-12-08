@@ -152,7 +152,7 @@ public class NavigationActivity extends AppCompatActivity
     }
 
     /**
-     * Método para fazer uma animação de rotacioar uma view chamado no atributo onClick do XML na
+     * Método para fazer uma animação de rotacioar uma viewContent chamado no atributo onClick do XML na
      * escolha do jogo
      *
      * @param view que será rotacionado
