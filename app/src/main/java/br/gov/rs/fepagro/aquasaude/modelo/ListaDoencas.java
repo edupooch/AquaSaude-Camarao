@@ -21,16 +21,16 @@ public class ListaDoencas {
     public ListaDoencas(Context context) {
         doencas = new ArrayList<>();
 
-        Doenca wssv = new Doenca(INDICE_WSSV,context.getString(R.string.wssv_nome),R.drawable.mancha_branca);
+        Doenca wssv = new Doenca(INDICE_WSSV,context.getString(R.string.wssv_nome),R.drawable.imagem_wssv);
         doencas.add(INDICE_WSSV, wssv);
 
-        Doenca imnv = new Doenca(INDICE_IMNV,context.getString(R.string.imnv_nome),R.drawable.foto_padrao);
+        Doenca imnv = new Doenca(INDICE_IMNV,context.getString(R.string.imnv_nome),R.drawable.imagem_mnv);
         doencas.add(INDICE_IMNV, imnv);
 
-        Doenca ihhnv = new Doenca(INDICE_IHHNV,context.getString(R.string.ihhnv_nome),R.drawable.foto_padrao);
+        Doenca ihhnv = new Doenca(INDICE_IHHNV,context.getString(R.string.ihhnv_nome),R.drawable.imagem_ihhnv);
         doencas.add(INDICE_IHHNV, ihhnv);
 
-        Doenca nhp = new Doenca(INDICE_NHP,context.getString(R.string.nhv_nome),R.drawable.foto_padrao);
+        Doenca nhp = new Doenca(INDICE_NHP,context.getString(R.string.nhv_nome),R.drawable.imagem_nhp);
         doencas.add(INDICE_NHP, nhp);
     }
 

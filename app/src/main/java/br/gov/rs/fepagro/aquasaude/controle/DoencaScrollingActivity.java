@@ -38,9 +38,6 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         switch (idDoenca) {
             case ListaDoencas.INDICE_WSSV:
                 viewContent = findViewById(R.id.content_smb);
-                ImageView imagem = (ImageView) findViewById(R.id.imagem_toolbar);
-                assert imagem != null;
-                imagem.setImageResource(doenca.getImagemResId());
                 break;
             case ListaDoencas.INDICE_IMNV:
                 viewContent = findViewById(R.id.content_mni);
@@ -55,8 +52,14 @@ public class DoencaScrollingActivity extends AppCompatActivity {
                 viewContent = null;
                 break;
         }
+        //Imagem da doença na toolbar
+        ImageView imagem = (ImageView) findViewById(R.id.imagem_toolbar);
+        assert imagem != null;
+        imagem.setImageResource(doenca.getImagemResId());
+
         assert viewContent != null;
         viewContent.setVisibility(View.VISIBLE);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
