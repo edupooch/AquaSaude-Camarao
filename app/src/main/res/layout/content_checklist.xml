@@ -22,24 +22,33 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/checklist_selecione"
+            android:layout_margin="10dp"
 
-            />
+            android:text="@string/checklist_selecione" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="1. ENTRADA DO PATÓGENO"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginTop="5dp"
-            android:background="#666" />
-
+            android:layout_height="1dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="#707070" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="As Pós-Larvas/Larvas/Alevinos adquiridas são de alta qualidade e livres de patógenos em laboratórios confiáveis"
+            android:layout_marginTop="10dp"
+            android:text="As pós-larvas adquiridas são de alta qualidade e livres de patógenos em laboratórios confiáveis"
             android:textColor="#666" />
 
         <CheckBox
@@ -60,7 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Relizar cuidados com o transporte e recepção das Pós-Larvas/Larvas/Alevinos."
+            android:text="Realizar cuidados com o transporte e recepção das Pós-Larvas/Larvas/Alevinos."
             android:textColor="#666" />
 
         <CheckBox
