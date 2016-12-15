@@ -172,6 +172,8 @@
     <string name="link_ihhnv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_ihhn.htm]]></string>
     <string name="link_imnv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_infectious_myonecrosis.htm]]></string>
     <string name="link_nhv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_necrotising_hepatopancreatitis.htm]]></string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
 
 
 </resources>
