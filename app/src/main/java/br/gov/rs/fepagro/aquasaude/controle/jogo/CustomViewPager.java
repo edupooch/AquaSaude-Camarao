@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude.controle;
+package br.gov.rs.fepagro.aquasaude.controle.jogo;
 
 /**
  * Created by eduardo-pooch on 10/10/2016.

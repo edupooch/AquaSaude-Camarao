@@ -1,7 +1,6 @@
-package br.gov.rs.fepagro.aquasaude.controle;
+package br.gov.rs.fepagro.aquasaude.controle.jogo;
 
 import android.content.DialogInterface;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +23,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
+import br.gov.rs.fepagro.aquasaude.controle.jogo.CustomViewPager;
 import br.gov.rs.fepagro.aquasaude.modelo.ListaPerguntas;
 import br.gov.rs.fepagro.aquasaude.modelo.Pergunta;
 import br.gov.rs.fepagro.aquasaude.modelo.RespostaImagem;

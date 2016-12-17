@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude.controle;
+package br.gov.rs.fepagro.aquasaude.controle.biosseguranca;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -7,8 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
-import org.json.JSONObject;
 
 import br.gov.rs.fepagro.aquasaude.R;
 

@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude.controle;
+package br.gov.rs.fepagro.aquasaude.controle.jogo;
 
 
 import android.app.Fragment;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import br.gov.rs.fepagro.aquasaude.R;
+import br.gov.rs.fepagro.aquasaude.controle.jogo.JogoActivity;
 
 public class JogoFragment extends Fragment {
 

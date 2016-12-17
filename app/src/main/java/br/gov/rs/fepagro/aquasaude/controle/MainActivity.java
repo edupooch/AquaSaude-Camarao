@@ -1,6 +1,5 @@
 package br.gov.rs.fepagro.aquasaude.controle;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -19,8 +18,12 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 
 import br.gov.rs.fepagro.aquasaude.R;
+import br.gov.rs.fepagro.aquasaude.controle.biosseguranca.BoasPraticasFragment;
+import br.gov.rs.fepagro.aquasaude.controle.doencas.ListaDoencasFragment;
+import br.gov.rs.fepagro.aquasaude.controle.jogo.JogoFragment;
+import br.gov.rs.fepagro.aquasaude.controle.sobre.SobreFragment;
 
-public class NavigationActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 

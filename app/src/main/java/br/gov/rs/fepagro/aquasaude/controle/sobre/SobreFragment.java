@@ -1,4 +1,4 @@
-package br.gov.rs.fepagro.aquasaude.controle;
+package br.gov.rs.fepagro.aquasaude.controle.sobre;
 
 import android.app.Fragment;
 import android.os.Bundle;

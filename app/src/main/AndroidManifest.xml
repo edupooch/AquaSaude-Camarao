@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".controle.NavigationActivity"
+            android:name=".controle.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,20 +19,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".controle.DoencaScrollingActivity"
+            android:name=".controle.doencas.DoencaScrollingActivity"
             android:label="@string/title_activity_doenca_scrolling"
-            android:parentActivityName=".controle.NavigationActivity"
+            android:parentActivityName=".controle.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="br.gov.rs.fepagro.aquasaude.controle.NavigationActivity" />
+                android:value=".controle.MainActivity" />
         </activity>
         <activity
-            android:name=".controle.JogoActivity"
+            android:name=".controle.jogo.JogoActivity"
             android:label="@string/title_activity_jogo2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".controle.ChecklistActivity"
+            android:name=".controle.biosseguranca.ChecklistActivity"
             android:label="@string/title_activity_checklist"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

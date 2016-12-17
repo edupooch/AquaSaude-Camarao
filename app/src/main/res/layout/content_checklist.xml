@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="br.gov.rs.fepagro.aquasaude.controle.ChecklistActivity"
+    tools:context=".controle.biosseguranca.ChecklistActivity"
     tools:showIn="@layout/activity_checklist">
 
     <LinearLayout
