@@ -16,7 +16,7 @@ public class ChecklistActivity extends AppCompatActivity {
         setContentView(R.layout.activity_checklist);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        View btConfirma = findViewById(R.id.bt_confirma_checklist);
+        View btConfirma =  findViewById(R.id.bt_confirma_checklist);
         assert btConfirma != null;
         btConfirma.setOnClickListener(new View.OnClickListener() {
             @Override

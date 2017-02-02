@@ -45,13 +45,13 @@
                     android:background="#fff" />
 
 
-                <TextView
+                <TextSwitcher
+                    android:id="@+id/text_switcher"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="#fff"
                     android:padding="10dp"
                     android:textSize="35sp"
-                    android:text="É feita a desinfecção dos veículos e controle de pessoas e animais no cultivo?"
                     />
             </LinearLayout>
         </ScrollView>

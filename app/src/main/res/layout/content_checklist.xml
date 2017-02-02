@@ -47,56 +47,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="As pós-larvas adquiridas são de alta qualidade e livres de patógenos em laboratórios confiáveis"
+            android:text="@string/checkbox_1"
             android:textColor="#666" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Visita ao laboratório antes de adquirir as Pós-Larvas/Larvas/ Alevinos para checar a integridade dos animais"
+            android:text="@string/checkbox_2"
             android:textColor="#666" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="A qualidade das Pós-Larvas/Larvas/Alevinos é avaliada na aquisição"
+            android:text="@string/checkbox_3"
             android:textColor="#666" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Realizar cuidados com o transporte e recepção das Pós-Larvas/Larvas/Alevinos."
+            android:text="@string/checkbox_4"
             android:textColor="#666" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="A água captada para o abastecimento dos berçários passa por uma filtração"
+            android:text="@string/checkbox_5"
             android:textColor="#666" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="É realizada a limpeza dos berçários imediatamente após a despesca."
+            android:text="@string/checkbox_6"
             android:textColor="#666" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="É realizada uma sanitização (aplicação de produtos químicos) dos tanques berçário por pessoas especializadas antes da recepção dos animais novos."
+            android:text="@string/checkbox_7"
             android:textColor="#666" />
 
         <CheckBox
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="A alimentação é balanceada levando em conta a quantidade de ração e os requerimentos nutricionais para cada fase de vida"
+            android:text="@string/checkbox_8"
+            android:textColor="#666" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/checkbox_9"
+            android:textColor="#666" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/checkbox_10"
             android:textColor="#666" />
 
         <Button

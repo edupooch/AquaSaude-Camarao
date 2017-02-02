@@ -57,6 +57,8 @@ public class JogoActivity extends AppCompatActivity {
         mViewPager = (CustomViewPager) findViewById(R.id.container);
         assert mViewPager != null;
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+
     }
 
 

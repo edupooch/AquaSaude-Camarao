@@ -174,6 +174,18 @@
     <string name="link_nhv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_necrotising_hepatopancreatitis.htm]]></string>
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
+    <string name="title_activity_pergunta_biosseg">PerguntaBiossegActivity</string>
+
+    <string name="checkbox_1">Entrada de veículos higienizados e de apenas uma origem</string>
+    <string name="checkbox_2">Controle de pragas e de entrada de animais silvestres e domésticos nas fazendas de cultivo</string>
+    <string name="checkbox_3">Utiliza pós-larvas livres de enfermidades ou com atestado de sanidade</string>
+    <string name="checkbox_4">Os animais são transportados de acordo com as normas e cuidados necessários durante a comercialização</string>
+    <string name="checkbox_5">A despesca envolve cuidados como higiene pessoal e uso de EPIs do pessoal envolvido, bem como higienização de equipamentos envolvidos</string>
+    <string name="checkbox_6">Alimentação balanceada analisando a quantidade de ração e os requerimentos nutricionais de acordo com a fase de vida</string>
+    <string name="checkbox_7">Realiza tratamento para redução da matéria orgânica no solo de viveiros</string>
+    <string name="checkbox_8">Realiza monitoramento e tratamento da água dos viveiros</string>
+    <string name="checkbox_9">As  pessoas envolvidas no processo produtivo foram suficientemente treinadas para suas funções</string>
+    <string name="checkbox_10">É realizada limpeza e sanitização nas instalações e após despescas</string>
 
 
 </resources>

@@ -1,21 +1,29 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 24
     buildToolsVersion "24.0.1"
 
     defaultConfig {
         applicationId "br.gov.rs.fepagro.aquasaude_camarao"
-        minSdkVersion 10
-        targetSdkVersion 23
+        minSdkVersion 11
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
+        jackOptions {// para java 8
+            enabled true
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 
