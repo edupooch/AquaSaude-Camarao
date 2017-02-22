@@ -210,5 +210,7 @@
 
     <string name="checkbox_10">É realizada limpeza e sanitização nas instalações e após despescas</string>
     <string name="resposta_10">A limpeza e sanitização deverá ser realizada nas instalações e sempre após despesca. Realizada por pessoal treinado e com uso de Equipamentos de Proteção Individual (EPIs) adequados.</string>
+    <string name="acess_escudo">Escudo representando biossegurança</string>
+    <string name="resultado_checklist_dicas_titulo">Algumas dicas baseadas em suas marcações para aumentar o nível de biossegurança:</string>
 
 </resources>
