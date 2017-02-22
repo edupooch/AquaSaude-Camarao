@@ -48,6 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/checkbox_1"
+            android:backgroundTint="@color/branco"
+            android:checked="true"
             android:textColor="#666" />
 
         <CheckBox

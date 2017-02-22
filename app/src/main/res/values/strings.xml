@@ -22,11 +22,10 @@
         "Manchas brancas embutidas dentro do exoesqueleto é o sinal clínico mais comumente observado."
         "Todavia, outras enfermidades podem causar manchas brancas na carapaça do camarão.\n"
         "Altos graus de variação de cor, com predomínio de avermelhada ou camarão descoloridos rosada"
-        "são vistos em populações doentes."
-    </string>
+        "são vistos em populações doentes."</string>
     <string name="wssv_sinais_atencao">
-        "Mudanças de comportamento são sinais que devem ser observados atentamente, pois pode ser esperado uma elevada taxa de mortalidade na população:"
-    </string>
+        "Mudanças de comportamento são sinais que devem ser observados atentamente, pois pode ser"
+        "esperada uma elevada taxa de mortalidade na população:"</string>
     <string name="wssv_atencao_sinal_1">"Se o camarão parece letárgico"</string>
     <string name="wssv_atencao_sinal_2">"Se a cor muda para rosa ou marrom-avermelhada"</string>
     <string name="wssv_atencao_sinal_3">Se os animais se reúnem em torno das bordas dos cultivos na superfície da água</string>
@@ -177,15 +176,39 @@
     <string name="title_activity_pergunta_biosseg">PerguntaBiossegActivity</string>
 
     <string name="checkbox_1">Entrada de veículos higienizados e de apenas uma origem</string>
-    <string name="checkbox_2">Controle de pragas e de entrada de animais silvestres e domésticos nas fazendas de cultivo</string>
-    <string name="checkbox_3">Utiliza pós-larvas livres de enfermidades ou com atestado de sanidade</string>
-    <string name="checkbox_4">Os animais são transportados de acordo com as normas e cuidados necessários durante a comercialização</string>
-    <string name="checkbox_5">A despesca envolve cuidados como higiene pessoal e uso de EPIs do pessoal envolvido, bem como higienização de equipamentos envolvidos</string>
-    <string name="checkbox_6">Alimentação balanceada analisando a quantidade de ração e os requerimentos nutricionais de acordo com a fase de vida</string>
-    <string name="checkbox_7">Realiza tratamento para redução da matéria orgânica no solo de viveiros</string>
-    <string name="checkbox_8">Realiza monitoramento e tratamento da água dos viveiros</string>
-    <string name="checkbox_9">As  pessoas envolvidas no processo produtivo foram suficientemente treinadas para suas funções</string>
-    <string name="checkbox_10">É realizada limpeza e sanitização nas instalações e após despescas</string>
+    <string name="resposta_1">
+        "• Os veículos que prestam serviço de transporte de camarão devem ser cadastrados, com laudo "
+        "de desinfecção e oriundos de uma só origem, sem que tenham passado por outras fazendas de "
+        "cultivo. Esta medida previne a introdução ou disseminação de agentes patogênicos no cultivo."
+    </string>
 
+    <string name="checkbox_2">Controle de pragas e de entrada de animais silvestres e domésticos nas fazendas de cultivo</string>
+    <string name="resposta_2">"• As fazendas de criação de camarões deverão contar com um Sistema de "
+        "Controle Integrado de Pragas (CIP) e de um sistema de proteção para minimizar o ingresso e "
+        "a permanência de animais domésticos e silvestres na área de produção da fazenda."</string>
+
+    <string name="checkbox_3">Utiliza pós-larvas livres de enfermidades ou com atestado de sanidade</string>
+    <string name="resposta_3">Do ponto de vista da sanidade, a aquisição de animais livre de patógenos ou com atestado de sanidade é o aspecto mais importante para o início do processo de produção nos viveiros. Ideal na aquisição, coletar amostras de 100 PL\'s em triplicata, fixar em álcool etílico a 95% e mantê-las arquivadas p/ análises confirmatórias de PCR em caso de suspeitas de surtos.</string>
+
+    <string name="checkbox_4">Os animais são transportados de acordo com as normas e cuidados necessários durante a comercialização</string>
+    <string name="resposta_4">Transporte de animais deve ser realizado em recipientes higienizados e próprios, em temperatura adequada e com GTA, quando for o caso.</string>
+
+    <string name="checkbox_5">A despesca envolve cuidados como higiene pessoal e uso de EPIs do pessoal envolvido, bem como higienização de equipamentos envolvidos</string>
+    <string name="resposta_5">A fazenda deve atender às normas de biossegurança quanto ao pessoal envolvido nas operações de despescas. Equipamentos devem ser higienizados após o uso, através da pulverização com o uso de solução clorada na concentração de 100ppm.</string>
+
+    <string name="checkbox_6">Alimentação balanceada analisando a quantidade de ração e os requerimentos nutricionais de acordo com a fase de vida</string>
+    <string name="resposta_6">Fornecimento de uma dieta balanceada é importante para produção de animais saudáveis e para o desenvolvimento do sistema imunológico dos animais.</string>
+
+    <string name="checkbox_7">Realiza tratamento para redução da matéria orgânica no solo de viveiros</string>
+    <string name="resposta_7">Matéria orgânica pode ser proveniente de plâncton, adubos orgânicos, restos de ração não consumida e fezes dos camarões e de outros animais presentes no ambiente de cultivo. Uma forma para tratamento da matéria orgânica é o uso contínuo e sistemático de probióticos. Evitar pontos mortos dentro do tanques com o  ajuste dos aeradores, bem como o uso de probióticos auxiliam no tratamento da matéria orgânica.</string>
+
+    <string name="checkbox_8">Realiza monitoramento e tratamento da água dos viveiros</string>
+    <string name="resposta_8"> Monitoramento, controle e tratamento da água é uma prática obrigatória nas fazendas de cultivo. Os limites toleráveis dos principais parâmetros da qualidade da água devem ser observados.</string>
+
+    <string name="checkbox_9">As  pessoas envolvidas no processo produtivo foram suficientemente treinadas para suas funções</string>
+    <string name="resposta_9">O pessoal envolvido nas atividades da fazenda de criação de camarões deverá usar EPIs específicos e receber treinamentos e atualizações para suas funções.</string>
+
+    <string name="checkbox_10">É realizada limpeza e sanitização nas instalações e após despescas</string>
+    <string name="resposta_10">A limpeza e sanitização deverá ser realizada nas instalações e sempre após despesca. Realizada por pessoal treinado e com uso de Equipamentos de Proteção Individual (EPIs) adequados.</string>
 
 </resources>
