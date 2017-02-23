@@ -23,15 +23,15 @@
             android:id="@+id/nav_jogo"
             android:icon="@drawable/icon_game"
             android:title="Jogos" />
+
+        <item
+            android:id="@+id/nav_sobre"
+            android:icon="@drawable/icon_sobre"
+            android:title="Sobre" />
     </group>
 
-    <item android:title="Mais Informações">
+    <item android:title="Contato">
         <menu>
-
-            <item
-                android:id="@+id/nav_sobre"
-                android:icon="@drawable/icon_sobre"
-                android:title="Sobre" />
 
             <item
                 android:id="@+id/nav_share"
