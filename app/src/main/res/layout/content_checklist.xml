@@ -44,15 +44,15 @@
             android:background="#707070" />
 
         <CheckBox
+            android:id="@+id/checkbox_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/checkbox_1"
-            android:backgroundTint="@color/branco"
-            android:checked="true"
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -60,6 +60,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -67,6 +68,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -74,6 +76,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -81,6 +84,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -88,6 +92,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -95,6 +100,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -102,6 +108,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -109,6 +116,7 @@
             android:textColor="#666" />
 
         <CheckBox
+            android:id="@+id/checkbox_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
