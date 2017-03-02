@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:orientation="vertical"
-    android:padding="16dp"
+
     tools:context="br.gov.rs.fepagro.aquasaude.controle.biosseguranca.ResultadoChecklistFragment">
 
     <LinearLayout
@@ -12,83 +13,82 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+
+            <TextView
+                android:id="@+id/text_resultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:padding="10dp"
+                android:paddingEnd="66dp"
+                android:paddingStart="66dp"
+                android:text="@string/sua_fazenda_esta_x_biossegura"
+                android:textColor="#f5f5f5"
+                android:textSize="35sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/acess_escudo"
+                android:src="@drawable/icon_biosseguro" />
+
+        </LinearLayout>
+
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardCornerRadius="10dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginStart="26dp"
+            app:cardBackgroundColor="@color/branco"
+            app:cardCornerRadius="4dp"
             app:cardElevation="5dp">
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="20dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:contentDescription="@string/acess_escudo"
-                    android:src="@drawable/icon_biosseguro" />
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp">
 
                 <TextView
-                    android:id="@+id/resultado"
+                    android:id="@+id/dicas_titulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingEnd="20dp"
-                    android:paddingStart="20dp"
-                    android:text="Parabéns! Sua fazenda está x% biossegura"
-                    android:textColor="#f5f5f5"
-                    android:fontFamily="sans-serif-thin"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="18dp"
+                    android:text="@string/resultado_checklist_dicas_titulo"
+                    android:textColor="#424242"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/dicas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16sp" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginEnd="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="20dp"
-            android:background="#7a868686" />
-
-        <TextView
-            android:id="@+id/dicas_titulo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:text="@string/resultado_checklist_dicas_titulo"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-light"
-            android:textSize="18sp"
-            />
-
-        <TextView
-            android:id="@+id/dicas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="18dp"
-            android:textSize="16sp" />
-
 
         <Button
             android:id="@+id/bt_ok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="OK"
+            android:layout_margin="26dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/ok"
             android:textColor="@color/branco"
-            android:textSize="18sp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            />
+            android:textSize="18sp" />
     </LinearLayout>
 </ScrollView>

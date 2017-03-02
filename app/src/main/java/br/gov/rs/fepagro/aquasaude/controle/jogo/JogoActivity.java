@@ -23,7 +23,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
-import br.gov.rs.fepagro.aquasaude.controle.jogo.CustomViewPager;
 import br.gov.rs.fepagro.aquasaude.modelo.ListaPerguntas;
 import br.gov.rs.fepagro.aquasaude.modelo.Pergunta;
 import br.gov.rs.fepagro.aquasaude.modelo.RespostaImagem;
@@ -262,7 +261,7 @@ public class JogoActivity extends AppCompatActivity {
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-            view = inflater.inflate(R.layout.content_resultados, container, false);
+            view = inflater.inflate(R.layout.content_resultado_jogo, container, false);
 
             textViewNota = (TextView) view.findViewById(R.id.text_nota);
 

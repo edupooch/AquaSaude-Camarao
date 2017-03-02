@@ -7,11 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.Toast;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
 
@@ -25,7 +23,7 @@ public class ChecklistFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.content_checklist, container, false);
+        view = inflater.inflate(R.layout.fragment_checklist, container, false);
 
         View btConfirma = view.findViewById(R.id.bt_confirma_checklist);
         assert btConfirma != null;

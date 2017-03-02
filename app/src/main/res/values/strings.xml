@@ -147,8 +147,8 @@
         "doenças contagiosas.\n"
         "\nPreencha o checklist abaixo para verificar o nível de biossegurança da sua produção."
     </string>
-    <string name="title_activity_checklist">ChecklistActivity</string>
-    <string name="checklist_selecione">Selecione os procedimentos que são realizados na sua produção e verifique qual o nível de biossegurança aplicado.</string>
+    <string name="title_activity_checklist">Checklist</string>
+    <string name="checklist_selecione">Selecione os procedimentos que são realizados na sua produção e verifique qual o nível de biossegurança aplicado:</string>
     <string name="comecar">COMEÇAR</string>
     <string name="proxima">Próxima</string>
     <string name="confirmar">Confirmar</string>
@@ -213,5 +213,8 @@
 
     <string name="acess_escudo">Escudo representando biossegurança</string>
     <string name="resultado_checklist_dicas_titulo">Confira algumas dicas baseadas em suas marcações para aumentar o nível de biossegurança:</string>
+    <string name="parabens">Parabéns!</string>
+    <string name="sua_fazenda_esta_x_biossegura">Sua fazenda está x% biossegura!</string>
+    <string name="ok">OK</string>
 
 </resources>

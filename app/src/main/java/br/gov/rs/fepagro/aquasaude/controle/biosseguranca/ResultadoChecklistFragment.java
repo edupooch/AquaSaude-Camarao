@@ -1,9 +1,7 @@
 package br.gov.rs.fepagro.aquasaude.controle.biosseguranca;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +48,22 @@ public class ResultadoChecklistFragment extends android.app.Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         itens = getArguments().getIntArray(ARG_ITENS_DESMARCADOS);
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        escondeBarra();
+    }
+
+    private void escondeBarra() {
+        AppBarLayout bar = (AppBarLayout) getActivity().findViewById(R.id.app_bar_layout);
+        if (bar != null) {
+            bar.setVisibility(View.GONE);
+        }
+
+
     }
 
     @Override
@@ -63,23 +77,29 @@ public class ResultadoChecklistFragment extends android.app.Fragment {
                 R.string.resposta_8, R.string.resposta_9, R.string.resposta_10};
 
         if (itens == null || itens.length == 0) {
-            view.findViewById(R.id.dicas_titulo).setVisibility(View.GONE);
-
+            // O usuário marcou todas as opções
+            TextView textTitulo = (TextView) view.findViewById(R.id.dicas_titulo);
+            textTitulo.setText(R.string.parabens);
         } else {
+            //Mostrar dicas personalizadas com base nas marcações
             StringBuilder builderDicas = new StringBuilder();
             for (int indice : itens) {
                 String dica = getString(stringsResId[indice]);
-                builderDicas.append(dica).append("\n");
+                builderDicas.append(dica).append("\n\n");
             }
             String dicas = builderDicas.toString();
             TextView textViewDicas = (TextView) view.findViewById(R.id.dicas);
             textViewDicas.setText(dicas);
         }
 
+        //Texto com quantos porcento a fazenda está biossegura
+        TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
+        int nota = (10 - itens.length)*10;
+        resultado.setText(resultado.getText().toString().replace("x", String.valueOf(nota)));
+
+
         Button btOk = (Button) view.findViewById(R.id.bt_ok);
         btOk.setOnClickListener(v -> getActivity().finish());
         return view;
     }
-
-
 }
