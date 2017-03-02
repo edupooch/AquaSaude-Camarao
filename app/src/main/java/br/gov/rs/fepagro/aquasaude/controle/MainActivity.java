@@ -118,11 +118,9 @@ public class MainActivity extends AppCompatActivity
 
     private void compartilhar() {
         String message = getString(R.string.msg_share);
-
         Intent share = new Intent(Intent.ACTION_SEND);
         share.setType("text/plain");
         share.putExtra(Intent.EXTRA_TEXT, message);
-
         startActivity(Intent.createChooser(share, "Compartilhar:"));
     }
 

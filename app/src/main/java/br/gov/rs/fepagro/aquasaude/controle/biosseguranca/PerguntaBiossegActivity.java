@@ -45,8 +45,6 @@ public class PerguntaBiossegActivity extends AppCompatActivity {
         btSim.setOnClickListener(e -> {
             CharSequence text = getString(R.string.checklist_teste);
             textSwitcher.setText(text);
-
-
         });
 
     }
