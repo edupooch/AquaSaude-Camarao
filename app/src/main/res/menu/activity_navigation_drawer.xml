@@ -6,7 +6,7 @@
         <item
             android:id="@+id/item_doencas_camarao"
             android:icon="@drawable/icon_camarao"
-            android:title="Camarão" />
+            android:title="Doenças" />
 
         <item
             android:visible="false"

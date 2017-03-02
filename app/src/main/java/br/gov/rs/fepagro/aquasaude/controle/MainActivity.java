@@ -102,8 +102,10 @@ public class MainActivity extends AppCompatActivity
                         .commit();
                 break;
             case R.id.nav_email:
-
                 enviarEmail();
+                break;
+            case R.id.nav_share:
+                compartilhar();
                 break;
         }
 
@@ -112,6 +114,16 @@ public class MainActivity extends AppCompatActivity
         assert drawer != null;
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void compartilhar() {
+        String message = getString(R.string.msg_share);
+
+        Intent share = new Intent(Intent.ACTION_SEND);
+        share.setType("text/plain");
+        share.putExtra(Intent.EXTRA_TEXT, message);
+
+        startActivity(Intent.createChooser(share, "Compartilhar:"));
     }
 
     /**

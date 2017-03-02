@@ -43,7 +43,7 @@ public class PerguntaBiossegActivity extends AppCompatActivity {
         View btSim = findViewById(R.id.bt_sim);
         assert btSim != null;
         btSim.setOnClickListener(e -> {
-            CharSequence text = "É feita a desinfecção dos veículos e controle de pessoas e animais no cultivo?";
+            CharSequence text = getString(R.string.checklist_teste);
             textSwitcher.setText(text);
 
 
