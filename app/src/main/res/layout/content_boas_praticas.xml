@@ -11,6 +11,18 @@
         android:src="@drawable/icon_biosseguro2" />
 
     <TextView
+        android:id="@+id/text_highscore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/default_highscore"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -19,30 +31,30 @@
 
     <!--&lt;!&ndash;Botão camarão&ndash;&gt;-->
     <!--<LinearLayout-->
-        <!--android:id="@+id/botao_checklist_camarao"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_margin="20dp"-->
-        <!--android:background="@drawable/botao_laranja"-->
-        <!--android:paddingBottom="2dp">-->
+    <!--android:id="@+id/botao_checklist_camarao"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_margin="20dp"-->
+    <!--android:background="@drawable/botao_laranja"-->
+    <!--android:paddingBottom="2dp">-->
 
-        <!--<ImageView-->
-            <!--android:layout_width="50dp"-->
-            <!--android:layout_height="50dp"-->
-            <!--android:background="#3c000000"-->
-            <!--android:padding="10dp"-->
-            <!--android:src="@drawable/icon_camarao_botao" />-->
+    <!--<ImageView-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:background="#3c000000"-->
+    <!--android:padding="10dp"-->
+    <!--android:src="@drawable/icon_camarao_botao" />-->
 
-        <!--<TextView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:layout_marginLeft="15dp"-->
-            <!--android:layout_marginStart="15dp"-->
-            <!--android:text="CHECKLIST CAMARÃO"-->
-            <!--android:textColor="#fff"-->
-            <!--android:textSize="16sp"-->
-            <!--android:textStyle="bold" />-->
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:layout_marginStart="15dp"-->
+    <!--android:text="CHECKLIST CAMARÃO"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="16sp"-->
+    <!--android:textStyle="bold" />-->
 
     <!--</LinearLayout>-->
     <!---->
@@ -55,7 +67,6 @@
         android:layout_marginTop="50dp"
         android:background="@color/colorPrimary"
         android:text="Checklist"
-        android:textColor="#fff"
-        />
+        android:textColor="#fff" />
 
 </LinearLayout>

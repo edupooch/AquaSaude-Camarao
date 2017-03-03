@@ -218,5 +218,8 @@
     <string name="ok">OK</string>
     <string name="msg_share">Aprenda sobre camarões com o AquaSaúde! Disponível para Android na Play Store: https://play.google.com/store/apps/details?id=br.edu.ufcspa.tc6m</string>
     <string name="checklist_teste">É feita a desinfecção dos veículos e controle de pessoas e animais no cultivo?</string>
+    <string name="nota_checklist">notachecklist</string>
+    <string name="default_highscore">Você ainda não preencheu o checklist</string>
+    <string name="nome_shared_pref">br.gov.rs.fepagro.aquasaude.preferences</string>
 
 </resources>

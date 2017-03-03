@@ -1,8 +1,12 @@
 package br.gov.rs.fepagro.aquasaude.controle.biosseguranca;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +18,7 @@ import br.gov.rs.fepagro.aquasaude.R;
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ResultadoChecklistFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * create an instance of this fragment -> necessário passar os itens desamarcados int array.
  */
 public class ResultadoChecklistFragment extends android.app.Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,8 +33,7 @@ public class ResultadoChecklistFragment extends android.app.Fragment {
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * Cria nova instâcia do fragment que recebe um parâmetro
      *
      * @param itensDesmarcados itens que não foram marcados na checklist.
      * @return A new instance of fragment ResultadoChecklistFragment.
@@ -62,8 +65,6 @@ public class ResultadoChecklistFragment extends android.app.Fragment {
         if (bar != null) {
             bar.setVisibility(View.GONE);
         }
-
-
     }
 
     @Override
@@ -72,16 +73,33 @@ public class ResultadoChecklistFragment extends android.app.Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_resultado_checklist, container, false);
 
-        int[] stringsResId = new int[]{R.string.resposta_1, R.string.resposta_2, R.string.resposta_3,
-                R.string.resposta_4, R.string.resposta_5, R.string.resposta_6, R.string.resposta_7,
-                R.string.resposta_8, R.string.resposta_9, R.string.resposta_10};
+        //nota com base nos itens desmarcados (0-100)
+        int nota = (10 - itens.length) * 10;
 
-        if (itens == null || itens.length == 0) {
-            // O usuário marcou todas as opções
-            TextView textTitulo = (TextView) view.findViewById(R.id.dicas_titulo);
-            textTitulo.setText(R.string.parabens);
-        } else {
-            //Mostrar dicas personalizadas com base nas marcações
+        // Frases de dicas que devem ser mostradas de acordo com o que o usuário deixou de marcar na ChecklistFragment
+        int[] stringsResId = new int[]{R.string.resposta_1,
+                R.string.resposta_2,
+                R.string.resposta_3,
+                R.string.resposta_4,
+                R.string.resposta_5,
+                R.string.resposta_6,
+                R.string.resposta_7,
+                R.string.resposta_8,
+                R.string.resposta_9,
+                R.string.resposta_10};
+
+        // Se usuário marcou todas as opções
+        if (nota == 100) {
+            // Esconde o card de dicas
+            CardView card = (CardView) view.findViewById(R.id.card_dicas);
+            card.setVisibility(View.GONE);
+
+            TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
+            // O texto do resultado ficará: sua fazenda está biossegura!
+            resultado.setText(resultado.getText().toString().replace("x% ", ""));
+        } else {// O usuário deixou de marcar alguma
+
+            // Mostrar dicas personalizadas com base nas marcações
             StringBuilder builderDicas = new StringBuilder();
             for (int indice : itens) {
                 String dica = getString(stringsResId[indice]);
@@ -90,14 +108,25 @@ public class ResultadoChecklistFragment extends android.app.Fragment {
             String dicas = builderDicas.toString();
             TextView textViewDicas = (TextView) view.findViewById(R.id.dicas);
             textViewDicas.setText(dicas);
+
+            // Texto com quantos porcento a fazenda está biossegura
+            TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
+            resultado.setText(resultado.getText().toString().replace("x", String.valueOf(nota)));
+        }
+        // Salva o HighScore
+        SharedPreferences sharedPref = getActivity()
+                .getSharedPreferences(getString(R.string.nome_shared_pref),Context.MODE_PRIVATE);
+
+        int notaEscalaDez = nota/10;
+        int notaGravada = sharedPref.getInt(getString(R.string.nota_checklist), -1);
+        // Confere se a nota atual foi maior do que a gravada
+        if (notaEscalaDez > notaGravada) {
+            SharedPreferences.Editor editor = sharedPref.edit();
+            editor.putInt(getString(R.string.nota_checklist), notaEscalaDez);
+            editor.apply();
         }
 
-        //Texto com quantos porcento a fazenda está biossegura
-        TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
-        int nota = (10 - itens.length)*10;
-        resultado.setText(resultado.getText().toString().replace("x", String.valueOf(nota)));
-
-
+        // Botão de finalizar a activity
         Button btOk = (Button) view.findViewById(R.id.bt_ok);
         btOk.setOnClickListener(v -> getActivity().finish());
         return view;
