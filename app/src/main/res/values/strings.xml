@@ -221,5 +221,9 @@
     <string name="nota_checklist">notachecklist</string>
     <string name="default_highscore">Você ainda não preencheu o checklist</string>
     <string name="nome_shared_pref">br.gov.rs.fepagro.aquasaude.preferences</string>
+    <string name="pergunta_1">Qual imagem não está relacionada com a entrada de patógenos?</string>
+    <string name="pergunta_2">Qual fator não está associado ao aparecimento de doenças?</string>
+    <string name="pergunta_3">Qual das imagens abaixo apresenta um camarão saudável?</string>
+    <string name="pergunta_4">Qual das imagens não é uma ação de biossegurança?</string>
 
 </resources>
