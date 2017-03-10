@@ -225,5 +225,6 @@
     <string name="pergunta_2">Qual fator não está associado ao aparecimento de doenças?</string>
     <string name="pergunta_3">Qual das imagens abaixo apresenta um camarão saudável?</string>
     <string name="pergunta_4">Qual das imagens não é uma ação de biossegurança?</string>
+    <string name="string_itens">string_itens</string>
 
 </resources>

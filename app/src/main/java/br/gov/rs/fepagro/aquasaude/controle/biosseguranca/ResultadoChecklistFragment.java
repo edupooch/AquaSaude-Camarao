@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 import br.gov.rs.fepagro.aquasaude.R;
 
 /**
@@ -113,18 +115,24 @@ public class ResultadoChecklistFragment extends android.app.Fragment {
             TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
             resultado.setText(resultado.getText().toString().replace("x", String.valueOf(nota)));
         }
-        // Salva o HighScore
+
+        // INICIA A TABELA DE PREFERENCIAS pra salvar o highscore e ultimo resultado
         SharedPreferences sharedPref = getActivity()
                 .getSharedPreferences(getString(R.string.nome_shared_pref),Context.MODE_PRIVATE);
+
+        //Salva o último resultado como um toString de array
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(getString(R.string.string_itens), Arrays.toString(itens));
 
         int notaEscalaDez = nota/10;
         int notaGravada = sharedPref.getInt(getString(R.string.nota_checklist), -1);
         // Confere se a nota atual foi maior do que a gravada
         if (notaEscalaDez > notaGravada) {
-            SharedPreferences.Editor editor = sharedPref.edit();
+            //salva o high score na tabela
             editor.putInt(getString(R.string.nota_checklist), notaEscalaDez);
-            editor.apply();
         }
+        //apply - commit assíncrono - do high score e último resultado - pro usuário poder rever dps
+        editor.apply();
 
         // Botão de finalizar a activity
         Button btOk = (Button) view.findViewById(R.id.bt_ok);

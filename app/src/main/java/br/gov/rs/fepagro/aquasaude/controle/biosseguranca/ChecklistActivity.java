@@ -19,8 +19,20 @@ public class ChecklistActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, new ChecklistFragment())
-                .commit();
+        //Pega o array de itens desmarcados da última vez
+        // se for null é pq o usuário selecionou pra preencher o checklist
+        // se não é pq ele quer rever o ultimos resultado
+        int[] resultados = getIntent().getIntArrayExtra("resultado");
+        if (resultados == null) {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, new ChecklistFragment())
+                    .commit();
+        } else {
+            getFragmentManager().beginTransaction()
+                    .replace(R.id.content_frame, ResultadoChecklistFragment.newInstance(resultados))
+                    .commit();
+        }
+
+
     }
 }
