@@ -21,8 +21,8 @@ public class ListaPerguntas {
 
         //Pergunta 1
         respostas = new ArrayList<>(4);
-        respostas.add(new RespostaImagem(R.drawable.imagem_wssv, true));
-        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
+        respostas.add(new RespostaImagem(R.drawable.imagem_peixe, true));
+        respostas.add(new RespostaImagem(R.drawable.imagem_caranguejo, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         pergunta = new Pergunta(context.getString(R.string.pergunta_1), respostas);
