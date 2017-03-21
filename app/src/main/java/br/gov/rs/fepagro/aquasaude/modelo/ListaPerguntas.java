@@ -21,11 +21,11 @@ public class ListaPerguntas {
 
         //Pergunta 1
         respostas = new ArrayList<>(4);
-        respostas.add(new RespostaImagem(R.drawable.imagem_wssv, true));
+        respostas.add(new RespostaImagem(R.drawable.imagem_peixe, true));
+        respostas.add(new RespostaImagem(R.drawable.imagem_caranguejo, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
-        respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
-        pergunta = new Pergunta("Pergunta 1", respostas);
+        pergunta = new Pergunta(context.getString(R.string.pergunta_1), respostas);
         listaPerguntasCamarao.add(pergunta);
 
         //Pergunta 2
@@ -34,28 +34,28 @@ public class ListaPerguntas {
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.logo_ufcspa, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
-        pergunta = new Pergunta("Pergunta 2", respostas);
+        pergunta = new Pergunta(context.getString(R.string.pergunta_2), respostas);
         listaPerguntasCamarao.add(pergunta);
 
-        //Pergunta 2
+        //Pergunta 3
         respostas = new ArrayList<>(4);
         respostas.add(new RespostaImagem(R.drawable.imagem_wssv, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.logo_cnpq, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
-        pergunta = new Pergunta("Pergunta 3", respostas);
+        pergunta = new Pergunta(context.getString(R.string.pergunta_3), respostas);
         listaPerguntasCamarao.add(pergunta);
 
-        //Pergunta 2
+        //Pergunta 4
         respostas = new ArrayList<>(4);
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));
-        pergunta = new Pergunta("Pergunta 4", respostas);
+        pergunta = new Pergunta(context.getString(R.string.pergunta_4), respostas);
         listaPerguntasCamarao.add(pergunta);
 
-        //Pergunta 2
+        //Pergunta 5
         respostas = new ArrayList<>(4);
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, true));
         respostas.add(new RespostaImagem(R.drawable.foto_padrao, false));

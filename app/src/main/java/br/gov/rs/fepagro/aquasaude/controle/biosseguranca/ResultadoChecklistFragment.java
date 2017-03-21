@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import java.util.Arrays;
+
 import br.gov.rs.fepagro.aquasaude.R;
 
 /**
@@ -137,6 +139,19 @@ public class ResultadoChecklistFragment extends Fragment {
         editor.putInt(getString(R.string.nota_checklist), notaAtual);
         editor.apply();
     }
+        //Salva o último resultado como um toString de array
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(getString(R.string.string_itens), Arrays.toString(itens));
+
+        int notaEscalaDez = nota/10;
+        int notaGravada = sharedPref.getInt(getString(R.string.nota_checklist), -1);
+        // Confere se a nota atual foi maior do que a gravada
+        if (notaEscalaDez > notaGravada) {
+            //salva o high score na tabela
+            editor.putInt(getString(R.string.nota_checklist), notaEscalaDez);
+        }
+        //apply - commit assíncrono - do high score e último resultado - pro usuário poder rever dps
+        editor.apply();
 
     private SharedPreferences getSharedPreferences() {
         return getActivity()

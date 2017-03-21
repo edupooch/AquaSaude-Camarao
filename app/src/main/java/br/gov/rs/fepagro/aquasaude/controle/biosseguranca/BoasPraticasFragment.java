@@ -5,10 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -26,8 +26,11 @@ public class BoasPraticasFragment extends Fragment {
         view = inflater.inflate(R.layout.content_boas_praticas, container, false);
 
         View btChecklist = view.findViewById(R.id.buttonChecklist);
-        btChecklist.setOnClickListener(v ->
-                startActivity(new Intent(getActivity(), ChecklistActivity.class)));
+        btChecklist.setOnClickListener(v -> {
+            startActivity(new Intent(getActivity(), ChecklistActivity.class));
+        });
+
+
         return view;
     }
 
@@ -43,5 +46,29 @@ public class BoasPraticasFragment extends Fragment {
             String texto = "Sua maior nota: " + nota + "/10";
             textView.setText(texto);
         }
+
+        String strUltimoResultado = sharedPref.getString(getString(R.string.string_itens), null);
+        if (strUltimoResultado != null){
+            int[] itensUltimoResultado = toIntArray(strUltimoResultado);
+
+            Button btRever = (Button) view.findViewById(R.id.bt_rever);
+            btRever.setVisibility(View.VISIBLE);
+            Intent intentResultados = new Intent(getActivity(), ChecklistActivity.class);
+            intentResultados.putExtra("resultado",itensUltimoResultado);
+            btRever.setOnClickListener(v -> startActivity(intentResultados));
+        }
+
+
+
+    }
+
+    public static int[] toIntArray(String input) {
+        String beforeSplit = input.replaceAll("\\[|\\]|\\s", "");
+        String[] split = beforeSplit.split("\\,");
+        int[] result = new int[split.length];
+        for (int i = 0; i < split.length; i++) {
+            result[i] = Integer.parseInt(split[i]);
+        }
+        return result;
     }
 }
