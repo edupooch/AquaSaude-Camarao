@@ -221,5 +221,6 @@
     <string name="nota_checklist">notachecklist</string>
     <string name="default_highscore">Você ainda não preencheu o checklist</string>
     <string name="nome_shared_pref">br.gov.rs.fepagro.aquasaude.preferences</string>
+    <string name="resultado_10">Sua fazenda está biossegura!</string>
 
 </resources>

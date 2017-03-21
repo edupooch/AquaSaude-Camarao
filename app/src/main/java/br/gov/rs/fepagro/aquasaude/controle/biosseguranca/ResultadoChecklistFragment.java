@@ -4,131 +4,167 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
-import android.util.Log;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import br.gov.rs.fepagro.aquasaude.R;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link ResultadoChecklistFragment#newInstance} factory method to
- * create an instance of this fragment -> necessário passar os itens desamarcados int array.
+ * Classe que controla a tela de resultados do checklist da classe{@link ChecklistFragment}
+ * Mostra a porcentagem de biossegurança da fazenda e dicas personalizadas de acordo com as marcações.
+ *
+ * Usar {@link ResultadoChecklistFragment#newInstance} factory method para criar uma instância desse
+ * fragment, sendo necessário passar os itens que nao foram marcados no checklist.
+ *
+ * Created by edupooch on 22/02/2017. Contato: edupooch@gmail.com
  */
-public class ResultadoChecklistFragment extends android.app.Fragment {
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_ITENS_DESMARCADOS = "desmarcados";
 
-    private int[] itens;
+
+public class ResultadoChecklistFragment extends Fragment {
+
     private View view;
+    private int[] itensDesmarcados;
 
+    private static final String ARG_ITENS_DESMARCADOS = "desmarcados";
+    public static final int NOTA_MAXIMA = 10;
+    public static final int VALOR_DEFAULT = -1;
 
     public ResultadoChecklistFragment() {
-        // Required empty public constructor
     }
 
     /**
-     * Cria nova instâcia do fragment que recebe um parâmetro
+     * Cria nova instâcia do fragment que recebe um parâmetro e o salva nos arguments do fragment
      *
-     * @param itensDesmarcados itens que não foram marcados na checklist.
+     * @param itensDesmarcados itensDesmarcados que não foram marcados na checklist.
      * @return A new instance of fragment ResultadoChecklistFragment.
      */
-    public static android.app.Fragment newInstance(int[] itensDesmarcados) {
+    public static Fragment newInstance(ArrayList<Integer> itensDesmarcados) {
         ResultadoChecklistFragment fragment = new ResultadoChecklistFragment();
-        Bundle args = new Bundle();
-        args.putIntArray(ARG_ITENS_DESMARCADOS, itensDesmarcados);
 
+        Bundle args = new Bundle();
+        args.putIntArray(ARG_ITENS_DESMARCADOS, transformaListaEmArray(itensDesmarcados));
         fragment.setArguments(args);
+
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        itens = getArguments().getIntArray(ARG_ITENS_DESMARCADOS);
-
+        escondeAppBar();
+        itensDesmarcados = getArguments().getIntArray(ARG_ITENS_DESMARCADOS);
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        escondeBarra();
-    }
-
-    private void escondeBarra() {
+    private void escondeAppBar() {
         AppBarLayout bar = (AppBarLayout) getActivity().findViewById(R.id.app_bar_layout);
-        if (bar != null) {
-            bar.setVisibility(View.GONE);
-        }
+        if (bar != null) bar.setVisibility(View.GONE);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_resultado_checklist, container, false);
+        int nota = getNota(); //Valor vai de 0..10
 
-        //nota com base nos itens desmarcados (0-100)
-        int nota = (10 - itens.length) * 10;
+        mudaTextoDoResultado(nota);
+        salvarHighScore(nota);
 
-        // Frases de dicas que devem ser mostradas de acordo com o que o usuário deixou de marcar na ChecklistFragment
-        int[] stringsResId = new int[]{R.string.resposta_1,
-                R.string.resposta_2,
-                R.string.resposta_3,
-                R.string.resposta_4,
-                R.string.resposta_5,
-                R.string.resposta_6,
-                R.string.resposta_7,
-                R.string.resposta_8,
-                R.string.resposta_9,
-                R.string.resposta_10};
-
-        // Se usuário marcou todas as opções
-        if (nota == 100) {
-            // Esconde o card de dicas
-            CardView card = (CardView) view.findViewById(R.id.card_dicas);
-            card.setVisibility(View.GONE);
-
-            TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
-            // O texto do resultado ficará: sua fazenda está biossegura!
-            resultado.setText(resultado.getText().toString().replace("x% ", ""));
-        } else {// O usuário deixou de marcar alguma
-
-            // Mostrar dicas personalizadas com base nas marcações
-            StringBuilder builderDicas = new StringBuilder();
-            for (int indice : itens) {
-                String dica = getString(stringsResId[indice]);
-                builderDicas.append(dica).append("\n\n");
-            }
-            String dicas = builderDicas.toString();
-            TextView textViewDicas = (TextView) view.findViewById(R.id.dicas);
-            textViewDicas.setText(dicas);
-
-            // Texto com quantos porcento a fazenda está biossegura
-            TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
-            resultado.setText(resultado.getText().toString().replace("x", String.valueOf(nota)));
-        }
-        // Salva o HighScore
-        SharedPreferences sharedPref = getActivity()
-                .getSharedPreferences(getString(R.string.nome_shared_pref),Context.MODE_PRIVATE);
-
-        int notaEscalaDez = nota/10;
-        int notaGravada = sharedPref.getInt(getString(R.string.nota_checklist), -1);
-        // Confere se a nota atual foi maior do que a gravada
-        if (notaEscalaDez > notaGravada) {
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putInt(getString(R.string.nota_checklist), notaEscalaDez);
-            editor.apply();
-        }
-
-        // Botão de finalizar a activity
         Button btOk = (Button) view.findViewById(R.id.bt_ok);
         btOk.setOnClickListener(v -> getActivity().finish());
         return view;
+    }
+
+    private int getNota() {
+        return (NOTA_MAXIMA - itensDesmarcados.length);
+    }
+
+    /**
+     * Define texto do resultado na tela, mostrando quantos porcento a fazenda está biossegura e
+     * chama o método de mostar dicas
+     *
+     * @param nota 0..10
+     */
+    private void mudaTextoDoResultado(int nota) {
+        TextView resultado = (TextView) view.findViewById(R.id.text_resultado);
+        if (nota == NOTA_MAXIMA) {
+            resultado.setText(getString(R.string.resultado_10)); //Sua fazenda está biossegura!
+        } else {
+            String strResultado = "Sua fazenda está " + nota * 10 + "% biossegura!";
+            resultado.setText(strResultado);
+            mostraDicas();
+        }
+    }
+
+    /**
+     * Mostra card de dicas com as dicas baseadas no que o usuário não marcou no checklist, essas
+     * strings estão definidas no arquivo strings.xml na pasta values do projeto.
+     */
+    private void mostraDicas() {
+        int[] dicasResId = getDicasId();
+
+        StringBuilder builderDicas = new StringBuilder();
+        for (int indiceDoItem : itensDesmarcados) {
+            String dica = getString(dicasResId[indiceDoItem]);
+            builderDicas.append(dica).append("\n\n");
+        }
+
+        String dicas = builderDicas.toString();
+        TextView textViewDicas = (TextView) view.findViewById(R.id.dicas);
+        textViewDicas.setText(dicas);
+    }
+
+    /**
+     * Salva o high score na tabela de preferences do android, que é um banco de dados simples
+     *
+     * @param notaAtual numa escala de 0 a 10
+     */
+    private void salvarHighScore(int notaAtual) {
+        SharedPreferences banco = getSharedPreferences();
+        int notaGravada = banco.getInt(getString(R.string.nota_checklist), VALOR_DEFAULT);
+
+        if (notaAtual > notaGravada) {
+            gravaNotaAtual(banco, notaAtual);
+        }
+    }
+
+    private void gravaNotaAtual(SharedPreferences banco, int notaAtual) {
+        SharedPreferences.Editor editor = banco.edit();
+        editor.putInt(getString(R.string.nota_checklist), notaAtual);
+        editor.apply();
+    }
+
+    private SharedPreferences getSharedPreferences() {
+        return getActivity()
+                .getSharedPreferences(getString(R.string.nome_shared_pref), Context.MODE_PRIVATE);
+    }
+
+    /**
+     * Recuperei a informação dos ids em um array para poder recuperar num laço 'for'
+     *
+     * @return ID das frases de dicas que devem ser mostradas de acordo com o que o usuário deixou
+     * de marcar na ChecklistFragment
+     */
+    private int[] getDicasId() {
+        return new int[]{R.string.resposta_1, R.string.resposta_2, R.string.resposta_3,
+                R.string.resposta_4, R.string.resposta_5, R.string.resposta_6, R.string.resposta_7,
+                R.string.resposta_8, R.string.resposta_9, R.string.resposta_10};
+    }
+
+    /**
+     * Os dados são transformados em int[] para passar para a classe de resultados
+     *
+     * @param listaItensDesmarcados com Integers de 0..9
+     * @return int array
+     */
+    private static int[] transformaListaEmArray(ArrayList<Integer> listaItensDesmarcados) {
+        int[] arrayItensDesmarcados = new int[listaItensDesmarcados.size()];
+        for (int i = 0; i < listaItensDesmarcados.size(); i++)
+            arrayItensDesmarcados[i] = listaItensDesmarcados.get(i);
+        return arrayItensDesmarcados;
     }
 }
