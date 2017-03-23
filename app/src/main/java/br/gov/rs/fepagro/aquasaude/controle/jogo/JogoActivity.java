@@ -1,6 +1,7 @@
 package br.gov.rs.fepagro.aquasaude.controle.jogo;
 
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -94,8 +101,9 @@ public class JogoActivity extends AppCompatActivity {
             //Imagem das respostas
             int[] imageViewResId = {R.id.foto_resposta_0, R.id.foto_resposta_1, R.id.foto_resposta_2, R.id.foto_resposta_3};
             for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
-                ImageView imagem = (ImageView) rootView.findViewById(imageViewResId[i]);
-                imagem.setImageResource(pergunta.getRespostas().get(i).getResIdFoto());
+                ImageView imageView = (ImageView) rootView.findViewById(imageViewResId[i]);
+                int resIdFoto = pergunta.getRespostas().get(i).getResIdFoto();
+                Glide.with(this).load(resIdFoto).centerCrop().into(imageView);
             }
 
             //Ação do botão de responder
@@ -106,7 +114,7 @@ public class JogoActivity extends AppCompatActivity {
                     if (btResponde.getText().toString().contains("Confirmar")) {
                         // MOSTRAR SE A RESPOSTA ESTÁ CERTA
 
-                        //Pega a resposta selecionada pelo usuário
+                        //Pegapergunta.getRespostas().get(i).getResIdFoto() a resposta selecionada pelo usuário
                         int respostaSelecionada = getRespostaSelecionada(rootView);
 
                         //VERIFICAR se o usuário acertou ou não
@@ -126,7 +134,7 @@ public class JogoActivity extends AppCompatActivity {
                             } else {
                                 //ERROU A RESPOSTA
                                 acertos[numPergunta] = false;
-                                //animação de balançar a viewContent
+                                //animação de balançar a tela
                                 Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
                                 rootView.findViewById(R.id.layout_game).startAnimation(animation);
 

@@ -55,6 +55,23 @@ public class ResultadoChecklistFragment extends Fragment {
 
         return fragment;
     }
+    /**
+     * Construtor alternativo, recebe um int array, então não precisa converter depois
+     * é chamado quando o usuário quer rever o ultimo resultado e a activity pega o int array gravado
+     * no banco
+     *
+     * @param itensDesmarcados itensDesmarcados que não foram marcados na checklist.
+     * @return A new instance of fragment ResultadoChecklistFragment.
+     */
+    public static Fragment newInstance(int[] itensDesmarcados) {
+        ResultadoChecklistFragment fragment = new ResultadoChecklistFragment();
+
+        Bundle args = new Bundle();
+        args.putIntArray(ARG_ITENS_DESMARCADOS, itensDesmarcados);
+        fragment.setArguments(args);
+
+        return fragment;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -106,7 +123,8 @@ public class ResultadoChecklistFragment extends Fragment {
         if (nota == NOTA_MAXIMA) {
             resultado.setText(getString(R.string.resultado_10)); //Sua fazenda está biossegura!
         } else {
-            String strResultado = "Sua fazenda está " + nota * 10 + "% biossegura!";
+            String strResultado = getString(R.string.sua_fazenda_esta) + nota * 10 +
+                    getString(R.string.porcento_biossegura); //Sua fazenda está nota% biossegura!
             resultado.setText(strResultado);
             mostraDicas();
         }
