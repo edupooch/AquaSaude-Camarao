@@ -1,7 +1,6 @@
 package br.gov.rs.fepagro.aquasaude.controle.jogo;
 
 import android.content.DialogInterface;
-import android.graphics.Bitmap;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -22,10 +21,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.BitmapImageViewTarget;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -42,7 +37,6 @@ public class JogoActivity extends AppCompatActivity {
     public static List<Pergunta> listaPerguntas;
 
     public static boolean[] acertos;
-    private static SectionsPagerAdapter mSectionsPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +49,7 @@ public class JogoActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter =
-                new SectionsPagerAdapter(getSupportFragmentManager());
+        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
 
         // Set up the ViewPager with the sections adapter.

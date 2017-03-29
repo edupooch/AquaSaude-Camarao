@@ -135,6 +135,7 @@ public class ResultadoChecklistFragment extends Fragment {
      * strings estão definidas no arquivo strings.xml na pasta values do projeto.
      */
     private void mostraDicas() {
+        view.findViewById(R.id.card_dicas).setVisibility(View.VISIBLE);
         int[] dicasResId = getDicasId();
 
         StringBuilder builderDicas = new StringBuilder();
