@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_resposta_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_weight="1"
+    android:background="@drawable/card"
+    android:orientation="vertical"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
+    android:tag="layout_resposta_0">
+
+    <ImageView
+        android:id="@+id/foto_resposta"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_gravity="center" />
+
+
+    <RadioButton
+        android:id="@+id/radio_resposta"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:tag="radio0"
+        android:textColor="#555"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -25,9 +26,10 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
+import br.gov.rs.fepagro.aquasaude.controle.jogo.adapter.RespostasAdapter;
 import br.gov.rs.fepagro.aquasaude.modelo.ListaPerguntas;
 import br.gov.rs.fepagro.aquasaude.modelo.Pergunta;
-import br.gov.rs.fepagro.aquasaude.modelo.RespostaImagem;
+import br.gov.rs.fepagro.aquasaude.modelo.Resposta;
 
 public class JogoActivity extends AppCompatActivity {
 
@@ -90,67 +92,61 @@ public class JogoActivity extends AppCompatActivity {
             //Título da página - titulo da pergunta
             TextView textPergunta = (TextView) rootView.findViewById(R.id.text_pergunta);
             textPergunta.setText(pergunta.getTitulo());
-            configuraRadioButtons(rootView);
-            //Imagem das respostas
-            int[] imageViewResId = {R.id.foto_resposta_0, R.id.foto_resposta_1, R.id.foto_resposta_2, R.id.foto_resposta_3};
-            for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
-                ImageView imageView = (ImageView) rootView.findViewById(imageViewResId[i]);
-                int resIdFoto = pergunta.getRespostas().get(i).getResIdFoto();
-                Glide.with(this).load(resIdFoto).centerCrop().into(imageView);
-            }
 
-            //Ação do botão de responder
+            GridView gridRespostas = (GridView) rootView.findViewById(R.id.grid_respostas);
+            RespostasAdapter respostasAdapter = new RespostasAdapter(getContext(), pergunta.getRespostas());
+            gridRespostas.setAdapter(respostasAdapter);
+
+
+
             final Button btResponde = (Button) rootView.findViewById(R.id.bt_responde);
-            btResponde.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (btResponde.getText().toString().contains("Confirmar")) {
-                        // MOSTRAR SE A RESPOSTA ESTÁ CERTA
+            btResponde.setOnClickListener(v -> {
+                if (btResponde.getText().toString().contains("Confirmar")) {
+                    // MOSTRAR SE A RESPOSTA ESTÁ CERTA
 
-                        //Pegapergunta.getRespostas().get(i).getResIdFoto() a resposta selecionada pelo usuário
-                        int respostaSelecionada = getRespostaSelecionada(rootView);
+                    //Pegapergunta.getRespostas().get(i).getFotoResId() a resposta selecionada pelo usuário
+                    int respostaSelecionada =  respostasAdapter.getSelectedPosition();;
 
-                        //VERIFICAR se o usuário acertou ou não
-                        if (respostaSelecionada != NENHUMA_RESPOSTA_SELECIONADA) {
+                    //VERIFICAR se o usuário acertou ou não
+                    if (respostaSelecionada != NENHUMA_RESPOSTA_SELECIONADA) {
 
-                            //Muda o texto do botão para "Próxima"
-                            btResponde.setText(R.string.proxima);
-                            bloqueiaRadios(rootView);
+                        //Muda o texto do botão para "Próxima"
+                        btResponde.setText(R.string.proxima);
+                        bloqueiaRadios(rootView);
 
-                            if (pergunta.getRespostas().get(respostaSelecionada).isCerta()) {
-                                //ACERTOU A RESPOSTA
-                                acertos[numPergunta] = true;
+                        if (pergunta.getRespostas().get(respostaSelecionada).isCerta()) {
+                            //ACERTOU A RESPOSTA
+                            acertos[numPergunta] = true;
 
-                                //o fundo da questao selecionada fica verde
-                                View layout = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
-                                layout.setBackgroundResource(R.drawable.card_verde);
-                            } else {
-                                //ERROU A RESPOSTA
-                                acertos[numPergunta] = false;
-                                //animação de balançar a tela
-                                Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
-                                rootView.findViewById(R.id.layout_game).startAnimation(animation);
+                            //o fundo da questao selecionada fica verde
+                            View layout = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
+                            layout.setBackgroundResource(R.drawable.card_verde);
+                        } else {
+                            //ERROU A RESPOSTA
+                            acertos[numPergunta] = false;
+                            //animação de balançar a tela
+                            Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
+                            rootView.findViewById(R.id.layout_game).startAnimation(animation);
 
-                                //deixa o fundo da selecionada vermelho
-                                int respostaCerta = getRespostaCerta(numPergunta);
-                                View layoutSelecionado = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
-                                layoutSelecionado.setBackgroundResource(R.drawable.card_vermelho);
+                            //deixa o fundo da selecionada vermelho
+                            int respostaCerta = getRespostaCerta(numPergunta);
+                            View layoutSelecionado = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
+                            layoutSelecionado.setBackgroundResource(R.drawable.card_vermelho);
 
-                                //o fundo da questão certa fica verde
-                                View layoutCerta = rootView.findViewWithTag("layout_resposta_" + respostaCerta);
-                                layoutCerta.setBackgroundResource(R.drawable.card_verde);
-                            }
+                            //o fundo da questão certa fica verde
+                            View layoutCerta = rootView.findViewWithTag("layout_resposta_" + respostaCerta);
+                            layoutCerta.setBackgroundResource(R.drawable.card_verde);
                         }
-
-                    } else {
-                        // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
-                        if (numPergunta == listaPerguntas.size() - 1) {
-                            //última pergunta
-                            ResultadosJogoFragment.calculaNota(); //atualiza a nota no fragment de resultados
-                        }
-                        //Passa para a próxima página
-                        mViewPager.setCurrentItem(numPergunta + 1);
                     }
+
+                } else {
+                    // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
+                    if (numPergunta == listaPerguntas.size() - 1) {
+                        //última pergunta
+                        ResultadosJogoFragment.calculaNota(); //atualiza a nota no fragment de resultados
+                    }
+                    //Passa para a próxima página
+                    mViewPager.setCurrentItem(numPergunta + 1);
                 }
             });
             return rootView;
@@ -171,54 +167,9 @@ public class JogoActivity extends AppCompatActivity {
         }
 
 
-        private void configuraRadioButtons(final View rootView) {
-            //Para cada resposta
-            for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
-                final int nResposta = i;
-                View layout = rootView.findViewWithTag("layout_resposta_" + nResposta);
-                final RadioButton radio = (RadioButton) layout.findViewWithTag("radio" + nResposta);
-
-                //Listener no layout e no botao para quando for clicado ativar o radiobutton e
-                //desativar os outros botoes
-                View.OnClickListener onRadioClick = new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        radio.setChecked(true);
-                        //Retira retira o check dos outros radio buttons
-                        for (int j = 0; j < NUMERO_DE_ALTERNATIVAS; j++) {
-                            if (j != nResposta) {
-                                RadioButton outrosRadios =
-                                        (RadioButton) rootView.findViewWithTag("radio" + j);
-                                outrosRadios.setChecked(false);
-                            }
-                        }
-                    }
-                };
-                layout.setOnClickListener(onRadioClick);
-                radio.setOnClickListener(onRadioClick);
-            }
-        }
-
-        /**
-         * Verifica os radioButtons da viewContent e retorna o número da resposta que está selecionada
-         *
-         * @param rootView para pegar os radioButons da viewContent
-         * @return 0-3 para numeros de respostas e -1 para nenhuma selecionada
-         */
-        private int getRespostaSelecionada(View rootView) {
-            int[] radioButtonsResId = {R.id.radio_resposta_0, R.id.radio_resposta_1, R.id.radio_resposta_2, R.id.radio_resposta_3};
-            for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
-                RadioButton radioButton = (RadioButton) rootView.findViewById(radioButtonsResId[i]);
-                if (radioButton.isChecked()) {
-                    return i;
-                }
-            }
-            return NENHUMA_RESPOSTA_SELECIONADA;
-        }
-
         public int getRespostaCerta(int numPergunta) {
             for (int i = 0; i < NUMERO_DE_ALTERNATIVAS; i++) {
-                RespostaImagem resposta = listaPerguntas.get(numPergunta).getRespostas().get(i);
+                Resposta resposta = listaPerguntas.get(numPergunta).getRespostas().get(i);
                 if (resposta.isCerta()) {
                     return i;
                 }

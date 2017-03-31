@@ -7,9 +7,9 @@ import java.util.ArrayList;
  */
 public class Pergunta {
     String titulo;
-    ArrayList<RespostaImagem> respostas;
+    ArrayList<Resposta> respostas;
 
-    public Pergunta(String titulo, ArrayList<RespostaImagem> respostas) {
+    public Pergunta(String titulo, ArrayList<Resposta> respostas) {
         this.titulo = titulo;
         this.respostas = respostas;
     }
@@ -22,11 +22,11 @@ public class Pergunta {
         this.titulo = titulo;
     }
 
-    public ArrayList<RespostaImagem> getRespostas() {
+    public ArrayList<Resposta> getRespostas() {
         return respostas;
     }
 
-    public void setRespostas(ArrayList<RespostaImagem> respostas) {
+    public void setRespostas(ArrayList<Resposta> respostas) {
         this.respostas = respostas;
     }
 }
