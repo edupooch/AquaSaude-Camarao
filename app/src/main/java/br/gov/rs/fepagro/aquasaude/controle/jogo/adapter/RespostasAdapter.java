@@ -1,11 +1,13 @@
 package br.gov.rs.fepagro.aquasaude.controle.jogo.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 
 import com.bumptech.glide.Glide;
@@ -22,7 +24,7 @@ public class RespostasAdapter extends BaseAdapter {
 
     private List<Resposta> respostas;
     private Context context;
-    private int selectedPosition;
+    private int selectedPosition = -1;
 
     public RespostasAdapter(Context context, List<Resposta> respostas) {
         this.respostas = respostas;
@@ -65,9 +67,15 @@ public class RespostasAdapter extends BaseAdapter {
         return view;
     }
 
+
     private void radioClicado(View v) {
         selectedPosition = (Integer) v.getTag();
+        Log.d("dbg", "" + selectedPosition);
         notifyDataSetChanged();
+    }
+
+    public void bloqueiaRadios(View view) {
+
     }
 
     public int getSelectedPosition() {

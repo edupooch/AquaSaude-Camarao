@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -67,6 +69,7 @@ public class JogoActivity extends AppCompatActivity {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
         private static final int NUMERO_DE_ALTERNATIVAS = 4;
+        private static final String TAG_DEBUG = "dbg";
 
 
         public PerguntaFragment() {
@@ -86,9 +89,9 @@ public class JogoActivity extends AppCompatActivity {
             //View principal
             final View rootView = inflater.inflate(R.layout.fragment_jogo, container, false);
             //Número da pergunta, primeira = 0
-            final int numPergunta = getArguments().getInt(ARG_SECTION_NUMBER) - 1;
+            final int nPerguntaAtual = getArguments().getInt(ARG_SECTION_NUMBER) - 1;
             //Pergunta oject
-            final Pergunta pergunta = listaPerguntas.get(numPergunta);
+            final Pergunta pergunta = listaPerguntas.get(nPerguntaAtual);
             //Título da página - titulo da pergunta
             TextView textPergunta = (TextView) rootView.findViewById(R.id.text_pergunta);
             textPergunta.setText(pergunta.getTitulo());
@@ -97,72 +100,75 @@ public class JogoActivity extends AppCompatActivity {
             RespostasAdapter respostasAdapter = new RespostasAdapter(getContext(), pergunta.getRespostas());
             gridRespostas.setAdapter(respostasAdapter);
 
-
-
             final Button btResponde = (Button) rootView.findViewById(R.id.bt_responde);
             btResponde.setOnClickListener(v -> {
                 if (btResponde.getText().toString().contains("Confirmar")) {
                     // MOSTRAR SE A RESPOSTA ESTÁ CERTA
 
-                    //Pegapergunta.getRespostas().get(i).getFotoResId() a resposta selecionada pelo usuário
                     int respostaSelecionada =  respostasAdapter.getSelectedPosition();;
-
+                    Log.d(TAG_DEBUG, "" + respostaSelecionada);
                     //VERIFICAR se o usuário acertou ou não
                     if (respostaSelecionada != NENHUMA_RESPOSTA_SELECIONADA) {
+                        btResponde.setText(R.string.proxima);  //Muda o texto do botão para "Próxima"
 
-                        //Muda o texto do botão para "Próxima"
-                        btResponde.setText(R.string.proxima);
-                        bloqueiaRadios(rootView);
+                        bloqueiaRadios(gridRespostas);
 
-                        if (pergunta.getRespostas().get(respostaSelecionada).isCerta()) {
-                            //ACERTOU A RESPOSTA
-                            acertos[numPergunta] = true;
-
+                        boolean acertou = pergunta.getRespostas().get(respostaSelecionada).isCerta();
+                        acertos[nPerguntaAtual] = acertou;
+                        if (acertou) {
                             //o fundo da questao selecionada fica verde
-                            View layout = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
+                            View layout = getViewByPosition(respostaSelecionada,gridRespostas);
                             layout.setBackgroundResource(R.drawable.card_verde);
                         } else {
-                            //ERROU A RESPOSTA
-                            acertos[numPergunta] = false;
-                            //animação de balançar a tela
+                            //balança a tela
                             Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.shake);
                             rootView.findViewById(R.id.layout_game).startAnimation(animation);
-
                             //deixa o fundo da selecionada vermelho
-                            int respostaCerta = getRespostaCerta(numPergunta);
-                            View layoutSelecionado = rootView.findViewWithTag("layout_resposta_" + respostaSelecionada);
+                            int respostaCerta = getRespostaCerta(nPerguntaAtual);
+                            View layoutSelecionado = getViewByPosition(respostaSelecionada,gridRespostas);
                             layoutSelecionado.setBackgroundResource(R.drawable.card_vermelho);
-
                             //o fundo da questão certa fica verde
-                            View layoutCerta = rootView.findViewWithTag("layout_resposta_" + respostaCerta);
+                            View layoutCerta = getViewByPosition(respostaCerta,gridRespostas);
                             layoutCerta.setBackgroundResource(R.drawable.card_verde);
                         }
                     }
 
                 } else {
                     // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
-                    if (numPergunta == listaPerguntas.size() - 1) {
-                        //última pergunta
+                    int ultimaPergunta = listaPerguntas.size() - 1;
+                    if (nPerguntaAtual == ultimaPergunta) {
                         ResultadosJogoFragment.calculaNota(); //atualiza a nota no fragment de resultados
                     }
                     //Passa para a próxima página
-                    mViewPager.setCurrentItem(numPergunta + 1);
+                    mViewPager.setCurrentItem(nPerguntaAtual + 1);
                 }
             });
             return rootView;
         }
 
+        public View getViewByPosition(int position, GridView gridView) {
+            final int firstListItemPosition = gridView.getFirstVisiblePosition();
+            final int lastListItemPosition = firstListItemPosition + gridView.getChildCount() - 1;
+
+            if (position < firstListItemPosition || position > lastListItemPosition ) {
+                return gridView.getAdapter().getView(position, null, gridView);
+            } else {
+                final int childIndex = position - firstListItemPosition;
+                return gridView.getChildAt(childIndex);
+            }
+        }
+
         /**
          * Método que bloqueia os radio buttons após a confirmação da resposta
          *
-         * @param rootView viewContent principal
+         * @param gridView
          */
-        private void bloqueiaRadios(View rootView) {
+        private void bloqueiaRadios(GridView gridView) {
             for (int j = 0; j < NUMERO_DE_ALTERNATIVAS; j++) {
-                RadioButton radio = (RadioButton) rootView.findViewWithTag("radio" + j);
-                radio.setClickable(false);
-                View layout = rootView.findViewWithTag("layout_resposta_" + j);
+                View layout = getViewByPosition(j,gridView);
                 layout.setClickable(false);
+                View radioButton = layout.findViewWithTag(j);
+                radioButton.setClickable(false);
             }
         }
 
