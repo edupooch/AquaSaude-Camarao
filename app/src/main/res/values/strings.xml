@@ -229,5 +229,10 @@
     <string name="resultado_10">Sua fazenda está biossegura!</string>
     <string name="sua_fazenda_esta">"Sua fazenda está "</string>
     <string name="porcento_biossegura">% biossegura!</string>
+    <string name="pergunta_5">Os animais param de comer, o que  é importante observar neste caso?</string>
+    <string name="pergunta_5_resposta_1">Alteração na temperatura</string>
+    <string name="pergunta_5_resposta_2">Sinais clínicos de doenças</string>
+    <string name="pergunta_5_resposta_3">Mortalidade</string>
+    <string name="pergunta_5_resposta_4">Fuga dos Animais</string>
 
 </resources>

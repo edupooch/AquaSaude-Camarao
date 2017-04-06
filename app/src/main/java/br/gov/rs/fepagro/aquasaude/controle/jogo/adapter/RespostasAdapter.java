@@ -1,14 +1,19 @@
 package br.gov.rs.fepagro.aquasaude.controle.jogo.adapter;
 
 import android.content.Context;
+import android.graphics.Point;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
@@ -22,13 +27,15 @@ import br.gov.rs.fepagro.aquasaude.modelo.Resposta;
  */
 public class RespostasAdapter extends BaseAdapter {
 
+    private final GridView gridRespostas;
     private List<Resposta> respostas;
     private Context context;
     private int selectedPosition = -1;
 
-    public RespostasAdapter(Context context, List<Resposta> respostas) {
+    public RespostasAdapter(Context context, List<Resposta> respostas, GridView gridRespostas) {
         this.respostas = respostas;
         this.context = context;
+        this.gridRespostas = gridRespostas;
     }
 
     @Override
@@ -60,26 +67,28 @@ public class RespostasAdapter extends BaseAdapter {
         radioButton.setOnClickListener(this::radioClicado);
         view.setOnClickListener(v -> radioClicado(radioButton));
 
-        ImageView imageView = (ImageView) view.findViewById(R.id.foto_resposta);
-        int resIdFoto = resposta.getFotoResId();
-        Glide.with(context).load(resIdFoto).centerCrop().into(imageView);
+        configuraRespostas(resposta, view);
 
         return view;
     }
 
-
-    private void radioClicado(View v) {
-        selectedPosition = (Integer) v.getTag();
-        Log.d("dbg", "" + selectedPosition);
-        notifyDataSetChanged();
-    }
-
-    public void bloqueiaRadios(View view) {
-
-    }
-
-    public int getSelectedPosition() {
-        return selectedPosition;
+    private void configuraRespostas(Resposta resposta, View view) {
+        if (resposta.getTipo() == Resposta.TIPO_IMAGEM) {
+            gridRespostas.setNumColumns(2);
+            ImageView imageView = (ImageView) view.findViewById(R.id.foto_resposta);
+            int resIdFoto = resposta.getFotoResId();
+            Glide.with(context).load(resIdFoto).centerCrop().into(imageView);
+        } else {
+            gridRespostas.setNumColumns(1);
+            WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+            Display display = wm.getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+            int width = size.x;
+            gridRespostas.setColumnWidth(width);
+            TextView textoRespota = (TextView) view.findViewById(R.id.texto_resposta);
+            textoRespota.setText(resposta.getTexto());
+        }
     }
 
     private int getLayoutTipoResposta(Resposta resposta) {
@@ -89,4 +98,16 @@ public class RespostasAdapter extends BaseAdapter {
             return R.layout.respostas_texto;
         }
     }
+
+    private void radioClicado(View v) {
+        selectedPosition = (Integer) v.getTag();
+        Log.d("dbg", "" + selectedPosition);
+        notifyDataSetChanged();
+    }
+
+    public int getSelectedPosition() {
+        return selectedPosition;
+    }
+
+
 }

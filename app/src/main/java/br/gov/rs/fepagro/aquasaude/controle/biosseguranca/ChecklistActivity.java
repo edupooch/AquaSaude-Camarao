@@ -1,5 +1,6 @@
 package br.gov.rs.fepagro.aquasaude.controle.biosseguranca;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,15 +25,15 @@ public class ChecklistActivity extends AppCompatActivity {
         // se não é pq ele quer rever o ultimos resultado
         int[] resultados = getIntent().getIntArrayExtra("resultado");
         if (resultados == null) {
-            getFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new ChecklistFragment())
-                    .commit();
+            abreFragment(new ChecklistFragment());
         } else {
-            getFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, ResultadoChecklistFragment.newInstance(resultados))
-                    .commit();
+            abreFragment(ResultadoChecklistFragment.newInstance(resultados));
         }
+    }
 
-
+    private void abreFragment(Fragment fragment) {
+        getFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, fragment)
+                .commit();
     }
 }

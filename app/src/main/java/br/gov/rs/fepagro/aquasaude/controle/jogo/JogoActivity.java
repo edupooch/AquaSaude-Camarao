@@ -18,12 +18,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -97,7 +92,7 @@ public class JogoActivity extends AppCompatActivity {
             textPergunta.setText(pergunta.getTitulo());
 
             GridView gridRespostas = (GridView) rootView.findViewById(R.id.grid_respostas);
-            RespostasAdapter respostasAdapter = new RespostasAdapter(getContext(), pergunta.getRespostas());
+            RespostasAdapter respostasAdapter = new RespostasAdapter(getContext(), pergunta.getRespostas(),gridRespostas);
             gridRespostas.setAdapter(respostasAdapter);
 
             final Button btResponde = (Button) rootView.findViewById(R.id.bt_responde);

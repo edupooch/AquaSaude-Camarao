@@ -1,5 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_resposta_0"
+    android:id="@+id/layout_resposta"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginEnd="5dp"
@@ -9,8 +9,7 @@
     android:orientation="vertical"
     android:paddingEnd="10dp"
     android:paddingStart="10dp"
-    android:paddingTop="10dp"
-    android:tag="layout_resposta_0">
+    android:paddingTop="10dp">
 
     <ImageView
         android:id="@+id/foto_resposta"
