@@ -11,7 +11,6 @@ import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -27,15 +26,15 @@ import br.gov.rs.fepagro.aquasaude.modelo.Resposta;
  */
 public class RespostasAdapter extends BaseAdapter {
 
-    private final GridView gridRespostas;
+    private final GridView gridParent;
     private List<Resposta> respostas;
     private Context context;
     private int selectedPosition = -1;
 
-    public RespostasAdapter(Context context, List<Resposta> respostas, GridView gridRespostas) {
+    public RespostasAdapter(Context context, List<Resposta> respostas, GridView gridParent) {
         this.respostas = respostas;
         this.context = context;
-        this.gridRespostas = gridRespostas;
+        this.gridParent = gridParent;
     }
 
     @Override
@@ -74,21 +73,27 @@ public class RespostasAdapter extends BaseAdapter {
 
     private void configuraRespostas(Resposta resposta, View view) {
         if (resposta.getTipo() == Resposta.TIPO_IMAGEM) {
-            gridRespostas.setNumColumns(2);
+            gridParent.setNumColumns(2);
             ImageView imageView = (ImageView) view.findViewById(R.id.foto_resposta);
             int resIdFoto = resposta.getFotoResId();
             Glide.with(context).load(resIdFoto).centerCrop().into(imageView);
+            notifyDataSetChanged();
         } else {
-            gridRespostas.setNumColumns(1);
-            WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
-            Display display = wm.getDefaultDisplay();
-            Point size = new Point();
-            display.getSize(size);
-            int width = size.x;
-            gridRespostas.setColumnWidth(width);
+            gridParent.setNumColumns(1);
+            gridParent.setColumnWidth(getScreenWidth());
+            gridParent.setStretchMode(GridView.NO_STRETCH);
+
             TextView textoRespota = (TextView) view.findViewById(R.id.texto_resposta);
             textoRespota.setText(resposta.getTexto());
         }
+    }
+
+    private int getScreenWidth() {
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        return size.x;
     }
 
     private int getLayoutTipoResposta(Resposta resposta) {

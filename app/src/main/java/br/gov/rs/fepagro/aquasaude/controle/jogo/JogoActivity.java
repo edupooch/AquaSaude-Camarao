@@ -21,6 +21,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.Locale;
 
 import br.gov.rs.fepagro.aquasaude.R;
 import br.gov.rs.fepagro.aquasaude.controle.jogo.adapter.RespostasAdapter;
@@ -87,12 +88,16 @@ public class JogoActivity extends AppCompatActivity {
             final int nPerguntaAtual = getArguments().getInt(ARG_SECTION_NUMBER) - 1;
             //Pergunta oject
             final Pergunta pergunta = listaPerguntas.get(nPerguntaAtual);
+            //Número da pergunta no topo da página
+            TextView textNumPergunta = (TextView) rootView.findViewById(R.id.text_num_pergunta);
+            textNumPergunta.setText(String.format(Locale.getDefault(), "%d -", nPerguntaAtual+1));
             //Título da página - titulo da pergunta
             TextView textPergunta = (TextView) rootView.findViewById(R.id.text_pergunta);
             textPergunta.setText(pergunta.getTitulo());
 
             GridView gridRespostas = (GridView) rootView.findViewById(R.id.grid_respostas);
-            RespostasAdapter respostasAdapter = new RespostasAdapter(getContext(), pergunta.getRespostas(),gridRespostas);
+            RespostasAdapter respostasAdapter =
+                    new RespostasAdapter(getContext(), pergunta.getRespostas(), gridRespostas);
             gridRespostas.setAdapter(respostasAdapter);
 
             final Button btResponde = (Button) rootView.findViewById(R.id.bt_responde);
@@ -100,7 +105,8 @@ public class JogoActivity extends AppCompatActivity {
                 if (btResponde.getText().toString().contains("Confirmar")) {
                     // MOSTRAR SE A RESPOSTA ESTÁ CERTA
 
-                    int respostaSelecionada =  respostasAdapter.getSelectedPosition();;
+                    int respostaSelecionada = respostasAdapter.getSelectedPosition();
+                    ;
                     Log.d(TAG_DEBUG, "" + respostaSelecionada);
                     //VERIFICAR se o usuário acertou ou não
                     if (respostaSelecionada != NENHUMA_RESPOSTA_SELECIONADA) {
@@ -112,7 +118,7 @@ public class JogoActivity extends AppCompatActivity {
                         acertos[nPerguntaAtual] = acertou;
                         if (acertou) {
                             //o fundo da questao selecionada fica verde
-                            View layout = getViewByPosition(respostaSelecionada,gridRespostas);
+                            View layout = getViewByPosition(respostaSelecionada, gridRespostas);
                             layout.setBackgroundResource(R.drawable.card_verde);
                         } else {
                             //balança a tela
@@ -120,10 +126,10 @@ public class JogoActivity extends AppCompatActivity {
                             rootView.findViewById(R.id.layout_game).startAnimation(animation);
                             //deixa o fundo da selecionada vermelho
                             int respostaCerta = getRespostaCerta(nPerguntaAtual);
-                            View layoutSelecionado = getViewByPosition(respostaSelecionada,gridRespostas);
+                            View layoutSelecionado = getViewByPosition(respostaSelecionada, gridRespostas);
                             layoutSelecionado.setBackgroundResource(R.drawable.card_vermelho);
                             //o fundo da questão certa fica verde
-                            View layoutCerta = getViewByPosition(respostaCerta,gridRespostas);
+                            View layoutCerta = getViewByPosition(respostaCerta, gridRespostas);
                             layoutCerta.setBackgroundResource(R.drawable.card_verde);
                         }
                     }
@@ -145,7 +151,7 @@ public class JogoActivity extends AppCompatActivity {
             final int firstListItemPosition = gridView.getFirstVisiblePosition();
             final int lastListItemPosition = firstListItemPosition + gridView.getChildCount() - 1;
 
-            if (position < firstListItemPosition || position > lastListItemPosition ) {
+            if (position < firstListItemPosition || position > lastListItemPosition) {
                 return gridView.getAdapter().getView(position, null, gridView);
             } else {
                 final int childIndex = position - firstListItemPosition;
@@ -160,7 +166,7 @@ public class JogoActivity extends AppCompatActivity {
          */
         private void bloqueiaRadios(GridView gridView) {
             for (int j = 0; j < NUMERO_DE_ALTERNATIVAS; j++) {
-                View layout = getViewByPosition(j,gridView);
+                View layout = getViewByPosition(j, gridView);
                 layout.setClickable(false);
                 View radioButton = layout.findViewWithTag(j);
                 radioButton.setClickable(false);

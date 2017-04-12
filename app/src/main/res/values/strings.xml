@@ -120,7 +120,7 @@
 
     </string>
     <string name="icone">Ícone</string>
-    <string name="institui_es">INSTITUIÇÕES</string>
+    <string name="instituicoes">INSTITUIÇÕES</string>
     <string name="equipe">EQUIPE</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -221,15 +221,16 @@
     <string name="nota_checklist">notachecklist</string>
     <string name="default_highscore">Você ainda não preencheu o checklist</string>
     <string name="nome_shared_pref">br.gov.rs.fepagro.aquasaude.preferences</string>
+    <string name="string_itens" translatable="false">string_itens</string>
+    <string name="resultado_10">Sua fazenda está biossegura!</string>
+    <string name="sua_fazenda_esta">"Sua fazenda está "</string>
+    <string name="porcento_biossegura">% biossegura!</string>
+
     <string name="pergunta_1">Qual imagem não está relacionada com a entrada de patógenos?</string>
     <string name="pergunta_2">Qual fator não está associado ao aparecimento de doenças?</string>
     <string name="pergunta_3">Qual das imagens abaixo apresenta um camarão saudável?</string>
     <string name="pergunta_4">Qual das imagens não é uma ação de biossegurança?</string>
-    <string name="string_itens">string_itens</string>
-    <string name="resultado_10">Sua fazenda está biossegura!</string>
-    <string name="sua_fazenda_esta">"Sua fazenda está "</string>
-    <string name="porcento_biossegura">% biossegura!</string>
-    <string name="pergunta_5">Os animais param de comer, o que  é importante observar neste caso?</string>
+    <string name="pergunta_5">Os animais pararam de comer, o que  é importante observar neste caso?</string>
     <string name="pergunta_5_resposta_1">Alteração na temperatura</string>
     <string name="pergunta_5_resposta_2">Sinais clínicos de doenças</string>
     <string name="pergunta_5_resposta_3">Mortalidade</string>

@@ -52,9 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:horizontalSpacing="5dp"
-            android:numColumns="2"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="5dp" />
+            android:verticalSpacing="5dp"
+            />
 
 
     </LinearLayout>
