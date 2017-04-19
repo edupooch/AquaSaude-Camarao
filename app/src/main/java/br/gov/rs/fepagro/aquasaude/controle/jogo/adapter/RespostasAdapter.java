@@ -114,5 +114,4 @@ public class RespostasAdapter extends BaseAdapter {
         return selectedPosition;
     }
 
-
 }

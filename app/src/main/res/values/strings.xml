@@ -77,7 +77,7 @@
     </string>
     <string name="text_saiba_mais_ihhnv">Mais informações sobre a Necrose Hipodermal e Hematopoiética:</string>
 
-    <string name="nhv_nome">"Hepatopancreatite necrosante"</string>
+    <string name="nhv_nome">"Hepatopancreatite Necrosante"</string>
     <string name="nhv_agente">
         " Hepatopancreatite Necrosante é uma doença bacteriana causada por uma bactéria gram-"
         "negativa, do tipo Rickettsia, que acomete o hepatopâncreas."</string>
@@ -235,5 +235,7 @@
     <string name="pergunta_5_resposta_2">Sinais clínicos de doenças</string>
     <string name="pergunta_5_resposta_3">Mortalidade</string>
     <string name="pergunta_5_resposta_4">Fuga dos Animais</string>
+    <string name="finalizar_jogo">Finalizar jogo</string>
+    <string name="voc_tirou_nota">Você tirou nota:</string>
 
 </resources>

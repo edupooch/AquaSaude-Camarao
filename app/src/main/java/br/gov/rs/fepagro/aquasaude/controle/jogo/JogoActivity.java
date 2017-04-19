@@ -90,7 +90,7 @@ public class JogoActivity extends AppCompatActivity {
             final Pergunta pergunta = listaPerguntas.get(nPerguntaAtual);
             //Número da pergunta no topo da página
             TextView textNumPergunta = (TextView) rootView.findViewById(R.id.text_num_pergunta);
-            textNumPergunta.setText(String.format(Locale.getDefault(), "%d -", nPerguntaAtual+1));
+            textNumPergunta.setText(String.format(Locale.getDefault(), "%d -", nPerguntaAtual + 1));
             //Título da página - titulo da pergunta
             TextView textPergunta = (TextView) rootView.findViewById(R.id.text_pergunta);
             textPergunta.setText(pergunta.getTitulo());
@@ -240,17 +240,20 @@ public class JogoActivity extends AppCompatActivity {
         @Override
         public void onResume() {
             super.onResume();
+
             calculaNota();
         }
 
         public static void calculaNota() {
             int countAcertos = 0;
-            for (boolean nota : acertos) {
-                if (nota) {
+            for (boolean acertou : acertos) {
+                if (acertou) {
                     countAcertos++;
                 }
             }
-            textViewNota.setText(String.valueOf(countAcertos));
+            int totalPerguntas = listaPerguntas.size();
+            String resultado = String.format(Locale.getDefault(), "%d/%d", countAcertos, totalPerguntas);
+            textViewNota.setText(resultado);
         }
 
 
