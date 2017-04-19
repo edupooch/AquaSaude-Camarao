@@ -1,6 +1,9 @@
 package br.gov.rs.fepagro.aquasaude.controle.jogo;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -139,6 +142,7 @@ public class JogoActivity extends AppCompatActivity {
                     int ultimaPergunta = listaPerguntas.size() - 1;
                     if (nPerguntaAtual == ultimaPergunta) {
                         ResultadosJogoFragment.calculaNota(); //atualiza a nota no fragment de resultados
+
                     }
                     //Passa para a próxima página
                     mViewPager.setCurrentItem(nPerguntaAtual + 1);
@@ -213,6 +217,7 @@ public class JogoActivity extends AppCompatActivity {
     }
 
     public static class ResultadosJogoFragment extends Fragment {
+        public static final int DEF_VALUE = -1;
         private View view;
         private static TextView textViewNota;
 
@@ -240,22 +245,42 @@ public class JogoActivity extends AppCompatActivity {
         @Override
         public void onResume() {
             super.onResume();
-
-            calculaNota();
+            int nota = calculaNota();
+            int totalPerguntas = listaPerguntas.size();
+            String resultado = String.format(Locale.getDefault(), "%d/%d", nota, totalPerguntas);
+            textViewNota.setText(resultado);
+            salvarHighScore(nota);
         }
 
-        public static void calculaNota() {
+        public static int calculaNota() {
             int countAcertos = 0;
             for (boolean acertou : acertos) {
                 if (acertou) {
                     countAcertos++;
                 }
             }
-            int totalPerguntas = listaPerguntas.size();
-            String resultado = String.format(Locale.getDefault(), "%d/%d", countAcertos, totalPerguntas);
-            textViewNota.setText(resultado);
+            return countAcertos;
         }
 
+        private void salvarHighScore(int notaAtual) {
+            SharedPreferences banco = getSharedPreferences();
+            int notaGravada = banco.getInt(getString(R.string.nota_quiz), DEF_VALUE);
+
+            if (notaAtual > notaGravada) {
+                gravaNotaAtual(banco, notaAtual);
+            }
+        }
+
+        private void gravaNotaAtual(SharedPreferences banco, int notaAtual) {
+            SharedPreferences.Editor editor = banco.edit();
+            editor.putInt(getString(R.string.nota_quiz), notaAtual);
+            editor.apply();
+        }
+
+        private SharedPreferences getSharedPreferences() {
+            return getActivity()
+                    .getSharedPreferences(getString(R.string.nome_shared_pref), Context.MODE_PRIVATE);
+        }
 
         public static Fragment newInstace() {
             return new ResultadosJogoFragment();

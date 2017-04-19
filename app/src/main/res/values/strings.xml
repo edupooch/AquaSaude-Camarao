@@ -237,5 +237,8 @@
     <string name="pergunta_5_resposta_4">Fuga dos Animais</string>
     <string name="finalizar_jogo">Finalizar jogo</string>
     <string name="voc_tirou_nota">Você tirou nota:</string>
+    <string name="descricao_jogo">Teste seus conhecimentos sobre a aquicultura, para começar toque no botão abaixo:</string>
+    <string name="titulo_quiz">Quiz AquaSaúde</string>
+    <string name="nota_quiz">nota_quiz</string>
 
 </resources>

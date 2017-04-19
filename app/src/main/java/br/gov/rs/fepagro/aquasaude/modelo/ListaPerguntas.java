@@ -57,8 +57,8 @@ public class ListaPerguntas {
 
         //Pergunta 5
         respostas = new ArrayList<>(4);
-        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_1), true));
-        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_2), false));
+        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_1), false));
+        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_2), true));
         respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_3), false));
         respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_4), false));
         pergunta = new Pergunta(context.getString(R.string.pergunta_5), respostas);

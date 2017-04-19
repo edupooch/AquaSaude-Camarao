@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Quiz AquaSaúde"
+                    android:text="@string/titulo_quiz"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -51,12 +51,20 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginTop="10dp"
                     android:gravity="center"
-                    android:text="Teste seus conhecimentos sobre a aquicultura, para começar toque no botão abaixo:" />
+                    android:text="@string/descricao_jogo" />
 
-
-
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/text_highscore_quiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="Sua maior nota: 5" />
 
             </LinearLayout>
+
             <Button
                 android:id="@+id/btComecarJogo"
                 android:layout_width="match_parent"
