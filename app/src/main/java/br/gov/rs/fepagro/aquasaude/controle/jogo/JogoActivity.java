@@ -244,9 +244,7 @@ public class JogoActivity extends AppCompatActivity {
         public void onResume() {
             super.onResume();
             int nota = calculaNota();
-            int totalPerguntas = listaPerguntas.size();
-            String resultado = String.format(Locale.getDefault(), "%d/%d", nota, totalPerguntas);
-            textViewNota.setText(resultado);
+            textViewNota.setText(String.valueOf(nota));
             salvarHighScore(nota);
         }
 

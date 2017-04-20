@@ -13,11 +13,15 @@ import br.gov.rs.fepagro.aquasaude.R;
 public class ListaPerguntas {
 
     private List<Pergunta> listaPerguntasCamarao;
+    Context context;
 
     public ListaPerguntas(Context context) {
         listaPerguntasCamarao = new ArrayList<>();
+        this.context = context;
+
         ArrayList<Resposta> respostas;
         Pergunta pergunta;
+
 
         //Pergunta 1
         respostas = new ArrayList<>(4);
@@ -56,13 +60,62 @@ public class ListaPerguntas {
         listaPerguntasCamarao.add(pergunta);
 
         //Pergunta 5
-        respostas = new ArrayList<>(4);
-        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_1), false));
-        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_2), true));
-        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_3), false));
-        respostas.add(new Resposta(context.getString(R.string.pergunta_5_resposta_4), false));
-        pergunta = new Pergunta(context.getString(R.string.pergunta_5), respostas);
+        criaPerguntaTexto(R.string.pergunta_5,
+                R.string.pergunta_5_resposta_certa,
+                R.string.pergunta_5_resposta_2,
+                R.string.pergunta_5_resposta_3,
+                R.string.pergunta_5_resposta_4);
+
+        //Pergunta 6
+        criaPerguntaTexto(R.string.pergunta_6,
+                R.string.pergunta_6_resposta_2,
+                R.string.pergunta_6_resposta_3,
+                R.string.pergunta_6_resposta_certa,
+                R.string.pergunta_6_resposta_4);
+
+        //Pergunta 7
+        criaPerguntaTexto(R.string.pergunta_7,
+                R.string.pergunta_7_resposta_2,
+                R.string.pergunta_7_resposta_certa,
+                R.string.pergunta_7_resposta_3,
+                R.string.pergunta_7_resposta_4);
+
+        //Pergunta 8
+        criaPerguntaTexto(R.string.pergunta_8,
+                R.string.pergunta_8_resposta_certa,
+                R.string.pergunta_8_resposta_2,
+                R.string.pergunta_8_resposta_3,
+                R.string.pergunta_8_resposta_4);
+        //Pergunta 9
+        criaPerguntaTexto(R.string.pergunta_9,
+                R.string.pergunta_9_resposta_2,
+                R.string.pergunta_9_resposta_3,
+                R.string.pergunta_9_resposta_4,
+                R.string.pergunta_9_resposta_certa);
+        //Pergunta 10
+        criaPerguntaTexto(R.string.pergunta_10,
+                R.string.pergunta_10_resposta_2,
+                R.string.pergunta_10_resposta_3,
+                R.string.pergunta_10_resposta_certa,
+                R.string.pergunta_10_resposta_4);
+
+    }
+
+    private void criaPerguntaTexto(int resIdPergunta, int resIdResposta_1, int resIdResposta_2,
+                                   int resIdResposta_3, int resIdResposta_4) {
+
+        ArrayList<Resposta> respostas = new ArrayList<>(4);
+        respostas.add(new Resposta(context.getString(resIdResposta_1), isCerta(resIdResposta_1)));
+        respostas.add(new Resposta(context.getString(resIdResposta_2), isCerta(resIdResposta_2)));
+        respostas.add(new Resposta(context.getString(resIdResposta_3), isCerta(resIdResposta_3)));
+        respostas.add(new Resposta(context.getString(resIdResposta_4), isCerta(resIdResposta_4)));
+
+        Pergunta pergunta = new Pergunta(context.getString(resIdPergunta), respostas);
         listaPerguntasCamarao.add(pergunta);
+    }
+
+    private boolean isCerta(int resId){
+        return context.getResources().getResourceEntryName(resId).contains("certa");
     }
 
     public List<Pergunta> getListaPerguntas() {

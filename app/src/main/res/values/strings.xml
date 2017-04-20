@@ -229,11 +229,43 @@
     <string name="pergunta_2">Qual fator não está associado ao aparecimento de doenças?</string>
     <string name="pergunta_3">Qual das imagens abaixo apresenta um camarão saudável?</string>
     <string name="pergunta_4">Qual das imagens não é uma ação de biossegurança?</string>
-    <string name="pergunta_5">Os animais pararam de comer, o que  é importante observar neste caso?</string>
-    <string name="pergunta_5_resposta_1">Alteração na temperatura</string>
-    <string name="pergunta_5_resposta_2">Sinais clínicos de doenças</string>
-    <string name="pergunta_5_resposta_3">Mortalidade</string>
-    <string name="pergunta_5_resposta_4">Fuga dos Animais</string>
+
+    <string name="pergunta_5"> Quais são os EPIs que devem ser fornecidos pelo proprietário?</string>
+    <string name="pergunta_5_resposta_certa">Luva, bota  e colete salva vidas</string>
+    <string name="pergunta_5_resposta_2">Chapéu, faca, canivete e calça jeans</string>
+    <string name="pergunta_5_resposta_3">O funcionário deve adquirir os itens de proteção individual</string>
+    <string name="pergunta_5_resposta_4">Luva, bota e protetor solar</string>
+
+    <string name="pergunta_6">Sobre a Síndrome da mancha branca, é correto afirmar:</string>
+    <string name="pergunta_6_resposta_certa">Fase aguda com manchas brancas e alta mortalidade em poucos dias </string>
+    <string name="pergunta_6_resposta_2">O agente patogênico é uma  bactéria</string>
+    <string name="pergunta_6_resposta_3">O principal sintoma é redução do crescimento</string>
+    <string name="pergunta_6_resposta_4">Há baixa mortalidade e alta morbidade</string>
+
+    <string name="pergunta_7">Não são sinais clínicos de Mionecrose infecciosa:</string>
+    <string name="pergunta_7_resposta_certa">Manchas brancas na capapaça</string>
+    <string name="pergunta_7_resposta_2">Letargia e zonas com aspecto leitoso no corpo</string>
+    <string name="pergunta_7_resposta_3">Liquefação dos músculos e enfraquecido</string>
+    <string name="pergunta_7_resposta_4">Aspecto de camarão cozido</string>
+
+    <string name="pergunta_8">Qual enfermidade não é de notificação obrigatória?</string>
+    <string name="pergunta_8_resposta_certa">Infecção por herpesvírus</string>
+    <string name="pergunta_8_resposta_2">Sindrome da mancha branca</string>
+    <string name="pergunta_8_resposta_3">Mionecrose infecciosa</string>
+    <string name="pergunta_8_resposta_4">Hepatopancreatite necrosante</string>
+
+    <string name="pergunta_9">São erros no manejo sanitário:</string>
+    <string name="pergunta_9_resposta_certa">Utilizar caixa de isopor na despesca</string>
+    <string name="pergunta_9_resposta_2">Monitoramento da matéria orgânica e pH do solo</string>
+    <string name="pergunta_9_resposta_3">Desinfecção do fundo do viveiro entre os ciclos, com cal seca ou hidratada</string>
+    <string name="pergunta_9_resposta_4">Eliminação de animais vetores</string>
+
+    <string name="pergunta_10"> A ação correta para controle de transmissão de doenças nas fazendas:</string>
+    <string name="pergunta_10_resposta_certa">Controle de pragas e descarte responsável de resíduos</string>
+    <string name="pergunta_10_resposta_2">Descarte indevido de resíduos resultantes de beneficiamento</string>
+    <string name="pergunta_10_resposta_3">Destinar cabeças e carapaças para utilização em aquicultura</string>
+    <string name="pergunta_10_resposta_4">Descartar resíduos diretamente no ambiente</string>
+
     <string name="finalizar_jogo">Finalizar jogo</string>
     <string name="voc_tirou_nota">Você tirou nota:</string>
     <string name="descricao_jogo">Teste seus conhecimentos sobre a aquicultura, para começar toque no botão abaixo:</string>
