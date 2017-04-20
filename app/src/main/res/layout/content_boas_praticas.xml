@@ -12,14 +12,14 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="180dp"
+            android:layout_height="170dp"
             android:src="@drawable/icon_biosseguro2" />
 
         <TextView
             android:id="@+id/text_highscore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:text="@string/default_highscore"
             android:textColor="@color/colorPrimaryDark"
@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="25dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
             android:text="Preencher Checklist"
             android:textColor="#fff" />

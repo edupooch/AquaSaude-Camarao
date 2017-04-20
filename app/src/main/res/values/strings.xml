@@ -145,7 +145,6 @@
         "Na aquicultura, biossegurança se resume em criar barreiras que impeçam a entrada de doenças"
         "que contaminem peixes ou camarões. A prevenção é a medida mais importante no combate às"
         "doenças contagiosas.\n"
-        "\nPreencha o checklist abaixo para verificar o nível de biossegurança da sua produção."
     </string>
     <string name="title_activity_checklist">Checklist</string>
     <string name="checklist_selecione">Selecione os procedimentos que são realizados na sua produção e verifique qual o nível de biossegurança aplicado:</string>

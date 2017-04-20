@@ -68,7 +68,6 @@ public class JogoActivity extends AppCompatActivity {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
         private static final int NUMERO_DE_ALTERNATIVAS = 4;
-        private static final String TAG_DEBUG = "dbg";
 
 
         public PerguntaFragment() {
@@ -109,8 +108,7 @@ public class JogoActivity extends AppCompatActivity {
                     // MOSTRAR SE A RESPOSTA ESTÁ CERTA
 
                     int respostaSelecionada = respostasAdapter.getSelectedPosition();
-                    ;
-                    Log.d(TAG_DEBUG, "" + respostaSelecionada);
+
                     //VERIFICAR se o usuário acertou ou não
                     if (respostaSelecionada != NENHUMA_RESPOSTA_SELECIONADA) {
                         btResponde.setText(R.string.proxima);  //Muda o texto do botão para "Próxima"
