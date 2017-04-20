@@ -24,9 +24,8 @@ public class JogoFragment extends Fragment {
         view = inflater.inflate(R.layout.content_escolher_jogo, container, false);
         View botao = view.findViewById(R.id.btComecarJogo);
 
-
         botao.setOnClickListener(v -> {
-            Intent intentComecaJogo = new Intent(getActivity(),JogoActivity.class);
+            Intent intentComecaJogo = new Intent(getActivity(), JogoActivity.class);
             startActivity(intentComecaJogo);
         });
 
