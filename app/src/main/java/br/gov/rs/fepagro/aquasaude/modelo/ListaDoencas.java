@@ -3,6 +3,7 @@ package br.gov.rs.fepagro.aquasaude.modelo;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
 
@@ -21,16 +22,20 @@ public class ListaDoencas {
     public ListaDoencas(Context context) {
         doencas = new ArrayList<>();
 
-        Doenca wssv = new Doenca(INDICE_WSSV,context.getString(R.string.wssv_nome),R.drawable.imagem_wssv);
+        Doenca wssv = new Doenca(INDICE_WSSV,context.getString(R.string.wssv_nome),
+                new int[]{R.drawable.imagem_wssv,R.drawable.imagem_wssv_2});
         doencas.add(INDICE_WSSV, wssv);
 
-        Doenca imnv = new Doenca(INDICE_IMNV,context.getString(R.string.imnv_nome),R.drawable.imagem_mnv);
+        Doenca imnv = new Doenca(INDICE_IMNV,context.getString(R.string.imnv_nome),
+                new int[]{R.drawable.imagem_mnv,R.drawable.imagem_mnv_2});
         doencas.add(INDICE_IMNV, imnv);
 
-        Doenca ihhnv = new Doenca(INDICE_IHHNV,context.getString(R.string.ihhnv_nome),R.drawable.imagem_ihhnv);
+        Doenca ihhnv = new Doenca(INDICE_IHHNV,context.getString(R.string.ihhnv_nome),
+                new int[]{R.drawable.imagem_ihhnv,R.drawable.imagem_ihhnv_2,R.drawable.imagem_ihhnv_3});
         doencas.add(INDICE_IHHNV, ihhnv);
 
-        Doenca nhp = new Doenca(INDICE_NHP,context.getString(R.string.nhv_nome),R.drawable.imagem_nhp);
+        Doenca nhp = new Doenca(INDICE_NHP,context.getString(R.string.nhv_nome),
+                new int[]{R.drawable.imagem_nhp});
         doencas.add(INDICE_NHP, nhp);
     }
 

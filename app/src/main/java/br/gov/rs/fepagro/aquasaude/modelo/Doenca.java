@@ -1,6 +1,7 @@
 package br.gov.rs.fepagro.aquasaude.modelo;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by eduardo-pooch on 18/08/2016.
@@ -9,13 +10,13 @@ public class Doenca implements Serializable {
 
     private int id;
     private String nome;
-    private Integer imagemResId;
+    private int[] imagensResId;
 
 
-    public Doenca(int id, String nome, Integer imagemResId) {
+    public Doenca(int id, String nome, int[] imagemResId) {
         this.id = id;
         this.nome = nome;
-        this.imagemResId = imagemResId;
+        this.imagensResId = imagemResId;
     }
 
     public int getId() {
@@ -26,8 +27,11 @@ public class Doenca implements Serializable {
         return nome;
     }
 
-    public Integer getImagemResId() {
-        return imagemResId;
+    public int[] getImagensResId() {
+        return imagensResId;
     }
 
+    public int getImagemResId(int imagemCapa) {
+        return imagensResId[imagemCapa];
+    }
 }

@@ -23,6 +23,7 @@ import br.gov.rs.fepagro.aquasaude.modelo.ListaDoencas;
  */
 public class ListaDoencasFragment extends Fragment {
 
+    public static final int IMAGEM_CAPA = 0;
     View myView;
 
     @Nullable
@@ -40,7 +41,7 @@ public class ListaDoencasFragment extends Fragment {
             nome.setText(doenca.getNome());
 
             ImageView imagem = (ImageView) card.findViewById(R.id.foto_principal);
-            imagem.setImageResource(doenca.getImagemResId());
+            imagem.setImageResource(doenca.getImagemResId(IMAGEM_CAPA));
 
             assert gridLayout != null;
             gridLayout.addView(card);

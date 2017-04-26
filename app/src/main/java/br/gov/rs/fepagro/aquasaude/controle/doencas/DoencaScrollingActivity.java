@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.bumptech.glide.Glide;
+
 import br.gov.rs.fepagro.aquasaude.R;
 import br.gov.rs.fepagro.aquasaude.modelo.Doenca;
 import br.gov.rs.fepagro.aquasaude.modelo.ListaDoencas;
@@ -24,7 +26,9 @@ import br.gov.rs.fepagro.aquasaude.modelo.ListaDoencas;
  */
 public class DoencaScrollingActivity extends AppCompatActivity {
 
+    public static final int IMAGEM_CAPA = 0;
     View viewContent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,17 +54,27 @@ public class DoencaScrollingActivity extends AppCompatActivity {
                 viewContent = null;
                 break;
         }
+
+        int[] imagensResId = doenca.getImagensResId();
+
         //Imagem da doença na toolbar
         ImageView imagem = (ImageView) findViewById(R.id.imagem_toolbar);
         assert imagem != null;
-        imagem.setImageResource(doenca.getImagemResId());
+        imagem.setImageResource(imagensResId[IMAGEM_CAPA]);
 
         assert viewContent != null;
         viewContent.setVisibility(View.VISIBLE);
 
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        //imagens da aba imagens - algumas doenças tem menos imagens do que outras
+        int[] imageViewsResId = new int[]{R.id.imagem_doenca_1, R.id.imagem_doenca_2, R.id.imagem_doenca_3};
+        for (int i = 0; i < imagensResId.length - 1; i++) {
+            ImageView imageView = (ImageView) findViewById(imageViewsResId[i]);
+            imageView.setVisibility(View.VISIBLE);
+            Glide.with(getApplicationContext()).load(imagensResId[i]).centerCrop().into(imageView);
+        }
 
         // Botão de voltar
         ActionBar supportActionBar = getSupportActionBar();
