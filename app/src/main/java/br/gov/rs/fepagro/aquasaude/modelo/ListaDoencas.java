@@ -23,7 +23,7 @@ public class ListaDoencas {
         doencas = new ArrayList<>();
 
         Doenca wssv = new Doenca(INDICE_WSSV,context.getString(R.string.wssv_nome),
-                new int[]{R.drawable.imagem_wssv,R.drawable.imagem_wssv_2});
+                new int[]{R.drawable.imagem_wssv,R.drawable.imagem_wssv_2,R.drawable.imagem_wssv_3});
         doencas.add(INDICE_WSSV, wssv);
 
         Doenca imnv = new Doenca(INDICE_IMNV,context.getString(R.string.imnv_nome),
