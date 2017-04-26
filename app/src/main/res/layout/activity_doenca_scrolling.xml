@@ -41,15 +41,15 @@
 
 
     <include
-        android:id="@+id/content_smb"
+        android:id="@+id/content_wssv"
         layout="@layout/content_doenca_wssv_scrolling"
         android:visibility="gone" />
     <include
-        android:id="@+id/content_mni"
+        android:id="@+id/content_imnv"
         layout="@layout/content_doenca_imnv_scrolling"
         android:visibility="gone" />
     <include
-        android:id="@+id/content_nhp"
+        android:id="@+id/content_nhv"
         layout="@layout/content_doenca_nhv_scrolling"
         android:visibility="gone" />
     <include

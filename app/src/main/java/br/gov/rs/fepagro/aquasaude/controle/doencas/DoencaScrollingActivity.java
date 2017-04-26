@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.TransitionManager;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageView;
@@ -39,13 +40,13 @@ public class DoencaScrollingActivity extends AppCompatActivity {
 
         switch (idDoenca) {
             case ListaDoencas.INDICE_WSSV:
-                viewContent = findViewById(R.id.content_smb);
+                viewContent = findViewById(R.id.content_wssv);
                 break;
             case ListaDoencas.INDICE_IMNV:
-                viewContent = findViewById(R.id.content_mni);
+                viewContent = findViewById(R.id.content_imnv);
                 break;
             case ListaDoencas.INDICE_NHP:
-                viewContent = findViewById(R.id.content_nhp);
+                viewContent = findViewById(R.id.content_nhv);
                 break;
             case ListaDoencas.INDICE_IHHNV:
                 viewContent = findViewById(R.id.content_ihhnv);
@@ -70,8 +71,9 @@ public class DoencaScrollingActivity extends AppCompatActivity {
 
         //imagens da aba imagens - algumas doenças tem menos imagens do que outras
         int[] imageViewsResId = new int[]{R.id.imagem_doenca_1, R.id.imagem_doenca_2, R.id.imagem_doenca_3};
-        for (int i = 0; i < imagensResId.length - 1; i++) {
-            ImageView imageView = (ImageView) findViewById(imageViewsResId[i]);
+        for (int i = 0; i < imagensResId.length; i++) {
+            ImageView imageView = (ImageView) viewContent.findViewById(imageViewsResId[i]);
+
             imageView.setVisibility(View.VISIBLE);
             Glide.with(getApplicationContext()).load(imagensResId[i]).centerCrop().into(imageView);
         }
@@ -83,32 +85,13 @@ public class DoencaScrollingActivity extends AppCompatActivity {
 
         setTitle(doenca.getNome());
 
-
         //-------------listener para aumentar e diminuir o layout clicado-------------------------//
         int[] layouts = {R.id.layout_agente, R.id.layout_sinais, R.id.layout_imagens, R.id.layout_prevencao};
 
         for (final int resId : layouts) {
             final LinearLayout layout = (LinearLayout) viewContent.findViewById(resId);
-            assert layout != null;
-            layout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
-                        TransitionManager.beginDelayedTransition(layout);
+            layout.setOnClickListener(this::abreLayout);
 
-                    int marginTop = getPx(5);
-
-                    if (layout.getLayoutParams().height == LinearLayout.LayoutParams.WRAP_CONTENT) {
-                        LinearLayout.LayoutParams posicao = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getPx(50));
-                        posicao.setMargins(0, marginTop, 0, 0);
-                        layout.setLayoutParams(posicao);
-                    } else {
-                        LinearLayout.LayoutParams posicao = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                        posicao.setMargins(0, marginTop, 0, 0);
-                        layout.setLayoutParams(posicao);
-                    }
-                }
-            });
         }
     }
 
@@ -127,16 +110,18 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         int marginTop = getPx(5);
 
         if (layout.getLayoutParams().height == LinearLayout.LayoutParams.WRAP_CONTENT) {
-            LinearLayout.LayoutParams posicao = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getPx(50));
+            LinearLayout.LayoutParams posicao =
+                    new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getPx(50));
             posicao.setMargins(0, marginTop, 0, 0);
             layout.setLayoutParams(posicao);
         } else {
-            LinearLayout.LayoutParams posicao = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams posicao = new LinearLayout
+                    .LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
             posicao.setMargins(0, marginTop, 0, 0);
             layout.setLayoutParams(posicao);
         }
+        Log.d("abre", "abriu");
     }
-
 
     public void abrirLinkDaTag(View view) {
         String url = (String) view.getTag();

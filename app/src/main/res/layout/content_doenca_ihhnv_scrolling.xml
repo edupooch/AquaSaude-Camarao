@@ -115,6 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
+            android:onClick="abreLayout"
             android:background="@drawable/card"
             android:orientation="vertical">
 
@@ -148,6 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:contentDescription="@string/descr_imagem"
                 android:visibility="gone" />
 
@@ -156,6 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:contentDescription="@string/descr_imagem"
                 android:visibility="gone" />
 
@@ -164,9 +167,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:contentDescription="@string/descr_imagem"
                 android:visibility="gone" />
-
         </LinearLayout>
         <!--prevencao-->
         <LinearLayout
