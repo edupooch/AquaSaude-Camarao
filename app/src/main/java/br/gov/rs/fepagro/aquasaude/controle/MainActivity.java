@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         android.app.FragmentManager fragmentManager = getFragmentManager();
         int id = item.getItemId();
         switch (id) {
@@ -154,7 +155,7 @@ public class MainActivity extends AppCompatActivity
      */
     public void enviarEmail() {
         String[] emails = {"aquassaude@gmail.com"};
-        String assunto = "Aplicativo AquaSaúde";
+        String assunto = getString(R.string.titulo_email);
         Intent intentEmail = new Intent(Intent.ACTION_SENDTO);
         intentEmail.setData(Uri.parse("mailto:"));
         intentEmail.putExtra(Intent.EXTRA_EMAIL, emails);

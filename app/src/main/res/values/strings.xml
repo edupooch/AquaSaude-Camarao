@@ -271,5 +271,6 @@
     <string name="descricao_jogo">Teste seus conhecimentos sobre a aquicultura, para começar toque no botão abaixo:</string>
     <string name="titulo_quiz">Quiz AquaSaúde</string>
     <string name="nota_quiz">nota_quiz</string>
+    <string name="titulo_email">Aplicativo AquaSaúde</string>
 
 </resources>
