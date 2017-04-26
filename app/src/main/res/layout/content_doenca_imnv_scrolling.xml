@@ -155,7 +155,7 @@
             <ImageView
                 android:id="@+id/imagem_doenca_2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="210dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:contentDescription="@string/descr_imagem"
