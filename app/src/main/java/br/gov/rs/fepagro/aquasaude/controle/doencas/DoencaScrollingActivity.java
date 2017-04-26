@@ -59,9 +59,10 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         int[] imagensResId = doenca.getImagensResId();
 
         //Imagem da doença na toolbar
-        ImageView imagem = (ImageView) findViewById(R.id.imagem_toolbar);
-        assert imagem != null;
-        imagem.setImageResource(imagensResId[IMAGEM_CAPA]);
+        ImageView imageViewCapa = (ImageView) findViewById(R.id.imagem_toolbar);
+        assert imageViewCapa != null;
+        imageViewCapa.setImageResource(imagensResId[IMAGEM_CAPA]);
+        Glide.with(getApplicationContext()).load(imagensResId[IMAGEM_CAPA]).centerCrop().into(imageViewCapa);
 
         assert viewContent != null;
         viewContent.setVisibility(View.VISIBLE);
