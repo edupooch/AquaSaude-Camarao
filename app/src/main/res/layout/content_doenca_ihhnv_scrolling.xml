@@ -20,7 +20,7 @@
         <LinearLayout
             android:id="@+id/layout_agente"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
             android:orientation="vertical">
@@ -144,25 +144,28 @@
             </LinearLayout>
 
             <ImageView
-                android:visibility="gone"
                 android:id="@+id/imagem_doenca_1"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
 
             <ImageView
-                android:visibility="gone"
                 android:id="@+id/imagem_doenca_2"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
 
             <ImageView
-                android:visibility="gone"
                 android:id="@+id/imagem_doenca_3"
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
 
         </LinearLayout>
         <!--prevencao-->

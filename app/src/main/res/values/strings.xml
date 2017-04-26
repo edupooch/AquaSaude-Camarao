@@ -272,5 +272,6 @@
     <string name="titulo_quiz">Quiz AquaSaúde</string>
     <string name="nota_quiz">nota_quiz</string>
     <string name="titulo_email">Aplicativo AquaSaúde</string>
+    <string name="descr_imagem">Imagem do Camarão com a Doença</string>
 
 </resources>

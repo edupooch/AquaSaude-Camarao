@@ -292,6 +292,29 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
+            <ImageView
+                android:id="@+id/imagem_doenca_1"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imagem_doenca_2"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imagem_doenca_3"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
         </LinearLayout>
         <!--prevencao-->
         <LinearLayout
@@ -337,12 +360,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:onClick="abreLayout"
             android:id="@+id/layout_saibamais"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
+            android:onClick="abreLayout"
             android:orientation="vertical">
 
             <LinearLayout
@@ -375,42 +398,41 @@
                 android:id="@+id/text_saiba_mais"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:gravity="center"
+                android:padding="10dp"
                 android:text="@string/text_saiba_mais_wssv" />
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
                 android:background="#cfd8dc"
-                android:layout_width="match_parent"
                 android:onClick="abrirLinkDaTag"
-                android:tag="@string/link_wssv"
-                android:layout_height="wrap_content">
+                android:tag="@string/link_wssv">
 
                 <ImageView
-                    android:contentDescription="@string/logo_oie"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/icon_oie"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/logo_oie"
                     android:onClick="abrirLinkDaTag"
-                    android:tag="@string/link_wssv"
+                    android:src="@drawable/icon_oie"
 
-                    android:layout_margin="5dp" />
+                    android:tag="@string/link_wssv" />
 
                 <TextView
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
-                    android:textSize="17sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/manual_oie"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:onClick="abrirLinkDaTag"
                     android:tag="@string/link_wssv"
-                    />
+                    android:text="@string/manual_oie"
+                    android:textSize="17sp" />
 
             </LinearLayout>
         </LinearLayout>

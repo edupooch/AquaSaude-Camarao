@@ -142,6 +142,30 @@
                     android:textSize="20sp" />
             </LinearLayout>
 
+            <ImageView
+                android:id="@+id/imagem_doenca_1"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imagem_doenca_2"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imagem_doenca_3"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:visibility="gone" />
+
         </LinearLayout>
         <!--prevencao-->
         <LinearLayout
