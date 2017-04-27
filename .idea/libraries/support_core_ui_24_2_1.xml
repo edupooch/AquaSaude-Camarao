@@ -10,6 +10,7 @@
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="jar://E:/AppData/Android/android-sdk/extras/android/m2repository/com/android/support/support-core-ui/24.2.1/support-core-ui-24.2.1-sources.jar!/" />
       <root url="jar://$USER_HOME$/androidstudio/extras/android/m2repository/com/android/support/support-core-ui/24.2.1/support-core-ui-24.2.1-sources.jar!/" />
     </SOURCES>
   </library>

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AquaSaude-Camarao.iml" filepath="$PROJECT_DIR$/AquaSaude-Camarao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AquaSaude-Camarao-fork.iml" filepath="$PROJECT_DIR$/AquaSaude-Camarao-fork.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
