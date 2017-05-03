@@ -227,10 +227,10 @@
 
     <string name="pergunta_1">Qual imagem não está relacionada com a entrada de patógenos?</string>
     <string name="pergunta_2">Qual fator não está associado ao aparecimento de doenças?</string>
-    <string name="pergunta_3">Qual das imagens abaixo apresenta um camarão saudável?</string>
-    <string name="pergunta_4">Qual das imagens não é uma ação de biossegurança?</string>
+    <string name="pergunta_3">Qual destes animais apresenta IMNV?</string>
+    <string name="pergunta_4">Qual das imagens não é uma medida de biossegurança?</string>
 
-    <string name="pergunta_5"> Quais são os EPIs que devem ser fornecidos pelo proprietário?</string>
+    <string name="pergunta_5"> Quais são os EPIs que devem ser fornecidos ao trabalhador?</string>
     <string name="pergunta_5_resposta_certa">Luva, bota  e colete salva vidas</string>
     <string name="pergunta_5_resposta_2">Chapéu, faca, canivete e calça jeans</string>
     <string name="pergunta_5_resposta_3">O funcionário deve adquirir os itens de proteção individual</string>

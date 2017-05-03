@@ -43,10 +43,10 @@ public class ListaPerguntas {
 
         //Pergunta 3
         respostas = new ArrayList<>(4);
-        respostas.add(new Resposta(R.drawable.imagem_wssv, false));
-        respostas.add(new Resposta(R.drawable.foto_padrao, true));
-        respostas.add(new Resposta(R.drawable.imagem_ihhnv, false));
-        respostas.add(new Resposta(R.drawable.imagem_mnv, false));
+        respostas.add(new Resposta(R.drawable.imagem_wssv_2, false));
+        respostas.add(new Resposta(R.drawable.imagem_ihhnv, true));
+        respostas.add(new Resposta(R.drawable.imagem_nhp, false));
+        respostas.add(new Resposta(R.drawable.imagem_mnv_2, false));
         pergunta = new Pergunta(context.getString(R.string.pergunta_3), respostas);
         listaPerguntasCamarao.add(pergunta);
 
