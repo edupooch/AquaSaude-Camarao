@@ -22,14 +22,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_agente">
 
             <LinearLayout
+                android:id="@+id/barra_agente"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_agente">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -37,7 +41,7 @@
                     android:layout_gravity="center"
                     android:padding="5dp"
                     android:src="@drawable/icon_agente"
-                    android:tint="#FFFFFF"/>
+                    android:tint="#FFFFFF" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -63,15 +67,18 @@
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_sinais">
 
             <LinearLayout
-
+                android:id="@+id/barra_sinais"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_sinais">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -114,16 +121,19 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
-            android:onClick="abreLayout"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_imagens">
 
             <LinearLayout
+                android:id="@+id/barra_imagens"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_imagens">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -144,30 +154,33 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/imagem_doenca_0"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:onClick="abreImagem"
+                android:visibility="gone" />
+
+            <ImageView
                 android:id="@+id/imagem_doenca_1"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="230dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:contentDescription="@string/descr_imagem"
+                android:onClick="abreImagem"
                 android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/imagem_doenca_2"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="230dp"
                 android:layout_marginBottom="10dp"
-                android:contentDescription="@string/descr_imagem"
-                android:visibility="gone" />
-
-            <ImageView
-                android:id="@+id/imagem_doenca_3"
-                android:layout_width="match_parent"
-                android:layout_height="210dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:contentDescription="@string/descr_imagem"
+                android:onClick="abreImagem"
                 android:visibility="gone" />
         </LinearLayout>
         <!--prevencao-->
@@ -177,14 +190,18 @@
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_prevencao">
 
             <LinearLayout
+                android:id="@+id/barra_prevencao"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_prevencao">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -214,20 +231,23 @@
         </LinearLayout>
 
         <LinearLayout
-            android:onClick="abreLayout"
             android:id="@+id/layout_saibamais"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_saibamais">
 
             <LinearLayout
+                android:id="@+id/barra_saibamais"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_saibamais">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -252,41 +272,40 @@
                 android:id="@+id/text_saiba_mais"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
                 android:gravity="center"
+                android:padding="10dp"
                 android:text="@string/text_saiba_mais_imnv" />
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
                 android:background="#cfd8dc"
-                android:layout_width="match_parent"
                 android:onClick="abrirLinkDaTag"
-                android:tag="@string/link_imnv"
-                android:layout_height="wrap_content">
+                android:tag="@string/link_imnv">
 
                 <ImageView
-                    android:contentDescription="@string/logo_oie"
-                    android:layout_gravity="center_vertical"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/icon_oie"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/logo_oie"
                     android:onClick="abrirLinkDaTag"
-                    android:tag="@string/link_imnv"
-                    android:layout_margin="5dp" />
+                    android:src="@drawable/icon_oie"
+                    android:tag="@string/link_imnv" />
 
                 <TextView
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="10dp"
-                    android:textSize="17sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/manual_oie"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:onClick="abrirLinkDaTag"
                     android:tag="@string/link_imnv"
-                    />
+                    android:text="@string/manual_oie"
+                    android:textSize="17sp" />
 
             </LinearLayout>
         </LinearLayout>

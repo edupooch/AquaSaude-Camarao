@@ -29,13 +29,14 @@ public class DoencaScrollingActivity extends AppCompatActivity {
 
     public static final int IMAGEM_CAPA = 0;
     View viewContent;
+    private Doenca doenca;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         int idDoenca = (int) getIntent().getSerializableExtra("id_doenca");
-        Doenca doenca = ListaDoencas.getDoenca(idDoenca);
+        doenca = ListaDoencas.getDoenca(idDoenca);
         setContentView(R.layout.activity_doenca_scrolling);
 
         switch (idDoenca) {
@@ -71,7 +72,7 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //imagens da aba imagens - algumas doenças tem menos imagens do que outras
-        int[] imageViewsResId = new int[]{R.id.imagem_doenca_1, R.id.imagem_doenca_2, R.id.imagem_doenca_3};
+        int[] imageViewsResId = new int[]{R.id.imagem_doenca_0, R.id.imagem_doenca_1, R.id.imagem_doenca_2};
         for (int i = 0; i < imagensResId.length; i++) {
             ImageView imageView = (ImageView) viewContent.findViewById(imageViewsResId[i]);
 
@@ -85,21 +86,18 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         supportActionBar.setDisplayHomeAsUpEnabled(true);
 
         setTitle(doenca.getNome());
-
-        //-------------listener para aumentar e diminuir o layout clicado-------------------------//
-        int[] layouts = {R.id.layout_agente, R.id.layout_sinais, R.id.layout_imagens, R.id.layout_prevencao};
-
-        for (final int resId : layouts) {
-            final LinearLayout layout = (LinearLayout) viewContent.findViewById(resId);
-            layout.setOnClickListener(this::abreLayout);
-
-        }
     }
 
-    private int getPx(int dp) {
+    private int dp2Px(int dp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, getResources().getDisplayMetrics());
     }
 
+    public void abreParentLayout(View view) {
+        String tagDaBarra = (String) view.getTag();
+        String section = tagDaBarra.replace("barra", "");
+        View parentLayout = viewContent.findViewWithTag("layout" + section);
+        abreLayout(parentLayout);
+    }
 
     //-------------listener para aumentar e diminuir o layout clicado-------------------------//
     public void abreLayout(View view) {
@@ -108,11 +106,11 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             TransitionManager.beginDelayedTransition(layout);
 
-        int marginTop = getPx(5);
+        int marginTop = dp2Px(5);
 
         if (layout.getLayoutParams().height == LinearLayout.LayoutParams.WRAP_CONTENT) {
             LinearLayout.LayoutParams posicao =
-                    new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, getPx(50));
+                    new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, dp2Px(50));
             posicao.setMargins(0, marginTop, 0, 0);
             layout.setLayoutParams(posicao);
         } else {
@@ -129,6 +127,14 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         System.out.println(url);
         Uri uri = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+    }
+
+    public void abreImagem(View view) {
+        String textoId = getResources().getResourceEntryName(view.getId());
+        int position = Integer.valueOf(textoId.replace("imagem_doenca_", ""));
+        Intent intent = new Intent(getApplicationContext(), ImagemActivity.class);
+        intent.putExtra("imagem", doenca.getImagemResId(position));
         startActivity(intent);
     }
 }

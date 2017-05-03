@@ -31,7 +31,7 @@ public class Doenca implements Serializable {
         return imagensResId;
     }
 
-    public int getImagemResId(int imagemCapa) {
-        return imagensResId[imagemCapa];
+    public int getImagemResId(int position) {
+        return imagensResId[position];
     }
 }

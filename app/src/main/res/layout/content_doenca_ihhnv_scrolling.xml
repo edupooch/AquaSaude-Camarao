@@ -23,14 +23,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_agente">
 
             <LinearLayout
+                android:id="@+id/barra_agente"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_agente">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -64,15 +68,18 @@
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_sinais">
 
             <LinearLayout
-
+                android:id="@+id/barra_sinais"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_sinais">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -115,16 +122,19 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
-            android:onClick="abreLayout"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_imagens">
 
             <LinearLayout
+                android:id="@+id/barra_imagens"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_imagens">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -145,30 +155,33 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/imagem_doenca_0"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/descr_imagem"
+                android:onClick="abreImagem"
+                android:visibility="gone" />
+
+            <ImageView
                 android:id="@+id/imagem_doenca_1"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="240dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
                 android:contentDescription="@string/descr_imagem"
+                android:onClick="abreImagem"
                 android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/imagem_doenca_2"
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="240dp"
                 android:layout_marginBottom="10dp"
-                android:contentDescription="@string/descr_imagem"
-                android:visibility="gone" />
-
-            <ImageView
-                android:id="@+id/imagem_doenca_3"
-                android:layout_width="match_parent"
-                android:layout_height="210dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:contentDescription="@string/descr_imagem"
+                android:onClick="abreImagem"
                 android:visibility="gone" />
         </LinearLayout>
         <!--prevencao-->
@@ -178,14 +191,18 @@
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_prevencao">
 
             <LinearLayout
+                android:id="@+id/barra_prevencao"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_prevencao">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -220,15 +237,18 @@
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
             android:background="@drawable/card"
-            android:onClick="abreLayout"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:tag="layout_saibamais">
 
             <LinearLayout
+                android:id="@+id/barra_saibamais"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:onClick="abreParentLayout"
+                android:padding="10dp"
+                android:tag="barra_saibamais">
 
                 <ImageView
                     android:layout_width="25dp"
