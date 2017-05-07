@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">AquaSaúde</string>
-    <string name="action_settings">Configurações</string>
 
 
     <string name="titulo_agente">Agente</string>
@@ -30,7 +29,6 @@
     <string name="wssv_atencao_sinal_2">"Se a cor muda para rosa ou marrom-avermelhada"</string>
     <string name="wssv_atencao_sinal_3">Se os animais se reúnem em torno das bordas dos cultivos na superfície da água</string>
     <string name="wssv_atencao_sinal_4">Se há uma rápida redução no consumo alimentar</string>
-    <string name="wssv_atencao_sinal_conclusao">"Pode ser esperado uma elevada taxa de mortalidade na população."</string>
 
     <string name="wssv_prevencao">
         " Práticas gerais de manejo são as melhores medidas para prevenção do vírus da mancha "
@@ -124,10 +122,7 @@
     <string name="equipe">EQUIPE</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_jogo">JogoActivity</string>
     <string name="title_activity_jogo2">Jogo2Activity</string>
-    <string name="section_format">Hello World from section: %1$d</string>
     <string name="sobre_descricao">
         "O objetivo do AquaSaúde é trazer melhorias para a aquicultura brasileira através da"
         "disponibilização de"
@@ -155,13 +150,6 @@
     <string name="dialog_abandonar_voltar">O jogo será cancelado e todos os dados serão perdidos.</string>
     <string name="dialog_yes">Sim</string>
     <string name="dialog_no">Não</string>
-    <string name="links">MAIS INFORMAÇÕES</string>
-    <string name="links_info">
-        "\n • OIE: World Organisation for Animal Health:\n    http://www.oie.int/ \n\n"
-        "• MAPA: Ministério da Agricultura:\n    http://agricultura.gov.br/ \n\n"
-        "• ABCCAM: Associação Brasileira de Carcinicultura:\n    http://abccam.com.br/ \n\n"
-
-    </string>
     <string name="titulo_saiba_mais">Saiba Mais</string>
 
     <string name="manual_oie">Manual da OIE\n(em inglês)</string>
@@ -212,7 +200,6 @@
 
     <string name="acess_escudo">Escudo representando biossegurança</string>
     <string name="resultado_checklist_dicas_titulo">Confira algumas dicas baseadas em suas marcações para aumentar o nível de biossegurança:</string>
-    <string name="parabens">Parabéns!</string>
     <string name="sua_fazenda_esta_x_biossegura">Sua fazenda está x% biossegura!</string>
     <string name="ok">OK</string>
     <string name="msg_share">Aprenda sobre o cultivo de camarões com o AquaSaúde! Disponível para Android na Play Store: https://play.google.com/store/apps/</string>

@@ -17,7 +17,6 @@
 
         <!--agente-->
         <LinearLayout
-            android:id="@+id/layout_agente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -26,7 +25,6 @@
             android:tag="layout_agente">
 
             <LinearLayout
-                android:id="@+id/barra_agente"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
@@ -54,7 +52,6 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/text_agente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -62,7 +59,6 @@
         </LinearLayout>
         <!--sinais clinicos-->
         <LinearLayout
-            android:id="@+id/layout_sinais"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
@@ -71,7 +67,6 @@
             android:tag="layout_sinais">
 
             <LinearLayout
-                android:id="@+id/barra_sinais"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
@@ -106,7 +101,6 @@
                 android:src="@drawable/icon_mni" />
 
             <TextView
-                android:id="@+id/text_sinais"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -117,7 +111,6 @@
         </LinearLayout>
         <!--imagens-->
         <LinearLayout
-            android:id="@+id/layout_imagens"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
@@ -126,7 +119,6 @@
             android:tag="layout_imagens">
 
             <LinearLayout
-                android:id="@+id/barra_imagens"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
@@ -185,7 +177,6 @@
         </LinearLayout>
         <!--prevencao-->
         <LinearLayout
-            android:id="@+id/layout_prevencao"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
@@ -194,7 +185,6 @@
             android:tag="layout_prevencao">
 
             <LinearLayout
-                android:id="@+id/barra_prevencao"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
@@ -223,7 +213,6 @@
 
 
             <TextView
-                android:id="@+id/text_prevencao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
@@ -231,7 +220,6 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/layout_saibamais"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
@@ -240,7 +228,6 @@
             android:tag="layout_saibamais">
 
             <LinearLayout
-                android:id="@+id/barra_saibamais"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/titulo_cards"
@@ -269,7 +256,6 @@
 
 
             <TextView
-                android:id="@+id/text_saiba_mais"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
