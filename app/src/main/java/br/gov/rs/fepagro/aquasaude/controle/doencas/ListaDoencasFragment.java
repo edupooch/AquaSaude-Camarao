@@ -12,6 +12,8 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 import br.gov.rs.fepagro.aquasaude.R;
@@ -41,7 +43,8 @@ public class ListaDoencasFragment extends Fragment {
             nome.setText(doenca.getNome());
 
             ImageView imagem = (ImageView) card.findViewById(R.id.foto_principal);
-            imagem.setImageResource(doenca.getImagemResId(IMAGEM_CAPA));
+
+            Glide.with(getActivity()).load(doenca.getImagemResId(IMAGEM_CAPA)).centerCrop().into(imagem);
 
             assert gridLayout != null;
             gridLayout.addView(card);

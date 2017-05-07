@@ -62,84 +62,9 @@
             android:background="#707070" />
 
         <ImageView
+            android:id="@+id/imagem_logos"
             android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:src="@drawable/logos2"
-            />
+            android:layout_height="280dp" />
 
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:text="@string/links"-->
-            <!--android:textStyle="bold" />-->
-
-        <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"-->
-            <!--android:layout_marginEnd="10dp"-->
-            <!--android:layout_marginStart="10dp"-->
-            <!--android:background="#707070" />-->
-
-        <!--<TextView-->
-            <!--android:layout_marginStart="5dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/links_info"-->
-            <!--android:autoLink="web"-->
-            <!--android:textColorLink="@color/colorPrimaryDark"-->
-            <!--android:layout_marginLeft="5dp" />-->
-
-
-        <!--<GridLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:columnCount="2"-->
-            <!--android:paddingTop="10dp">-->
-
-            <!--<ImageView-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="80dp"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_marginEnd="10dp"-->
-                <!--android:layout_marginRight="10dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:src="@drawable/logo_fepagro" />-->
-
-            <!--<ImageView-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="80dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:src="@drawable/logo_ufcspa" />-->
-
-            <!--<ImageView-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="70dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:src="@drawable/logo_cibnor" />-->
-
-            <!--<ImageView-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="60dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:src="@drawable/logo_furg" />-->
-
-            <!--<ImageView-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="80dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:src="@drawable/logo_fiocruz" />-->
-
-
-            <!--<ImageView-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="80dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:src="@drawable/logo_cnpq" />-->
-
-
-        <!--</GridLayout>-->
     </LinearLayout>
 </ScrollView>
