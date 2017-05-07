@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.bumptech.glide.Glide;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import br.gov.rs.fepagro.aquasaude.R;
@@ -23,7 +24,7 @@ public class ImagemActivity extends AppCompatActivity {
         int imagemResId = getIntent().getIntExtra("imagem", R.drawable.foto_padrao);
 
         PhotoView photoView = (PhotoView) findViewById(R.id.photo_view);
-        photoView.setImageResource(imagemResId);
+        Glide.with(this).load(imagemResId).into(photoView);
 
     }
 }

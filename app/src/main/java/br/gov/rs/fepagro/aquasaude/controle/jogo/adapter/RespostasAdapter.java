@@ -30,11 +30,13 @@ public class RespostasAdapter extends BaseAdapter {
     private List<Resposta> respostas;
     private Context context;
     private int selectedPosition = -1;
+    private int screenWidth;
 
     public RespostasAdapter(Context context, List<Resposta> respostas, GridView gridParent) {
         this.respostas = respostas;
         this.context = context;
         this.gridParent = gridParent;
+        this.screenWidth = getScreenWidth();
     }
 
     @Override
@@ -57,6 +59,7 @@ public class RespostasAdapter extends BaseAdapter {
         Resposta resposta = respostas.get(position);
         LayoutInflater inflater = LayoutInflater.from(context);
         int layoutTipoResposta = getLayoutTipoResposta(resposta);
+
         View view = convertView;
         if (view == null) view = inflater.inflate(layoutTipoResposta, parent, false);
 
@@ -65,7 +68,6 @@ public class RespostasAdapter extends BaseAdapter {
         radioButton.setTag(position);
         radioButton.setOnClickListener(this::radioClicado);
         view.setOnClickListener(v -> radioClicado(radioButton));
-
         configuraRespostas(resposta, view);
 
         return view;
@@ -80,11 +82,12 @@ public class RespostasAdapter extends BaseAdapter {
             notifyDataSetChanged();
         } else {
             gridParent.setNumColumns(1);
-            gridParent.setColumnWidth(getScreenWidth());
-            gridParent.setStretchMode(GridView.NO_STRETCH);
+            gridParent.setColumnWidth(screenWidth);
+            gridParent.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
 
             TextView textoRespota = (TextView) view.findViewById(R.id.texto_resposta);
             textoRespota.setText(resposta.getTexto());
+            notifyDataSetChanged();
         }
     }
 
