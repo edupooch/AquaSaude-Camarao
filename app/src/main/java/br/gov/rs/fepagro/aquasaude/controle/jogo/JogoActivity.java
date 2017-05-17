@@ -22,6 +22,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Locale;
@@ -108,11 +109,11 @@ public class JogoActivity extends AppCompatActivity {
                     // MOSTRAR SE A RESPOSTA ESTÁ CERTA
 
                     int respostaSelecionada = respostasAdapter.getSelectedPosition();
-
-                    //VERIFICAR se o usuário acertou ou não
-                    if (respostaSelecionada != NENHUMA_RESPOSTA_SELECIONADA) {
-                        btResponde.setText(R.string.proxima);  //Muda o texto do botão para "Próxima"
-
+                    if (respostaSelecionada == NENHUMA_RESPOSTA_SELECIONADA) {
+                        Toast.makeText(getActivity(), "Selecione alguma alternativa", Toast.LENGTH_LONG).show();
+                    } else {
+                        //VERIFICAR se o usuário acertou ou não
+                        btResponde.setText(R.string.proxima);
                         bloqueiaRadios(gridRespostas);
 
                         boolean acertou = pergunta.getRespostas().get(respostaSelecionada).isCerta();
@@ -140,7 +141,6 @@ public class JogoActivity extends AppCompatActivity {
                     int ultimaPergunta = listaPerguntas.size() - 1;
                     if (nPerguntaAtual == ultimaPergunta) {
                         ResultadosJogoFragment.calculaNota(); //atualiza a nota no fragment de resultados
-
                     }
                     //Passa para a próxima página
                     mViewPager.setCurrentItem(nPerguntaAtual + 1);
