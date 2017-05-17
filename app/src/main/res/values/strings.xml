@@ -263,5 +263,12 @@
     <string name="nota_quiz">nota_quiz</string>
     <string name="titulo_email">Aplicativo AquaSaúde</string>
     <string name="descr_imagem">Imagem do Camarão com a Doença</string>
+    <string name="bibliotecas">BIBLIOTECAS UTLIZADAS</string>
+    <string name="bibliotecas_descricao">
+        " Ícones: flaticon.com/\n"
+            "Glide: github.com/bumptech/glide\n"
+            "PhotoView: github.com/chrisbanes/PhotoView\n"
+            "AutoFit TextView: github.com/grantland/android-autofittextview\n"
+    </string>
 
 </resources>

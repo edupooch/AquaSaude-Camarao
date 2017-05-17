@@ -15,7 +15,7 @@ import br.gov.rs.fepagro.aquasaude.R;
 /**
  * Created by eduardo-pooch on 01/09/2016.
  */
-public class SobreFragment extends Fragment{
+public class SobreFragment extends Fragment {
     View view;
 
     @Nullable
@@ -23,9 +23,11 @@ public class SobreFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.content_sobre, container, false);
 
-        ImageView imagem = (ImageView) view.findViewById(R.id.imagem_logos);
+        ImageView instituicoes = (ImageView) view.findViewById(R.id.imagem_logos);
+        ImageView logoApp = (ImageView) view.findViewById(R.id.logo_app);
 
-        Glide.with(getActivity()).load(R.drawable.logos2).into(imagem);
+        Glide.with(getActivity()).load(R.drawable.logos_instituicoes).into(instituicoes);
+        Glide.with(getActivity()).load(R.drawable.logo_app).into(logoApp);
         return view;
     }
 
