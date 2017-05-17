@@ -103,18 +103,21 @@
 
     <string name="equipe_nomes">
         " Coordenadora:\n"
-        "Dra. Lissandra Souto Cavalli (Fepagro)\n\n"
+        "Dra. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n\n"
         "Desenvolvimento do Aplicativo:\n"
         "Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n\n"
 
-        "Equipe:\n"
-        "Dra. Lissandra Souto Cavalli (Fepagro)\n"
+        "Equipe AquaSaúde:\n"
+        "Dra. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n"
+        "Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n"
         "Dr. Silvio Cazella (UFCSPA)\n"
-        "Dra. Maria Helena Firmino (Fepagro)\n"
-        "Dr. Benito Brito (Fepagro)\n"
-        "Dra. Kelly Tagliari Brito (Fepagro)\n"
-        "Dr. Marco Aurélio Rotta (Fepagro)\n"
-        "Dra. Andrea F. da Rocha (Fepagro)"
+        "Dra. Maria Helena Firmino (DDPA/SEAPI-RS)\n"
+        "Dr. Benito Brito (DDPA/SEAPI-RS)\n"
+        "Dra. Kelly Tagliari Brito (DDPA/SEAPI-RS)\n"
+        "Dra. Marcia Regina Stech"
+        "Dr. Paulo César Abreu (FURG)\n"
+        "Dr. Luis Alberto Romano (FURG)\n"
+        "Dr. Arturo Sanchez-Paz (CIBNOR)"
 
     </string>
     <string name="icone">Ícone</string>
