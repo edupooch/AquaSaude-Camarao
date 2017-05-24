@@ -92,7 +92,8 @@ public class DoencaScrollingActivity extends AppCompatActivity {
     public void abreParentLayout(View view) {
         String tagDaBarra = (String) view.getTag();
         String section = tagDaBarra.replace("barra", "");
-        View parentLayout = viewContent.findViewWithTag("layout" + section);
+        String tag = "layout" + section;
+        View parentLayout = viewContent.findViewWithTag(tag);
         abreLayout(parentLayout);
     }
 
