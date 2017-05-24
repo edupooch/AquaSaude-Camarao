@@ -8,8 +8,8 @@ android {
         applicationId "br.gov.rs.fepagro.aquasaude_camarao"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 2
-        versionName "1.01"
+        versionCode 3
+        versionName "1.02"
 
         jackOptions {// para java 8
             enabled true
