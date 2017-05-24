@@ -34,13 +34,10 @@ public class DoencaScrollingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActionBar supportActionBar = getSupportActionBar();
-        assert supportActionBar != null;
-        supportActionBar.setDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_doenca_scrolling);
 
         int idDoenca = (int) getIntent().getSerializableExtra("id_doenca");
         doenca = ListaDoencas.getDoenca(idDoenca);
-        setContentView(R.layout.activity_doenca_scrolling);
         setTitle(doenca.getNome());
 
         switch (idDoenca) {
@@ -61,18 +58,21 @@ public class DoencaScrollingActivity extends AppCompatActivity {
                 break;
         }
 
-        //Imagem da doença na toolbar
-        ImageView imageViewCapa = (ImageView) findViewById(R.id.imagem_toolbar);
-        assert imageViewCapa != null;
-        Glide.with(getApplicationContext()).load(doenca.getImagemResId(IMAGEM_CAPA)).centerCrop().into(imageViewCapa);
-
         assert viewContent != null;
         viewContent.setVisibility(View.VISIBLE);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //imagens da aba imagens - algumas doenças tem menos imagens do que outras
+        ActionBar supportActionBar = getSupportActionBar();
+        assert supportActionBar != null;
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
+
+        //Imagem da doença na toolbar
+        ImageView imageViewCapa = (ImageView) findViewById(R.id.imagem_toolbar);
+        assert imageViewCapa != null;
+        Glide.with(getApplicationContext()).load(doenca.getImagemResId(IMAGEM_CAPA)).centerCrop().into(imageViewCapa);
+
         carregaImagens();
     }
 
