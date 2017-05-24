@@ -112,9 +112,9 @@
         "Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n"
         "Dr. Silvio Cazella (UFCSPA)\n"
         "Dra. Maria Helena Firmino (DDPA/SEAPI-RS)\n"
+        "Dra. Marcia Regina Stech\n"
         "Dr. Benito Brito (DDPA/SEAPI-RS)\n"
         "Dra. Kelly Tagliari Brito (DDPA/SEAPI-RS)\n"
-        "Dra. Marcia Regina Stech"
         "Dr. Paulo César Abreu (FURG)\n"
         "Dr. Luis Alberto Romano (FURG)\n"
         "Dr. Arturo Sanchez-Paz (CIBNOR)"
@@ -233,9 +233,9 @@
     <string name="pergunta_6_resposta_4">Há baixa mortalidade e alta morbidade</string>
 
     <string name="pergunta_7">Não são sinais clínicos de Mionecrose infecciosa:</string>
-    <string name="pergunta_7_resposta_certa">Manchas brancas na capapaça</string>
+    <string name="pergunta_7_resposta_certa">Liquefação dos músculos e enfraquecido</string>
     <string name="pergunta_7_resposta_2">Letargia e zonas com aspecto leitoso no corpo</string>
-    <string name="pergunta_7_resposta_3">Liquefação dos músculos e enfraquecido</string>
+    <string name="pergunta_7_resposta_3">Manchas brancas na capapaça</string>
     <string name="pergunta_7_resposta_4">Aspecto de camarão cozido</string>
 
     <string name="pergunta_8">Qual enfermidade não é de notificação obrigatória?</string>
@@ -245,7 +245,7 @@
     <string name="pergunta_8_resposta_4">Hepatopancreatite necrosante</string>
 
     <string name="pergunta_9">São erros no manejo sanitário:</string>
-    <string name="pergunta_9_resposta_certa">Utilizar caixa de isopor na despesca</string>
+    <string name="pergunta_9_resposta_certa">Utilizar antibióticos para doenças virais</string>
     <string name="pergunta_9_resposta_2">Monitoramento da matéria orgânica e pH do solo</string>
     <string name="pergunta_9_resposta_3">Desinfecção do fundo do viveiro entre os ciclos, com cal seca ou hidratada</string>
     <string name="pergunta_9_resposta_4">Eliminação de animais vetores</string>
@@ -263,9 +263,9 @@
     <string name="nota_quiz">nota_quiz</string>
     <string name="titulo_email">Aplicativo AquaSaúde</string>
     <string name="descr_imagem">Imagem do Camarão com a Doença</string>
-    <string name="bibliotecas">BIBLIOTECAS UTLIZADAS</string>
+    <string name="bibliotecas">BIBLIOTECAS UTILIZADAS</string>
     <string name="bibliotecas_descricao">
-        " Ícones: flaticon.com/\n"
+        " Ícones: flaticon.com\n"
             "Glide: github.com/bumptech/glide\n"
             "PhotoView: github.com/chrisbanes/PhotoView\n"
             "AutoFit TextView: github.com/grantland/android-autofittextview\n"

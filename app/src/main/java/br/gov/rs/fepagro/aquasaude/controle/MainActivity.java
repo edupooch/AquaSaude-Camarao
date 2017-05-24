@@ -12,7 +12,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
@@ -28,6 +27,8 @@ import br.gov.rs.fepagro.aquasaude.controle.sobre.SobreFragment;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    public static final String TAG_FRAGMENT_PRINCIPAL = "LISTA_DOENCAS";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +55,11 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         assert navigationView != null;
         navigationView.setNavigationItemSelectedListener(this);
-
         //Começar com a lista de doenças aberta
         navigationView.setCheckedItem(R.id.item_doencas_camarao);
+
         getFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, new ListaDoencasFragment())
+                .replace(R.id.content_frame, new ListaDoencasFragment(), TAG_FRAGMENT_PRINCIPAL)
                 .commit();
 
 
@@ -69,9 +70,19 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        } else if (estaNoFragmentPrincipal()) {
+            finish();
         } else {
             abreFragmentPrincipal();
         }
+
+    }
+
+    private boolean estaNoFragmentPrincipal() {
+        ListaDoencasFragment fragment = (ListaDoencasFragment)
+                getFragmentManager().findFragmentByTag(TAG_FRAGMENT_PRINCIPAL);
+        return fragment != null && fragment.isVisible();
+
     }
 
     @Override
@@ -81,9 +92,7 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             case R.id.item_doencas_camarao:
                 mostraSombra();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.content_frame, new ListaDoencasFragment())
-                        .commit();
+                abreFragmentPrincipal();
                 break;
             case R.id.item_boas_praticas:
                 mostraSombra();

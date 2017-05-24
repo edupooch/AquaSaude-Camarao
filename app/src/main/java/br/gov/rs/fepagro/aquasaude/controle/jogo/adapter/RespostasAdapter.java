@@ -109,7 +109,6 @@ public class RespostasAdapter extends BaseAdapter {
 
     private void radioClicado(View v) {
         selectedPosition = (Integer) v.getTag();
-        Log.d("dbg", "" + selectedPosition);
         notifyDataSetChanged();
     }
 

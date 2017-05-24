@@ -34,10 +34,14 @@ public class DoencaScrollingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar supportActionBar = getSupportActionBar();
+        assert supportActionBar != null;
+        supportActionBar.setDisplayHomeAsUpEnabled(true);
 
         int idDoenca = (int) getIntent().getSerializableExtra("id_doenca");
         doenca = ListaDoencas.getDoenca(idDoenca);
         setContentView(R.layout.activity_doenca_scrolling);
+        setTitle(doenca.getNome());
 
         switch (idDoenca) {
             case ListaDoencas.INDICE_WSSV:
@@ -57,13 +61,10 @@ public class DoencaScrollingActivity extends AppCompatActivity {
                 break;
         }
 
-        int[] imagensResId = doenca.getImagensResId();
-
         //Imagem da doença na toolbar
         ImageView imageViewCapa = (ImageView) findViewById(R.id.imagem_toolbar);
         assert imageViewCapa != null;
-        imageViewCapa.setImageResource(imagensResId[IMAGEM_CAPA]);
-        Glide.with(getApplicationContext()).load(imagensResId[IMAGEM_CAPA]).centerCrop().into(imageViewCapa);
+        Glide.with(getApplicationContext()).load(doenca.getImagemResId(IMAGEM_CAPA)).centerCrop().into(imageViewCapa);
 
         assert viewContent != null;
         viewContent.setVisibility(View.VISIBLE);
@@ -72,20 +73,16 @@ public class DoencaScrollingActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //imagens da aba imagens - algumas doenças tem menos imagens do que outras
+        carregaImagens();
+    }
+
+    private void carregaImagens() {
         int[] imageViewsResId = new int[]{R.id.imagem_doenca_0, R.id.imagem_doenca_1, R.id.imagem_doenca_2};
-        for (int i = 0; i < imagensResId.length; i++) {
+        for (int i = 0; i < doenca.getImagensResId().length; i++) {
             ImageView imageView = (ImageView) viewContent.findViewById(imageViewsResId[i]);
-
             imageView.setVisibility(View.VISIBLE);
-            Glide.with(getApplicationContext()).load(imagensResId[i]).centerCrop().into(imageView);
+            Glide.with(getApplicationContext()).load(doenca.getImagemResId(i)).centerCrop().into(imageView);
         }
-
-        // Botão de voltar
-        ActionBar supportActionBar = getSupportActionBar();
-        assert supportActionBar != null;
-        supportActionBar.setDisplayHomeAsUpEnabled(true);
-
-        setTitle(doenca.getNome());
     }
 
     private int dp2Px(int dp) {
@@ -119,7 +116,6 @@ public class DoencaScrollingActivity extends AppCompatActivity {
             posicao.setMargins(0, marginTop, 0, 0);
             layout.setLayoutParams(posicao);
         }
-        Log.d("abre", "abriu");
     }
 
     public void abrirLinkDaTag(View view) {

@@ -24,6 +24,7 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
@@ -118,6 +119,8 @@ public class JogoActivity extends AppCompatActivity {
 
                         boolean acertou = pergunta.getRespostas().get(respostaSelecionada).isCerta();
                         acertos[nPerguntaAtual] = acertou;
+                        Log.d("jogo", Arrays.toString(acertos));
+
                         if (acertou) {
                             //o fundo da questao selecionada fica verde
                             View layout = getViewByPosition(respostaSelecionada, gridRespostas);
@@ -139,8 +142,10 @@ public class JogoActivity extends AppCompatActivity {
                 } else {
                     // O BOTÃO ESTÁ COM O TEXTO 'PRÓXIMA'
                     int ultimaPergunta = listaPerguntas.size() - 1;
+                    Log.d("jogo", "n atual:" + nPerguntaAtual + " ultima: " + ultimaPergunta);
                     if (nPerguntaAtual == ultimaPergunta) {
-                        ResultadosJogoFragment.calculaNota(); //atualiza a nota no fragment de resultados
+                        Log.d("jogo", "atualizou o ultimo resultado");
+                        ResultadosJogoFragment.atualizaNota(); //atualiza a nota no fragment de resultado
                     }
                     //Passa para a próxima página
                     mViewPager.setCurrentItem(nPerguntaAtual + 1);
@@ -237,15 +242,19 @@ public class JogoActivity extends AppCompatActivity {
             return view;
         }
 
+        private static void atualizaNota() {
+            int nota = calculaNota();
+            textViewNota.setText(String.valueOf(nota));
+        }
+
         /**
          * Calcula a nota novamente na mudança de estado (por exemplo orientação alterada)
          */
         @Override
         public void onResume() {
             super.onResume();
-            int nota = calculaNota();
-            textViewNota.setText(String.valueOf(nota));
-            salvarHighScore(nota);
+            atualizaNota();
+            salvarHighScore(calculaNota());
         }
 
         public static int calculaNota() {
