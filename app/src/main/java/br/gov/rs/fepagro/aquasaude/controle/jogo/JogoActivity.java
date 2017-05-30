@@ -254,7 +254,6 @@ public class JogoActivity extends AppCompatActivity {
         public void onResume() {
             super.onResume();
             atualizaNota();
-            salvarHighScore(calculaNota());
         }
 
         public static int calculaNota() {
@@ -287,10 +286,17 @@ public class JogoActivity extends AppCompatActivity {
                     .getSharedPreferences(getString(R.string.nome_shared_pref), Context.MODE_PRIVATE);
         }
 
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            salvarHighScore(calculaNota());
+        }
+
         public static Fragment newInstace() {
             return new ResultadosJogoFragment();
         }
     }
+
 
     /**
      * Salva o array de acertos no restart da activity, mudança de orientação da tela
