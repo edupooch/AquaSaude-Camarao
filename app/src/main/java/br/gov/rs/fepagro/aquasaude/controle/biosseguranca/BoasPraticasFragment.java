@@ -48,14 +48,18 @@ public class BoasPraticasFragment extends Fragment {
         }
 
         String strUltimoResultado = sharedPref.getString(getString(R.string.string_itens), null);
-        if (strUltimoResultado != null){
-            int[] itensUltimoResultado = toIntArray(strUltimoResultado);
+        try {
+            if (strUltimoResultado != null) {
+                int[] itensUltimoResultado = toIntArray(strUltimoResultado);
 
-            Button btRever = (Button) view.findViewById(R.id.bt_rever);
-            btRever.setVisibility(View.VISIBLE);
-            Intent intentResultados = new Intent(getActivity(), ChecklistActivity.class);
-            intentResultados.putExtra("resultado",itensUltimoResultado);
-            btRever.setOnClickListener(v -> startActivity(intentResultados));
+                Button btRever = (Button) view.findViewById(R.id.bt_rever);
+                btRever.setVisibility(View.VISIBLE);
+                Intent intentResultados = new Intent(getActivity(), ChecklistActivity.class);
+                intentResultados.putExtra("resultado", itensUltimoResultado);
+                btRever.setOnClickListener(v -> startActivity(intentResultados));
+            }
+        } catch (Exception e){
+            e.printStackTrace();
         }
 
 
