@@ -1,0 +1,191 @@
+<resources>
+    <string name="app_name">"AquaSalud"</string>
+
+
+    <string name="titulo_agente">"Agente"</string>
+    <string name="titulo_sinais">"Signos Clínicos"</string>
+    <string name="titulo_prevencao">"Prevención"</string>
+    <string name="titulo_imagens">"Imágenes"</string>
+    <string name="atencao">"¡ATENCIÓN!"</string>
+
+
+    <string name="wssv_nome">"Enfermedad de las manchas blancas"</string>
+    <string name="wssv_agente">"La enfermedad de las manchas blancas es causada por un virus llamado virus de la mancha blanca, perteneciente a la familia Nimaviridae  y género Whispovirus.\n La nomenclatura adoptada fue aprobada por el Comité Internacional de Taxonomía Viral (ICTV) bajo el nombre White spot syndrome virus."</string>
+    <string name="wssv_sinais">"La infección puede causar enfermedad o no, dependiendo de factores aún poco conocidos, pero relacionado con la tolerancia de las especies y causas ambientales.\n Puntos blancos calcáreos embebidos en el interior del exoesqueleto es uno de los signos clínicos más comúnmente observados. Sin embargo, otras condiciones pueden causar manchas blancas en el caparazón de camarones. \n Altos grados de variación en el color, con predominio de color rojizo o decoloración al rosa se puede observar en poblaciones enfermas."</string>
+    <string name="wssv_sinais_atencao">"Los cambios de comportamiento son señales que deben ser observados de cerca, ya que es esperada una alta tasa de mortalidad  en la población."</string>
+    <string name="wssv_atencao_sinal_1">"Si el camarón parece aletargado ó inactivo"</string>
+    <string name="wssv_atencao_sinal_2">"Si el color cambia de rosado ó marrón-rojizo"</string>
+    <string name="wssv_atencao_sinal_3">"Si los animales se reúnen alrededor de los bordes de los cultivos en la superficie del agua"</string>
+    <string name="wssv_atencao_sinal_4">"Si hay una rápida reducción de la ingesta de alimentos"</string>
+
+    <string name="wssv_prevencao">"Prácticas Generales de Manejo son las mejores medidas para prevenir el virus de la mancha blanca. Evitar altas densidades en las estaciones frías. Prefiera utilizar animales libres de patógenos específicos (SPF) o poblar con animales sanos comprobados por PCR. Opte por el uso de agua biosegura y sistemas de policultivo con camarón y peces."</string>
+    <string name="text_saiba_mais_wssv">"Más información sobre el Síndrome de la mancha blancas:"</string>
+
+    <string name="imnv_nome">"Mionecrosis infecciosa"</string>
+    <string name="imnv_agente">"El virus de la mionecrosis infecciosa (IMNV) es un miembro de la familia Totiviridae."</string>
+    <string name="imnv_sinais">"En la fase aguda de la enfermedad, el animal tiene grandes áreas de necrosis blanca en sus músculos, se nota la pérdida de transparencia en la región de la cola, puede presentar tejido necrótico y rojizo en algunos camarones.  Animales severamente afectados se tornan moribundos y la mortalidad puede ser alta y repentina después de un evento estresante."</string>
+    <string name="imnv_prevencao">"Prefiera usar animales diagnosticados negativos para IMNV a través de la técnica de reacción en cadena reversa de polimerasa (RT-PCR). Prefiera utilizar animales libres de patógenos específicos (SPF). Si existie infección, realizar el vacío higiénico como se recomienda por la OIE. La utilización de cepas resistentes de camarones también es una buena alternativa prevención al IMNV."</string>
+    <string name="text_saiba_mais_imnv">"Más información acerca de la mionecrosis infecciosa:"</string>
+
+    <string name="ihhnv_nome">"Necrosis hipodérmica y hematopoyética infecciosa"</string>
+    <string name="ihhnv_agente">"La infección hipodérmica  y necrosis hematopoyética es causada por un parvovirus no-envuelto. El Comité Internacional de Taxonomía de Virus (ICTV) ha asignado este virus a la familia Parvoviridae, género Brevidensovirus, especie Penaeus stylirostris densovirus (PstDNV) ."</string>
+
+    <string name="ihhnv_sinais">"El signo clínico más obvio de esta enfermedad viral es la deformación del rostro y una tamaño reducido de algunos especímenes. A esto se le conoce como Síndrome del Enanismo y Deformacón (RDS, por sus siglas en inglés). Otra característica es una mortalidad cercana al 100%."</string>
+    <string name="ihhnv_prevencao">"Diagnóstico molecular previo de IHHNV por PCR para descartar infección por el virus antes de poblar tanques y viveros. Buenas prácticas de manejo. Animales libre de enfermedad específico puede ser una medida, pero no es el más eficaz en este caso."</string>
+    <string name="text_saiba_mais_ihhnv">"Más información sobre la Necrosis hipodérmica y hematopoyética infecciosa"</string>
+
+    <string name="nhv_nome">"Hepatopancreatitis necrotizante"</string>
+    <string name="nhv_agente">"Hepatopancreatitis necrotizante es una enfermedad bacteriana causada por una bacteria gram-negativa, es de tipo Rickettsia, lo que afecta a los hepatopáncreas."</string>
+    <string name="nhv_sinais">"Los signos clínicos incluyen letargo, reducción de la ingesta de alimentos, hepatopáncreas atrofiado y pálido, anorexia, tracto digestivo vacío, baja conversión alimenticia, notable reducción del crecimiento, exoesqueletos blandos, cuerpo flácido, cutícula oscurecida, branquias sueltas, y lesiones cutícula ulcerosa."</string>
+    <string name="nhv_prevencao">"De acuerdo con la OIE, el mejor tratamiento para NHP es el uso de antibióticos (oxitetraciclina y Florfenicol 50%) si se detecta la enfermedad en una etapa temprana. Es importante detectar temprano para evitar el canibalismo e iniciar un tratamiento oportuno. El uso de cal hidratada para tratar el fondo de los tanques reduce la incidencia de NHP. Secado prolongada al sol de fondo de los estanques y la desinfección de equipos con hipoclorito calcio son importantes medidas preventivas. El uso de animales libres de patógenos especificos (SPF) también es una medida preventiva eficaz."</string>
+    <string name="text_saiba_mais_nhv">"Más información sobre la hepatopancreatitis necrotizante:"</string>
+
+
+    <string name="title_activity_doenca_scrolling">"Enfermedad"</string>
+
+    <string name="equipe_nomes">"Coordinadora:\n
+        Dra. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n\n
+        Desarrollo de aplicacion móvil:\n
+        Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n\n
+
+        Equipo AquaSalud:\n
+        Dra. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n
+        Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n
+        Dr. Silvio Cazella (UFCSPA)\n
+        Dra. Maria Helena Firmino (DDPA/SEAPI-RS)\n
+        Dra. Marcia Regina Stech\n
+        Dr. Benito Brito (DDPA/SEAPI-RS)\n
+        Dra. Kelly Tagliari Brito (DDPA/SEAPI-RS)\n
+        Dr. Paulo César Abreu (FURG)\n
+        Dr. Luis Alberto Romano (FURG)\n
+        Dr. Arturo Sanchez-Paz (CIBNOR)\n
+       
+        "</string>
+    <string name="icone">"Ícono"</string>
+    <string name="instituicoes">"INSTITUCIONES"</string>
+    <string name="equipe">"EQUIPO"</string>
+
+    <string name="sobre_descricao">"El objetivo de AquaSalud es traer mejoras a la acuicultura a través de la información sobre la salud de los animales acuáticos de una manera rápida y fácil de entender. Con el desarrollo de aplicaciones, la información científica que se distribuye en diferentes partes de la Internet son ahora fácilmente disponibles y por lo que off-line a los productores y otras partes interesadas."</string>
+
+
+    <string name="biosseguranca_intro">"La bioseguridad describe medidas que deben tomarse en el cultivo animal para evitar el desencadenamiento de enfermedades contagiosas en la producción, la contaminación del cultivo puede llevar a una alta mortalidad de los animales y traer perjuicios para el productor. En la acuicultura, la bioseguridad se resume en crear barreras que impidan la entrada de enfermedades que contaminen peces o camarones. La prevención es la medida más importante en la lucha contra las enfermedades contagiosas."</string>
+    <string name="title_activity_checklist">"Checklist"</string>
+    <string name="checklist_selecione">"Seleccione os procedimentos que son realizados en su producción y verifique el nivel de bioseguridad aplicado:"</string>
+    <string name="comecar">"INICIO"</string>
+    <string name="proxima">"Siguiente"</string>
+    <string name="confirmar">"Confirmar"</string>
+    <string name="atencao_sair">"¿Quieres salir del juego?"</string>
+    <string name="dialog_abandonar_voltar">"El juego será cancelado y todos sus datos serán perdidos."</string>
+    <string name="dialog_yes">"Sí"</string>
+    <string name="dialog_no">"No"</string>
+    <string name="titulo_saiba_mais">"Leer más"</string>
+
+    <string name="manual_oie">"Manual de la OIE"</string>
+    <string name="logo_oie">"Logotipo de la OIE"</string>
+
+    <string name="checkbox_1">"Entrada de vehículos higienizados y de un solo origen"</string>
+    <string name="resposta_1">"• Los vehículos que prestan servicio de transporte de camarón deben ser registrados, con lazo de desinfección y oriundos de un solo origen, sin que hayan pasado por otras granjas de cultivo. Esta medida previene la introducción o diseminación de agentes patógenos en el cultivo."</string>
+
+    <string name="checkbox_2">"Control de plagas y de entrada de animales silvestres y domésticos en las granjas de cultivo"</string>
+    <string name="resposta_2">"• Las granjas de cría de camarones deberán contar con un Sistema de Control Integrado de Plagas (CIP) y un sistema de protección para minimizar el ingreso y la permanencia de animales domésticos y silvestres en el área de producción de la hacienda."</string>
+
+    <string name="checkbox_3">"Utiliza post-larvas libres de enfermedades o con certificado de sanidad"</string>
+    <string name="resposta_3">"• Desde el punto de vista de la sanidad, la adquisición de animales libre de patógenos o con certificado de sanidad es el aspecto más importante para el inicio del proceso de producción en los viveros. En la adquisición, recoger muestras de 100 PL en triplicado, fijar en alcohol etílico al 95% y mantenerlas archivadas para análisis confirmatorios de PCR en caso de sospechas de brotes."</string>
+
+    <string name="checkbox_4">"Los animales son transportados de conformidad con las normas y cuidados necesarios durante la comercialización"</string>
+    <string name="resposta_4">"• Transporte de animales debe realizarse en recipientes higienizados y propios, a temperatura adecuada y con GTA, cuando sea el caso."</string>
+
+    <string name="checkbox_5">"La eliminación de los peces implica el cuidado y la higiene personal y el uso de equipo de protección del personal, así como equipos de limpieza involucrados"</string>
+    <string name="resposta_5">"• La finca debe cumplir con las normas de bioseguridad para el personal involucrado en las operaciones. El equipo debe ser limpiado después de su uso utilizando una solución de cloro en una concentración de 100 ppm."</string>
+
+    <string name="checkbox_6">"Alimentación balanceada analizando la cantidad de ración y los requerimientos nutricionales de acuerdo con la fase de vida"</string>
+    <string name="resposta_6">"• Provisión de una dieta equilibrada es importante para la producción de animales sanos y el desarrollo del sistema inmune de los animales."</string>
+
+    <string name="checkbox_7">"Realiza tratamiento para reducir la materia orgánica en viveros de suelos"</string>
+    <string name="resposta_7">"• La materia orgánica puede ser de plancton, fertilizante orgánico, alimentación y heces sigue siendo consumidos camarones y otros animales presentes en el ambiente de crecimiento. Una forma de tratar la materia orgánica es el uso continuo y sistemático de los probióticos. Para evitar los puntos muertos en el tanque con el ajuste de los aireadores, así como el uso de los probióticos ayudan en el tratamiento de la materia orgánica."</string>
+
+    <string name="checkbox_8">"Realiza el seguimiento y tratamiento de agua del estanque"</string>
+    <string name="resposta_8">"• Seguimiento, control y tratamiento de agua es una práctica obligatoria en el cultivo de las granjas. Deben respetarse los límites tolerables de los principales parámetros de calidad del agua."</string>
+
+    <string name="checkbox_9">"Las personas involucradas en el proceso de producción se ha formado suficientemente por sus funciones"</string>
+    <string name="resposta_9">"• El personal que participa en las actividades de la granja de cría de camarones deben usar PPE específica y recibir formación y cambios a sus funciones."</string>
+
+    <string name="checkbox_10">"Se lleva a cabo en la limpieza y desinfección de las instalaciones y después de despescas"</string>
+    <string name="resposta_10">"• Limpieza y desinfección deben llevarse a cabo en las instalaciones y siempre después de la eliminación de pescado. Realizado por uso personal Equipo de protección personal capacitado y (EPP) apropiado."</string>
+
+    <string name="acess_escudo">"Escudo de bioseguridad que representa"</string>
+    <string name="resultado_checklist_dicas_titulo">"Echa un vistazo a algunos consejos basados ​​en sus marcas para aumentar el nivel de bioseguridad:"</string>
+    <string name="sua_fazenda_esta_x_biossegura">"Su granja es x% bio-seguro!"</string>
+    <string name="ok">"OK"</string>
+    <string name="msg_share">"Aprender acerca de la salud del camarón con AquaSaúde! Disponible para Android Play Store: https://play.google.com/store/apps/details?id=br.gov.rs.fepagro.aquasaude_camarao"</string>
+    <string name="default_highscore">"No ha completado la lista de comprobación"</string>
+    <string name="resultado_10">"Su granja es bio-seguro!"</string>
+    <string name="sua_fazenda_esta">"Su granja es "</string>
+    <string name="porcento_biossegura">"% bio-seguro!"</string>
+
+    <string name="pergunta_1">"¿Qué imagen no está relacionado con la entrada de patógenos?"</string>
+    <string name="pergunta_2">"¿Qué factor no está asociada con la aparición de enfermedades?"</string>
+    <string name="pergunta_3">"¿Cuál de estos animales tiene IMNV?"</string>
+    <string name="pergunta_4">"¿Cuál de las imágenes no es una medida de bioseguridad?"</string>
+
+    <string name="pergunta_5">" ¿Cuáles son los PPE que debe proporcionarse a los empleados?"</string>
+    <string name="pergunta_5_resposta_certa">"Guante, botas y chaleco salvavidas"</string>
+    <string name="pergunta_5_resposta_2">"Sombrero, cuchillo, navaja y pantalones vaqueros"</string>
+    <string name="pergunta_5_resposta_3">"El empleado debe comprar artículos de protección personal"</string>
+    <string name="pergunta_5_resposta_4">"Guantes, botas y protector solar"</string>
+
+    <string name="pergunta_6">"En el síndrome de la mancha blanca, es correcto decir:"</string>
+    <string name="pergunta_6_resposta_certa">"Fase aguda con manchas blancas y alta mortalidad en pocos días "</string>
+    <string name="pergunta_6_resposta_2">"El patógeno es una bacteria"</string>
+    <string name="pergunta_6_resposta_3">"El síntoma principal se reduce el crecimiento"</string>
+    <string name="pergunta_6_resposta_4">"Hay baja mortalidad y morbilidad alta"</string>
+
+    <string name="pergunta_7">"Hay signos clínicos de mionecrosis infecciosa:"</string>
+    <string name="pergunta_7_resposta_certa">"La licuefacción de los músculos y debilitado"</string>
+    <string name="pergunta_7_resposta_2">"Letargo y áreas cuerpo lechoso"</string>
+    <string name="pergunta_7_resposta_3">"Manchas blancas en el caparazón"</string>
+    <string name="pergunta_7_resposta_4">"Aspecto camarones cocidos"</string>
+
+    <string name="pergunta_8">"Lo que la enfermedad no es obligatoria?"</string>
+    <string name="pergunta_8_resposta_certa">"Infección por herpesvirus"</string>
+    <string name="pergunta_8_resposta_2">"Enfermedad de las manchas blancas"</string>
+    <string name="pergunta_8_resposta_3">"Mionecrosis infecciosa"</string>
+    <string name="pergunta_8_resposta_4">"Hepatopancreatite necrotizante "</string>
+
+    <string name="pergunta_9">"Son errores en la gestión de la salud:"</string>
+    <string name="pergunta_9_resposta_certa">"El uso de antibióticos para enfermedades virales"</string>
+    <string name="pergunta_9_resposta_2">"Monitoreo de la materia orgánica y el pH del suelo"</string>
+    <string name="pergunta_9_resposta_3">"Desinfección de fondo del estanque entre ciclos con cal seca o hidratada"</string>
+    <string name="pergunta_9_resposta_4">"Eliminación de vectores animales"</string>
+
+    <string name="pergunta_10">" La acción correcta para el control de la transmisión de enfermedades en las granjas:"</string>
+    <string name="pergunta_10_resposta_certa">"El control de plagas y la eliminación responsable de los residuos"</string>
+    <string name="pergunta_10_resposta_2">"la eliminación inadecuada de los residuos resultantes de procesamiento"</string>
+    <string name="pergunta_10_resposta_3">"Las cabezas y los depósitos destinados para su uso en la acuicultura"</string>
+    <string name="pergunta_10_resposta_4">"Desechar los residuos directamente en el entorno"</string>
+
+    <string name="finalizar_jogo">"Finalizar juego"</string>
+    <string name="voc_tirou_nota">Obtuviste nota:</string>
+    <string name="descricao_jogo">"Pruebe sus conocimientos sobre la acuicultura, para empezar a tocar el botón de abajo:"</string>
+    <string name="titulo_quiz">"Quiz AquaSalud"</string>
+    <string name="titulo_email">"Aplicación AquaSalud"</string>
+    <string name="descr_imagem">"Imagen del camarón con la enfermedad"</string>
+    <string name="bibliotecas">"BIBLIOTECAS USADAS"</string>
+    <string name="bibliotecas_descricao">"Ícones: flaticon.com\n
+            Glide: github.com/bumptech/glide\n
+            PhotoView: github.com/chrisbanes/PhotoView\n
+            AutoFit TextView: github.com/grantland/android-autofittextview\n"</string>
+
+    <string name="doencas">Enfermedades</string>
+    <string name="peixes">Pez</string>
+    <string name="boas_praticas">Buenas prácticas</string>
+    <string name="jogos">Juegos</string>
+    <string name="sobre">Acerca</string>
+    <string name="contato">Contacto</string>
+    <string name="compartilhar">Compartir</string>
+    <string name="fale_conosco">Contáctenos</string>
+    <string name="principais_doencas">Principales enfermedades del camarón:</string>
+    <string name = "preencher_checklist"> Completar checklist </string>
+    <string name = "rever_resultado"> Rever el último resultado </string>
+
+</resources>

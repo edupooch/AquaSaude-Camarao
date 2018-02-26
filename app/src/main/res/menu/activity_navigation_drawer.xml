@@ -6,41 +6,41 @@
         <item
             android:id="@+id/item_doencas_camarao"
             android:icon="@drawable/icon_camarao"
-            android:title="Doenças" />
+            android:title="@string/doencas" />
 
         <item
             android:visible="false"
             android:icon="@drawable/icon_peixe"
-            android:title="Peixes" />
+            android:title="@string/peixes" />
 
         <item
             android:id="@+id/item_boas_praticas"
             android:icon="@drawable/icon_boas_praticas"
-            android:title="Boas Práticas" />
+            android:title="@string/boas_praticas" />
 
         <item
             android:id="@+id/nav_jogo"
             android:icon="@drawable/icon_game"
-            android:title="Jogos" />
+            android:title="@string/jogos" />
 
         <item
             android:id="@+id/nav_sobre"
             android:icon="@drawable/icon_sobre"
-            android:title="Sobre" />
+            android:title="@string/sobre" />
     </group>
 
-    <item android:title="Contato">
+    <item android:title="@string/contato">
         <menu>
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Compartilhar" />
+                android:title="@string/compartilhar" />
 
             <item
                 android:id="@+id/nav_email"
                 android:icon="@drawable/icon_email"
-                android:title="Fale Conosco" />
+                android:title="@string/fale_conosco" />
         </menu>
     </item>
 

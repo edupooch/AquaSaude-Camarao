@@ -2,106 +2,22 @@
 <items version="2" >
 
     <item
+        jar="E:\AppData\Android\android-sdk\platforms\android-25\android.jar"
+        revision="25.0.3"
+        sha1="712a0312fe844a21a1b3812fa960c363a1578984">
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-ffc0eb6cc4c8dd12a8cbfe2b556b67f46d2b5a7a.jar" />
+    </item>
+    <item
+        jar="E:\AppData\Android\android-sdk\platforms\android-25\optional\org.apache.http.legacy.jar"
+        revision="25.0.3"
+        sha1="5f0541a4298daa0590b22cfbde43f85e2a675545">
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-6aa458661e07a2889714fd995cf90c40627371f6.jar" />
+    </item>
+    <item
         jar="C:\Users\edupooch\.android\build-cache\aa2f5aacfd080074ef37f784b07f2d3e667d599f\output\jars\classes.jar"
         revision="25.0.3"
         sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
         <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-bab039ab6e819bce6615becdec32d17f4b2b2613.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\9baefe13b70e4dff8e005637f12d4491ac85a120\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-f47378ad9721231dbf5230b214652a1dc2983af1.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\2054e67bdde7d648b1580208ec9ce214c00d0550\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-314c75d581caa76a4cf332ff47df901e521c0fca.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\8c4b11bc8e0bc46043d45aa3e6e11ce8db7c9370\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="914f5d3e3ace66080e59613708f06d129a222e25">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-9eb3a2eb40694132781e821388a22d0b5f264826.jar" />
-    </item>
-    <item
-        jar="E:\AppData\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        revision="25.0.3"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.3.1-beaace3d62a5f50521260e12ecc1fb5e66e8323c.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\4dd5b18a609d3d041f18de76097bd23feaf92f8f\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-8cb78d56fdd33e4c04a8358d2b4f33215ea44633.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\b373ec7986f29258bd199afc6c268fdc61fe476b\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-8461e5c6ece92b25a86eb3884677cbca7bd18bdc.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
-        revision="25.0.3"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\glide-3.7.0-09d5eed92e427b77c2cdaf42ed322158c251a726.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\3bf68d585d0f262eb76d4e432dc3ab30c3838853\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8a6ada912dc26024312b6a90ccd9b7f87ffbdade.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\d5de7d31c3d5d756413a6224d3b7ab973b39b57a\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-fb281a377193aa7e467bb180f91e73390f74f4d3.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\f2cf52ba86b204ab900cd87882492e56afe7f52e\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="183fcbfcca75b095b63125f5e31ebd8b5f5f3216">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c1482df738992ca9064e47c35b85251d1186cff9.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\286c451074941bd4c092e55b7afe539b9e8d401e\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a98bf20bb07196291893c2ecd7260d876a8e38da.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\da803d2b6efe734e7505b24f31be8979fdfc3f64\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-6a37258be9b97ad78682a9a3f349651ea0c3a0d4.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\c1b94fcbd7ad5e241885b8480907a3b967855929\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d1d7eaa12e68cb2914b0ec69eb4a62d89544c8ea.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\75d7de544e07f9f209881fcf2cfd48160b33d172\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-3bfac21775b9b24f6e22d4d88e50aed0043a07ed.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\a239e8185c769b73dc50ac19586c3f3e452c269e\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-c9ff47ed341e6330c3d795d61979f07bc90ff92e.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\aed1873a8a1fa1efd3087fff77f2e1da6e95a306\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="972ca945f0cf5ff0765ab94fa8e1a90661ea197a">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-9e0e20805ebb7a491d8be1472809f150242d5bf0.jar" />
     </item>
     <item
         jar="C:\Users\edupooch\.android\build-cache\4dd5b18a609d3d041f18de76097bd23feaf92f8f\output\jars\classes.jar"
@@ -119,7 +35,7 @@
         jar="C:\Users\edupooch\.android\build-cache\2054e67bdde7d648b1580208ec9ce214c00d0550\output\jars\classes.jar"
         revision="25.0.3"
         sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-314c75d581caa76a4cf332ff47df901e521c0fca.jar" />
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-314c75d581caa76a4cf332ff47df901e521c0fca.jar" />
     </item>
     <item
         jar="C:\Users\edupooch\.android\build-cache\8c4b11bc8e0bc46043d45aa3e6e11ce8db7c9370\output\jars\classes.jar"
@@ -134,16 +50,10 @@
         <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3bfac21775b9b24f6e22d4d88e50aed0043a07ed.jar" />
     </item>
     <item
-        jar="C:\Users\edupooch\.android\build-cache\aa2f5aacfd080074ef37f784b07f2d3e667d599f\output\jars\classes.jar"
+        jar="E:\AppData\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
         revision="25.0.3"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-bab039ab6e819bce6615becdec32d17f4b2b2613.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\3bf68d585d0f262eb76d4e432dc3ab30c3838853\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-8a6ada912dc26024312b6a90ccd9b7f87ffbdade.jar" />
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.3.1-beaace3d62a5f50521260e12ecc1fb5e66e8323c.jar" />
     </item>
     <item
         jar="C:\Users\edupooch\.android\build-cache\da803d2b6efe734e7505b24f31be8979fdfc3f64\output\jars\classes.jar"
@@ -152,22 +62,22 @@
         <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6a37258be9b97ad78682a9a3f349651ea0c3a0d4.jar" />
     </item>
     <item
-        jar="C:\Users\edupooch\.android\build-cache\286c451074941bd4c092e55b7afe539b9e8d401e\output\jars\classes.jar"
+        jar="C:\Users\edupooch\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
         revision="25.0.3"
-        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-a98bf20bb07196291893c2ecd7260d876a8e38da.jar" />
-    </item>
-    <item
-        jar="E:\AppData\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        revision="25.0.3"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\support-annotations-25.3.1-beaace3d62a5f50521260e12ecc1fb5e66e8323c.jar" />
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\glide-3.7.0-09d5eed92e427b77c2cdaf42ed322158c251a726.jar" />
     </item>
     <item
         jar="C:\Users\edupooch\.android\build-cache\b373ec7986f29258bd199afc6c268fdc61fe476b\output\jars\classes.jar"
         revision="25.0.3"
         sha1="150252b33b00274cc868578ade018fda0d43a3eb">
         <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8461e5c6ece92b25a86eb3884677cbca7bd18bdc.jar" />
+    </item>
+    <item
+        jar="C:\Users\edupooch\.android\build-cache\3bf68d585d0f262eb76d4e432dc3ab30c3838853\output\jars\classes.jar"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8a6ada912dc26024312b6a90ccd9b7f87ffbdade.jar" />
     </item>
     <item
         jar="C:\Users\edupooch\.android\build-cache\d5de7d31c3d5d756413a6224d3b7ab973b39b57a\output\jars\classes.jar"
@@ -179,13 +89,19 @@
         jar="C:\Users\edupooch\.android\build-cache\f2cf52ba86b204ab900cd87882492e56afe7f52e\output\jars\classes.jar"
         revision="25.0.3"
         sha1="183fcbfcca75b095b63125f5e31ebd8b5f5f3216">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-c1482df738992ca9064e47c35b85251d1186cff9.jar" />
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c1482df738992ca9064e47c35b85251d1186cff9.jar" />
     </item>
     <item
-        jar="C:\Users\edupooch\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.7.0\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\glide-3.7.0.jar"
+        jar="C:\Users\edupooch\.android\build-cache\286c451074941bd4c092e55b7afe539b9e8d401e\output\jars\classes.jar"
         revision="25.0.3"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\glide-3.7.0-09d5eed92e427b77c2cdaf42ed322158c251a726.jar" />
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a98bf20bb07196291893c2ecd7260d876a8e38da.jar" />
+    </item>
+    <item
+        jar="C:\Users\edupooch\.android\build-cache\c1b94fcbd7ad5e241885b8480907a3b967855929\output\jars\classes.jar"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d1d7eaa12e68cb2914b0ec69eb4a62d89544c8ea.jar" />
     </item>
     <item
         jar="C:\Users\edupooch\.android\build-cache\aed1873a8a1fa1efd3087fff77f2e1da6e95a306\output\jars\classes.jar"
@@ -198,12 +114,6 @@
         revision="25.0.3"
         sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
         <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c9ff47ed341e6330c3d795d61979f07bc90ff92e.jar" />
-    </item>
-    <item
-        jar="C:\Users\edupooch\.android\build-cache\c1b94fcbd7ad5e241885b8480907a3b967855929\output\jars\classes.jar"
-        revision="25.0.3"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="E:\Projetos\StudioProjects\AquaSaude2\app\build\intermediates\transforms\preJackPackagedLibraries\release\jars\8000\1f\classes-d1d7eaa12e68cb2914b0ec69eb4a62d89544c8ea.jar" />
     </item>
 
 </items>

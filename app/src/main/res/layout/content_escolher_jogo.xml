@@ -58,8 +58,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimaryDark"
-                    android:gravity="center"
-                    android:text="Sua maior nota: 5" />
+                    android:gravity="center" />
 
             </LinearLayout>
 

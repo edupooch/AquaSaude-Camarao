@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Principais doenças de camarão no Brasil:"
+            android:text="@string/principais_doencas"
             android:gravity="center"
             android:layout_marginBottom="5dp"
             />

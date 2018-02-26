@@ -96,8 +96,8 @@
     </string>
     <string name="text_saiba_mais_nhv">Mais informações sobre a Hepatopancreatite Necrosante:</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
 
     <string name="title_activity_doenca_scrolling">Doença</string>
 
@@ -124,8 +124,7 @@
     <string name="instituicoes">INSTITUIÇÕES</string>
     <string name="equipe">EQUIPE</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="title_activity_jogo2">Jogo2Activity</string>
+
     <string name="sobre_descricao">
         "O objetivo do AquaSaúde é trazer melhorias para a aquicultura brasileira através da"
         "disponibilização de"
@@ -157,13 +156,10 @@
 
     <string name="manual_oie">Manual da OIE\n(em inglês)</string>
     <string name="logo_oie">Logo OIE</string>
-    <string name="link_wssv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_wsd.htm]]></string>
-    <string name="link_ihhnv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_ihhn.htm]]></string>
-    <string name="link_imnv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_infectious_myonecrosis.htm]]></string>
-    <string name="link_nhv"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_necrotising_hepatopancreatitis.htm]]></string>
-    <string name="sim">Sim</string>
-    <string name="nao">Não</string>
-    <string name="title_activity_pergunta_biosseg">PerguntaBiossegActivity</string>
+    <string name="link_wssv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_wsd.htm]]></string>
+    <string name="link_ihhnv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_ihhn.htm]]></string>
+    <string name="link_imnv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_infectious_myonecrosis.htm]]></string>
+    <string name="link_nhv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_necrotising_hepatopancreatitis.htm]]></string>
 
     <string name="checkbox_1">Entrada de veículos higienizados e de apenas uma origem</string>
     <string name="resposta_1">
@@ -206,10 +202,9 @@
     <string name="sua_fazenda_esta_x_biossegura">Sua fazenda está x% biossegura!</string>
     <string name="ok">OK</string>
     <string name="msg_share">Aprenda sobre sanidade de camarões com o AquaSaúde! Disponível para Android na Play Store: https://play.google.com/store/apps/details?id=br.gov.rs.fepagro.aquasaude_camarao</string>
-    <string name="checklist_teste">É feita a desinfecção dos veículos e controle de pessoas e animais no cultivo?</string>
     <string name="nota_checklist" translatable="false">notachecklist</string>
     <string name="default_highscore">Você ainda não preencheu o checklist</string>
-    <string name="nome_shared_pref">br.gov.rs.fepagro.aquasaude.preferences</string>
+    <string name="nome_shared_pref" translatable="false">br.gov.rs.fepagro.aquasaude.preferences</string>
     <string name="string_itens" translatable="false">string_itens</string>
     <string name="resultado_10">Sua fazenda está biossegura!</string>
     <string name="sua_fazenda_esta">"Sua fazenda está "</string>
@@ -260,7 +255,7 @@
     <string name="voc_tirou_nota">Você tirou nota:</string>
     <string name="descricao_jogo">Teste seus conhecimentos sobre a aquicultura, para começar toque no botão abaixo:</string>
     <string name="titulo_quiz">Quiz AquaSaúde</string>
-    <string name="nota_quiz">nota_quiz</string>
+    <string name="nota_quiz" translatable="false">nota_quiz</string>
     <string name="titulo_email">Aplicativo AquaSaúde</string>
     <string name="descr_imagem">Imagem do Camarão com a Doença</string>
     <string name="bibliotecas">BIBLIOTECAS UTILIZADAS</string>
@@ -270,5 +265,19 @@
             "PhotoView: github.com/chrisbanes/PhotoView\n"
             "AutoFit TextView: github.com/grantland/android-autofittextview\n"
     </string>
+
+    <string name="doencas">Doenças</string>
+    <string name="peixes">Peixes</string>
+    <string name="boas_praticas">Boas Práticas</string>
+    <string name="jogos">Jogos</string>
+    <string name="sobre">Sobre</string>
+    <string name="contato">Contato</string>
+    <string name="compartilhar">Compartilhar</string>
+    <string name="fale_conosco">Fale Conosco</string>
+    <string name="principais_doencas">Principais doenças de camarão:</string>
+    <string name="preencher_checklist">Preencher Checklist</string>
+    <string name="rever_resultado">Rever último resultado</string>
+    <string name="title_activity_jogo2" translatable="false">Jogo2Activity</string>
+
 
 </resources>

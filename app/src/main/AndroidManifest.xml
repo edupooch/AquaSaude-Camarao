@@ -37,10 +37,6 @@
             android:label="@string/title_activity_checklist"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".controle.biosseguranca.PerguntaBiossegActivity"
-            android:label="@string/title_activity_pergunta_biosseg"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".controle.doencas.ImagemActivity"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

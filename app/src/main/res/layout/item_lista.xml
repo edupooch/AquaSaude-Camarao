@@ -34,7 +34,6 @@
                 android:layout_height="45dp"
                 android:layout_gravity="bottom"
                 android:gravity="center"
-                android:text="Nome da doença"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
