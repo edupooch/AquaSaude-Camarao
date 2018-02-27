@@ -2,11 +2,8 @@ package br.gov.rs.fepagro.aquasaude.controle.biosseguranca;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Toast;
 
 import br.gov.rs.fepagro.aquasaude.R;
 import br.gov.rs.fepagro.aquasaude.controle.doencas.ListaDoencasFragment;

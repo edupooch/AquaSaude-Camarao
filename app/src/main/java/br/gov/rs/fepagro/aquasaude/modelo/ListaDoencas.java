@@ -3,7 +3,6 @@ package br.gov.rs.fepagro.aquasaude.modelo;
 import android.content.Context;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import br.gov.rs.fepagro.aquasaude.R;
 

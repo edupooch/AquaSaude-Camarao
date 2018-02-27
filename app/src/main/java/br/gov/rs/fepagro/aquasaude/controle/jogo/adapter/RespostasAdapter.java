@@ -2,7 +2,6 @@ package br.gov.rs.fepagro.aquasaude.controle.jogo.adapter;
 
 import android.content.Context;
 import android.graphics.Point;
-import android.util.Log;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
