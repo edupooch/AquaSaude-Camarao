@@ -278,6 +278,7 @@
     <string name="preencher_checklist">Preencher Checklist</string>
     <string name="rever_resultado">Rever último resultado</string>
     <string name="title_activity_jogo2" translatable="false">Jogo2Activity</string>
+    <string name="maior_nota">Sua maior nota:</string>
 
 
 </resources>

@@ -43,7 +43,7 @@ public class BoasPraticasFragment extends Fragment {
         int nota = sharedPref.getInt(getString(R.string.nota_checklist), defaultValue);
         if (nota != defaultValue) {
             TextView textView = (TextView) view.findViewById(R.id.text_highscore);
-            String texto = "Sua maior nota: " + nota + "/10";
+            String texto = getString(R.string.maior_nota) + nota + "/10";
             textView.setText(texto);
         }
 

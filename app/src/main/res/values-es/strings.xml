@@ -185,7 +185,8 @@
     <string name="compartilhar">Compartir</string>
     <string name="fale_conosco">Contáctenos</string>
     <string name="principais_doencas">Principales enfermedades del camarón:</string>
-    <string name = "preencher_checklist"> Completar checklist </string>
-    <string name = "rever_resultado"> Rever el último resultado </string>
+    <string name="preencher_checklist">Completar checklist</string>
+    <string name="rever_resultado">Rever el último resultado</string>
+    <string name="maior_nota">Su mayor nota:</string>
 
 </resources>

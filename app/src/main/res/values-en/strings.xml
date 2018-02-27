@@ -184,7 +184,8 @@
     <string name="compartilhar">Share</string>
     <string name="fale_conosco">Contact Us</string>
     <string name="principais_doencas">Main shrimp diseases:</string>
-    <string name="preencher_checklist"> Fill Checklist </string>
-    <string name="rever_resultado"> Review last result </string>
+    <string name="preencher_checklist">Fill Checklist</string>
+    <string name="rever_resultado">Review last result</string>
+    <string name="maior_nota">Your highest score:</string>
 
 </resources>
