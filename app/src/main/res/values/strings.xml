@@ -1,285 +1,206 @@
 <resources>
-    <string name="app_name">AquaSaúde</string>
+    <string name="app_name">"AquaHealth"</string>
 
 
-    <string name="titulo_agente">Agente</string>
-    <string name="titulo_sinais">Sinais Clínicos</string>
-    <string name="titulo_prevencao">Prevenção</string>
-    <string name="titulo_imagens">Imagens</string>
-    <string name="atencao">ATENÇÃO:</string>
+    <string name="titulo_agente">"Agent"</string>
+    <string name="titulo_sinais">"Gross Signs"</string>
+    <string name="titulo_prevencao">"Prevention"</string>
+    <string name="titulo_imagens">"Images"</string>
+    <string name="atencao">"ATTENTION:"</string>
 
 
-    <string name="wssv_nome">Síndrome da Mancha Branca</string>
-    <string name="wssv_agente">
-        " A síndrome da mancha branca é causada por um vírus denominado Vírus da mancha branca,"
-        "pertencente à família Nimaviridae e gênero Whispovirus.\n A nomenclatura foi aprovada no"
-        "Comitê Internacional de Taxonomia Viral (ICTV) sob depósito cujo nome é White spotsyndrome"
-        "vírus 1."</string>
-    <string name="wssv_sinais">
-        " A Infecção pode causar a doença ou não, dependendo de fatores ainda mal compreendidos, mas"
-        "relacionados com a tolerância de espécies e causas ambientais.\n"
-        "Manchas brancas embutidas dentro do exoesqueleto é o sinal clínico mais comumente observado."
-        "Todavia, outras enfermidades podem causar manchas brancas na carapaça do camarão.\n"
-        "Altos graus de variação de cor, com predomínio de avermelhada ou camarão descoloridos rosada"
-        "são vistos em populações doentes."</string>
-    <string name="wssv_sinais_atencao">
-        "Mudanças de comportamento são sinais que devem ser observados atentamente, pois pode ser"
-        "esperada uma elevada taxa de mortalidade na população:"</string>
-    <string name="wssv_atencao_sinal_1">"Se o camarão parece letárgico"</string>
-    <string name="wssv_atencao_sinal_2">"Se a cor muda para rosa ou marrom-avermelhada"</string>
-    <string name="wssv_atencao_sinal_3">Se os animais se reúnem em torno das bordas dos cultivos na superfície da água</string>
-    <string name="wssv_atencao_sinal_4">Se há uma rápida redução no consumo alimentar</string>
+    <string name="wssv_nome">"White Spot Disease"</string>
+    <string name="wssv_agente">"White spot disease is caused by a virus named White spot syndrome virus, belonging to the family Nimaviridae and genus Whispovirus. The nomenclature was approved by the International Committee on Taxonomy of Viruses (ICTV) under deposit whose name is White spot syndrome virus."</string>
+    <string name="wssv_sinais">"The infection can cause disease or not, depending on factors still poorly understood, but related to species tolerance and environmental factors. White spots embedded within the exoskeleton are the most commonly observed clinical sign, however, other diseases can cause similar white spots on the shrimp exoskeleton. High levels of color variation, predominantly reddish or pinkish discolored shrimp are seen in sick populations."</string>
+    <string name="wssv_sinais_atencao">"Behavioral changes are signs that should be carefully observed, as a high mortality rate in the population can be expected."</string>
+    <string name="wssv_atencao_sinal_1">"If the shrimp looks lethargic"</string>
+    <string name="wssv_atencao_sinal_2">"If the color changes to pink or reddish-brown"</string>
+    <string name="wssv_atencao_sinal_3">"If animals gather around the edges of crops on the water surface"</string>
+    <string name="wssv_atencao_sinal_4">"If there is a rapid reduction in food consumption"</string>
 
-    <string name="wssv_prevencao">
-        " Práticas gerais de manejo são as melhores medidas para prevenção do vírus da mancha "
-        "branca. Evite altas densidades nas estações frias. Prefira usar animais \"livre de patógenos "
-        "específicos\" (SPF) ou povoar com animais testados PCR-negativos. Opte por utilizar água "
-        "biossegura e sistemas de policultivo com camarão e peixes."</string>
-    <string name="text_saiba_mais_wssv">Mais informações sobre a Síndrome da Mancha Branca:</string>
+    <string name="wssv_prevencao">"General management practices are the best measures for white spot virus prevention. Avoid high densities in cold seasons. Prefer to use specific pathogen free (SPF) animals or populate with PCR-negative animals. For using biosecurity water and polyculture systems with shrimp and fish."</string>
+    <string name="text_saiba_mais_wssv">"More information about White Spot Disease:"</string>
 
-    <string name="imnv_nome">"Mionecrose Infecciosa"</string>
-    <string name="imnv_agente">
-        " Vírus da mionecrose infecciosa (IMNV) é um membro da família Totiviridae."</string>
-    <string name="imnv_sinais">
-        " Na fase aguda da doença, o animal apresenta extensas áreas de necrose brancas nos"
-        "músculos, nota-se a perda da transparência na região da cauda, podendo se apresentar"
-        "necrótica e avermelhada em alguns camarões. Animais severamente afetados tornam-se moribundos"
-        "e a mortalidade pode ser alta e repentina após um evento de estresse."
-    </string>
-    <string name="imnv_prevencao">
-        " Prefira usar animais testados e negativos para IMNV através da técnica de reação em cadeia"
-        "reversa da polimerase (RT-PCR). Prefira usar animais livres de patógenos específicos (SPF)."
-        "Se houver infecção, realize vazio sanitário conforme recomendações da OIE e MAPA."
-        "Utilizar linhagens resistentes de camarões também é uma boa alternativa de prevenção ao IMNV."
-    </string>
-    <string name="text_saiba_mais_imnv">Mais informações sobre a Mionecrose Infecciosa:</string>
+    <string name="imnv_nome">"Infectious myonecrosis"</string>
+    <string name="imnv_agente">"Infectious myonecrosis virus (IMNV) is a member of the Totiviridae family."</string>
+    <string name="imnv_sinais">"In the acute stage of the disease, the animal presents extensive areas of white necrosis in muscles, it is possible to notice the loss of transparency in the region of the tail, which may appear necrotic and reddish in some prawns. Severely affected animals become moribund and mortality can be high and sudden after a stress event."</string>
+    <string name="imnv_prevencao">"Prefer to use tested and negative animals for IMNV through the reverse polymerase chain reaction (RT-PCR) technique. Prefer to use specific pathogen free (SPF) animals.  If there is infection, empty the OIE and MAPA recommendations. Using resistant strains of shrimp is also a good alternative for prevention to IMNV."</string>
+    <string name="text_saiba_mais_imnv">"More information about Infectious Myonecrosis:"</string>
 
-    <string name="ihhnv_nome">"Necrose Hipodermal e Hematopoiética"</string>
-    <string name="ihhnv_agente">
-        " A infecção hipodermal e necrose hematopoiética é causada por um parvovírus não-"
-        "envelopado. O vírus da infecção hipodermal e necrose hematopoiética (IHHNV) está sob"
-        "análise no Comitê Internacional de Taxonomia de Vírus (ICTV), classificado atualmente na"
-        "família Parvoviridae, gênero Brevidensovirus, espécie Penaeus stylirostris densovirus (PstDNV)."
-    </string>
+    <string name="ihhnv_nome">"Hypodermal and Hematopoietic Necrosis"</string>
+    <string name="ihhnv_agente">"Recently the International Committee on Taxonomy of Viruses (ICTV) classified this virus within the family Parvoviridae, genus Brevidensovirus, species Penaeus stylirostris densovirus (PstDNV)."</string>
 
-    <string name="ihhnv_sinais">
-        "O sinal clínico crônico mais evidente é a síndrome do rostro deformado (RDS), no qual altas"
-        "mortalidades são infrequentes. Crescimento reduzido e deformidades na carapaça são"
-        "comuns."
-        "\nEm alguns casos, pode apresentar mortalidades próximas de 100 %."
-    </string>
-    <string name="ihhnv_prevencao">
-        "Rastreamento prévio de IHHNV por PCR para descartar infecção pelo vírus antes de povoar"
-        "tanques e viveiros.Boas práticas de manejo.Animais livres de doença específica podem ser"
-        "uma medida, mas não é a mais eficaz neste caso."
-    </string>
-    <string name="text_saiba_mais_ihhnv">Mais informações sobre a Necrose Hipodermal e Hematopoiética:</string>
+    <string name="ihhnv_sinais">"The most obvious chronic clinical sign caused by this virus is a deformed rostrum of shrimp and organisms with smaller size (runt), which has been named as Runt and Deformity Syndrome (RDS). In some cases high mortalities are frequent."</string>
+    <string name="ihhnv_prevencao">"Pre - screening of IHHNV by PCR to rule out virus infection before populating tanks and nurseries. Good management practices. Animals free of specific disease may be a measure, but is not the most effective action in this case."</string>
+    <string name="text_saiba_mais_ihhnv">"More information about Hipodermal and Hematopoietic Necrosis:"</string>
 
-    <string name="nhv_nome">"Hepatopancreatite Necrosante"</string>
-    <string name="nhv_agente">
-        " Hepatopancreatite Necrosante é uma doença bacteriana causada por uma bactéria gram-"
-        "negativa, do tipo Rickettsia, que acomete o hepatopâncreas."</string>
-    <string name="nhv_sinais">
-        " Sinais clínicos incluem: letargia, ingestão de alimentos reduzida, hepatopâncreas atrofiados e"
-        "pálidos, anorexia, trato digestivo vazio, elevada conversão alimentar, crescimento reduzido"
-        "perceptível. Exoesqueleto amolecido, corpo flácido, cutícula frouxa, brânquias escurecidas,"
-        "lesões ulcerativas cutícula."
-    </string>
-    <string name="nhv_prevencao">
-        " Segundo a OIE, o melhor tratamento para NHP é utilização de antibióticos (oxitetraciclina e"
-        "florfenicol 50%) se a doença for detectada na fase inicial."
-        "É importante detectar precocemente para evitar canibalismo e iniciar tratamento rápido."
-        "Usar cal hidratada para tratar fundo dos tanques reduz incidência de NHP. Secagem"
-        "prolongada ao sol do fundo dos viveiros, desinfecção de equipamentos com hipoclorito de"
-        "cálcio são medidas preventivas importantes."
-        "Uso de animais livre de patógenos (SPF) é uma medida preventiva eficaz."
-    </string>
-    <string name="text_saiba_mais_nhv">Mais informações sobre a Hepatopancreatite Necrosante:</string>
+    <string name="nhv_nome">"Necrotizing hepatopancreatitis"</string>
+    <string name="nhv_agente">"Necrotizing hepatopancreatitis is a bacterial disease caused by a gram-negative, Rickettsia-like bacterium that attacks the hepatopancreas."</string>
+    <string name="nhv_sinais">"Clinical signs include: lethargy, reduced food intake, atrophied and pale hepatopancreas, anorexia, empty digestive tract, low feed conversion, reduced growth  softened exoskeleton, flaccid body, loose cuticle, darkened gills, lesions, and ulcerative cuticle."</string>
+    <string name="nhv_prevencao">"According to the OIE, the best treatment for NHP is the use of antibiotics (oxytetracycline and 50% florfenicol) if the disease is detected early. It's important to detect early to avoid cannibalism and start treatment quickly. Using hydrated lime to treat bottoms of tanks reduces the incidence of NHP. Prolonged drying in the sun at the bottom of the nurseries, disinfection of equipment with calcium hypochlorite are important preventive measures. Pathogen-free animal use (SPF) is an effective preventative measure."</string>
+    <string name="text_saiba_mais_nhv">"More information about Necrotizing Hepatopancreatitis:"</string>
 
+    <string name="title_activity_doenca_scrolling">"Occupational"</string>
+
+    <string name="equipe_nomes">"Coordinator:\n
+        Dr. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n\n
+        Software Development:\n
+        Eduardo H. P. Pooch (UFCSPA | CNPq fellow)\n\n
+
+        AquaHealth Team:\n
+        Dr. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n
+        Eduardo H. P. Pooch (UFCSPA | CNPq fellow)\n
+        Dr. Silvio Cazella (UFCSPA)\n
+        Dr. Maria Helena Firmino (DDPA/SEAPI-RS)\n
+        Dr. Marcia Regina Stech\n
+        Dr. Benito Brito (DDPA/SEAPI-RS)\n
+        Dr. Kelly Tagliari Brito (DDPA/SEAPI-RS)\n
+        Dr. Paulo César Abreu (FURG)\n
+        Dr. Luis Alberto Romano (FURG)\n
+        Dr. Arturo Sanchez-Paz (CIBNOR)
+        "</string>
+    <string name="icone">"Icon"</string>
+    <string name="instituicoes">"INSTITUTIONS"</string>
+    <string name="equipe">"Staff"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sobre_descricao">"The objective of AquaHealth is to bring improvements to world aquaculture through the availability of information about aquatic animal health in an agile and easy to understand way. With the development of the application, scientific information that was distributed in English and different internet sites is now available easily and offline to producers and other interested parties."</string>
+
+
+    <string name="biosseguranca_intro">"Biosecurity describes measures to be taken in animal husbandry to avoid the triggering of contagious diseases in the production, contamination of the crop can lead to high animal mortality and harm to the producer. Aquaculture, biosecurity is all about creating barriers that prevent the entry of  diseases that contaminate fish or shrimp.  Prevention is the most important measure in combating contagious diseases."</string>
+    <string name="title_activity_checklist">Checklist</string>
+    <string name="checklist_selecione">"Select the procedures that are performed in your production and check the level of biosafety applied:"</string>
+    <string name="comecar">Start</string>
+    <string name="proxima">"Next"</string>
+    <string name="confirmar">"Confirm"</string>
+    <string name="atencao_sair">"Do you want to quit the game?"</string>
+    <string name="dialog_abandonar_voltar">"The game will be canceled and all data will be lost."</string>
+    <string name="dialog_yes">"Yes "</string>
+    <string name="dialog_no">"No"</string>
+    <string name="titulo_saiba_mais">Find out more</string>
+
+    <string name="manual_oie">"OIE Manual \n"</string>
+    <string name="logo_oie">"OIE logo"</string>
+
+    <string name="checkbox_1">"Entry of sanitized vehicles and only one origin"</string>
+    <string name="resposta_1">"• Vehicles providing shrimp transport services must be registered with a disinfection report and come from a single source without having passed through other farms. This measure prevents the introduction or dissemination of pathogens in cultivation."</string>
+
+    <string name="checkbox_2">"Control of pests and entry of wild and domestic animals on farms"</string>
+    <string name="resposta_2">"• Shrimp farms should have an Integrated Pest Control System (CIP) and a protection system to minimize the entry and residence of domestic and wild animals in the farm 's production area."</string>
+
+    <string name="checkbox_3">"It uses post-larvae free of diseases or with health certificate"</string>
+    <string name="resposta_3">"• From the sanitation point of view, the purchase of animals free of pathogens or sanitary certification is the most important aspect for the beginning of the production process in the nurseries. Ideal in the acquisition, collect samples of 100 PL's in triplicate, fix in 95% ethyl alcohol and keep them filed for confirmatory PCR analyzes in case of suspected outbreaks."</string>
+
+    <string name="checkbox_4">"The animals are transported according to the standards and care required during the marketing"</string>
+    <string name="resposta_4">"• Transportation of animals must be carried out in hygienized and proper containers, at appropriate temperature and with GTA, when applicable."</string>
+
+    <string name="checkbox_5">"Expenditure involves care such as personal hygiene and use of PPE from the personnel involved, as well as hygiene of equipment involved"</string>
+    <string name="resposta_5">"• The farm must comply with the biosafety regulations regarding the personnel involved in the operations. Equipment should be sanitized after use by spraying with the use of 100 ppm chlorinated solution."</string>
+
+    <string name="checkbox_6">"Balanced feeding by analyzing the amount of feed and the nutritional requirements according to the life stage"</string>
+    <string name="resposta_6">"• Providing a balanced diet is important for the production of healthy animals and for the development of the immune system of animals."</string>
+
+    <string name="checkbox_7">"Conducts treatment to reduce soil organic matter in nurseries"</string>
+    <string name="resposta_7">"• Organic matter may originate from plankton, organic fertilizers, remains of unconsumed feed and feces from shrimp and other animals present in the growing environment. One way to treat organic matter is the continuous and systematic use of probiotics. Avoiding dead spots inside the tanks with the adjustment of the aerators as well as the use of probiotics aid in the treatment of organic matter."</string>
+
+    <string name="checkbox_8">"Performs monitoring and treatment of nursery water"</string>
+    <string name="resposta_8">"• Monitoring, control and treatment of water is a mandatory practice on farms. The tolerable limits of the main water quality parameters should be observed."</string>
+
+    <string name="checkbox_9">"The people involved in the production process were sufficiently trained for their functions"</string>
+    <string name="resposta_9">"• Personnel involved in the activities of the shrimp farm should use specific PPE and receive training and updates for their functions."</string>
+
+    <string name="checkbox_10">"Cleaning and sanitation is carried out on premises and after"</string>
+    <string name="resposta_10">"• Cleaning and sanitizing must be carried out on site and always after an expense. Performed by trained personnel and using appropriate Personal Protective Equipment (PPE)."</string>
+
+    <string name="acess_escudo">"Shield representing biosafety"</string>
+    <string name="resultado_checklist_dicas_titulo">"Check out some tips based on your markup to increase the level of biosafety:"</string>
+    <string name="sua_fazenda_esta_x_biossegura">"Your farm is x% biosecured!"</string>
+    <string name="ok">"OK"</string>
+    <string name="msg_share">"Learn about shrimp sanity with AquaSaúde! Available for Android in the Play Store: https://play.google.com/store/apps/details?id=br.gov.rs.fepagro.aquasaude_camarao"</string>
+    <string name="default_highscore">"You have not filled the checklist yet"</string>
+    <string name="resultado_10">"Your farm is biosecure!"</string>
+    <string name="sua_fazenda_esta">"Your farm is "</string>
+    <string name="porcento_biossegura">"% biosecure!"</string>
+
+    <string name="pergunta_1">Which one of the images is not related to the entry of pathogens?</string>
+    <string name="pergunta_2">"Which factor is not associated with the onset of diseases?"</string>
+    <string name="pergunta_3">Which one of these animals has NIMV?</string>
+    <string name="pergunta_4">Which one of the images is not a biosecurity measure?</string>
+
+    <string name="pergunta_5">What are the PPE that should be provided to the worker?</string>
+    <string name="pergunta_5_resposta_certa">"Glove, boot and life jacket"</string>
+    <string name="pergunta_5_resposta_2">Hat, knife and jeans</string>
+    <string name="pergunta_5_resposta_3">"The employee must purchase the individual protection items"</string>
+    <string name="pergunta_5_resposta_4">"Glove, boot and sunscreen"</string>
+
+    <string name="pergunta_6">"About White Spot Syndrome, it is correct to state:"</string>
+    <string name="pergunta_6_resposta_certa">"Acute phase with white spots and high mortality in a few days "</string>
+    <string name="pergunta_6_resposta_2">"The pathogen is a bacterium"</string>
+    <string name="pergunta_6_resposta_3">"The main symptom is reduced growth"</string>
+    <string name="pergunta_6_resposta_4">"There is low mortality and high morbidity"</string>
+
+    <string name="pergunta_7">Which signals are NOT a clinical sign of infectious myonecrosis?</string>
+    <string name="pergunta_7_resposta_certa">Liquefaction of muscles and weakness</string>
+    <string name="pergunta_7_resposta_2">"Lethargy and areas with a milky appearance in the body"</string>
+    <string name="pergunta_7_resposta_3">"White spots on the cap"</string>
+    <string name="pergunta_7_resposta_4">"Appearance of cooked shrimp"</string>
+
+    <string name="pergunta_8">Which one of the diseases do not require notification?</string>
+    <string name="pergunta_8_resposta_certa">"Herpesvirus infection"</string>
+    <string name="pergunta_8_resposta_2">"White Spot Syndrome"</string>
+    <string name="pergunta_8_resposta_3">"Infectious myonecrosis"</string>
+    <string name="pergunta_8_resposta_4">"Necrotizing hepatopancreatitis"</string>
+
+    <string name="pergunta_9">Which one is an error in sanitary management?</string>
+    <string name="pergunta_9_resposta_certa">"Use antibiotics for viral diseases"</string>
+    <string name="pergunta_9_resposta_2">"Monitoring of organic matter and soil pH"</string>
+    <string name="pergunta_9_resposta_3">"Disinfection of the nursery floor between cycles with dry or hydrated lime"</string>
+    <string name="pergunta_9_resposta_4">"Elimination of animal vectors"</string>
+
+    <string name="pergunta_10">The right action to control disease transmission on farms is:</string>
+    <string name="pergunta_10_resposta_certa">"Pest control and responsible waste disposal"</string>
+    <string name="pergunta_10_resposta_2">"Disposal of waste resulting from processing"</string>
+    <string name="pergunta_10_resposta_3">"Allocate heads and shells for use in aquaculture"</string>
+    <string name="pergunta_10_resposta_4">"Dispose of waste directly into the environment"</string>
+
+    <string name="finalizar_jogo">"Finish game"</string>
+    <string name="voc_tirou_nota">You scored:</string>
+    <string name="descricao_jogo">"Test your knowledge on aquaculture, to start tap the button below:"</string>
+    <string name="titulo_quiz">Quiz AquaHealth</string>
+    <string name="titulo_email">"AquaSaúde application"</string>
+    <string name="descr_imagem">"Image of Shrimp with Disease"</string>
+    <string name="bibliotecas">"LIBRARIES USED"</string>
+    <string name="bibliotecas_descricao">"Icons: flaticon.com \n
+        Glide: github.com/bumptech/glide\n
+        PhotoView: github.com/chrisbanes/PhotoView\n
+        AutoFit TextView: github.com/grantland/android-autofittextview\n"</string>
+
+    <string name="doencas">Diseases </string>
+    <string name="peixes">Fish </string>
+    <string name="boas_praticas">Good Practices</string>
+    <string name="jogos">Games</string>
+    <string name="sobre">About</string>
+    <string name="contato">Contact</string>
+    <string name="compartilhar">Share</string>
+    <string name="fale_conosco">Contact Us</string>
+    <string name="principais_doencas">Main shrimp diseases:</string>
+    <string name="preencher_checklist">Fill Checklist</string>
+    <string name="rever_resultado">Review last result</string>
+    <string name="maior_nota">Your highest score:</string>
+    <string name="erro_selecione">Select an answer</string>
+
+    <!--Untranslatable-->
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-
-    <string name="title_activity_doenca_scrolling">Doença</string>
-
-    <string name="equipe_nomes">
-        " Coordenadora:\n"
-        "Dra. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n\n"
-        "Desenvolvimento do Aplicativo:\n"
-        "Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n\n"
-
-        "Equipe AquaSaúde:\n"
-        "Dra. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n"
-        "Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n"
-        "Dr. Silvio Cazella (UFCSPA)\n"
-        "Dra. Maria Helena Firmino (DDPA/SEAPI-RS)\n"
-        "Dra. Marcia Regina Stech\n"
-        "Dr. Benito Brito (DDPA/SEAPI-RS)\n"
-        "Dra. Kelly Tagliari Brito (DDPA/SEAPI-RS)\n"
-        "Dr. Paulo César Abreu (FURG)\n"
-        "Dr. Luis Alberto Romano (FURG)\n"
-        "Dr. Arturo Sanchez-Paz (CIBNOR)"
-
-    </string>
-    <string name="icone">Ícone</string>
-    <string name="instituicoes">INSTITUIÇÕES</string>
-    <string name="equipe">EQUIPE</string>
-
-
-    <string name="sobre_descricao">
-        "O objetivo do AquaSaúde é trazer melhorias para a aquicultura brasileira através da"
-        "disponibilização de"
-        "informações sobre sanidade de animais aquáticos de forma ágil e de fácil compreensão."
-        "Com o desenvolvimento do aplicativo, informações científicas que estavam distribuídas em"
-        "inglês e em diferentes locais da internet agora estão disponíveis facilmente e de forma"
-        "off-line aos produtores e demais interessados."
-    </string>
-
-
-    <string name="biosseguranca_intro">
-        " A biossegurança descreve medidas que devem ser tomadas no cultivo animal para evitar o"
-        "desencadeamento de doenças contagiosas na produção, a contaminação do cultivo pode levar a"
-        "uma alta mortalidade dos animais e trazer prejuízos para o produtor.\n"
-        "Na aquicultura, biossegurança se resume em criar barreiras que impeçam a entrada de doenças"
-        "que contaminem peixes ou camarões. A prevenção é a medida mais importante no combate às"
-        "doenças contagiosas.\n"
-    </string>
-    <string name="title_activity_checklist">Checklist</string>
-    <string name="checklist_selecione">Selecione os procedimentos que são realizados na sua produção e verifique qual o nível de biossegurança aplicado:</string>
-    <string name="comecar">COMEÇAR</string>
-    <string name="proxima">Próxima</string>
-    <string name="confirmar">Confirmar</string>
-    <string name="atencao_sair">Deseja sair do jogo?</string>
-    <string name="dialog_abandonar_voltar">O jogo será cancelado e todos os dados serão perdidos.</string>
-    <string name="dialog_yes">Sim</string>
-    <string name="dialog_no">Não</string>
-    <string name="titulo_saiba_mais">Saiba Mais</string>
-
-    <string name="manual_oie">Manual da OIE\n(em inglês)</string>
-    <string name="logo_oie">Logo OIE</string>
     <string name="link_wssv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_wsd.htm]]></string>
     <string name="link_ihhnv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_ihhn.htm]]></string>
     <string name="link_imnv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_infectious_myonecrosis.htm]]></string>
     <string name="link_nhv" translatable="false"><![CDATA[http://www.oie.int/index.php?id=2439&L=0&htmfile=chapitre_necrotising_hepatopancreatitis.htm]]></string>
-
-    <string name="checkbox_1">Entrada de veículos higienizados e de apenas uma origem</string>
-    <string name="resposta_1">
-        "• Os veículos que prestam serviço de transporte de camarão devem ser cadastrados, com laudo "
-        "de desinfecção e oriundos de uma só origem, sem que tenham passado por outras fazendas de "
-        "cultivo. Esta medida previne a introdução ou disseminação de agentes patogênicos no cultivo."
-    </string>
-
-    <string name="checkbox_2">Controle de pragas e de entrada de animais silvestres e domésticos nas fazendas de cultivo</string>
-    <string name="resposta_2">"• As fazendas de criação de camarões deverão contar com um Sistema de "
-        "Controle Integrado de Pragas (CIP) e de um sistema de proteção para minimizar o ingresso e "
-        "a permanência de animais domésticos e silvestres na área de produção da fazenda."</string>
-
-    <string name="checkbox_3">Utiliza pós-larvas livres de enfermidades ou com atestado de sanidade</string>
-    <string name="resposta_3">• Do ponto de vista da sanidade, a aquisição de animais livre de patógenos ou com atestado de sanidade é o aspecto mais importante para o início do processo de produção nos viveiros. Ideal na aquisição, coletar amostras de 100 PL\'s em triplicata, fixar em álcool etílico a 95% e mantê-las arquivadas p/ análises confirmatórias de PCR em caso de suspeitas de surtos.</string>
-
-    <string name="checkbox_4">Os animais são transportados de acordo com as normas e cuidados necessários durante a comercialização</string>
-    <string name="resposta_4">• Transporte de animais deve ser realizado em recipientes higienizados e próprios, em temperatura adequada e com GTA, quando for o caso.</string>
-
-    <string name="checkbox_5">A despesca envolve cuidados como higiene pessoal e uso de EPIs do pessoal envolvido, bem como higienização de equipamentos envolvidos</string>
-    <string name="resposta_5">• A fazenda deve atender às normas de biossegurança quanto ao pessoal envolvido nas operações de despescas. Equipamentos devem ser higienizados após o uso, através da pulverização com o uso de solução clorada na concentração de 100ppm.</string>
-
-    <string name="checkbox_6">Alimentação balanceada analisando a quantidade de ração e os requerimentos nutricionais de acordo com a fase de vida</string>
-    <string name="resposta_6">• Fornecimento de uma dieta balanceada é importante para produção de animais saudáveis e para o desenvolvimento do sistema imunológico dos animais.</string>
-
-    <string name="checkbox_7">Realiza tratamento para redução da matéria orgânica no solo de viveiros</string>
-    <string name="resposta_7">• Matéria orgânica pode ser proveniente de plâncton, adubos orgânicos, restos de ração não consumida e fezes dos camarões e de outros animais presentes no ambiente de cultivo. Uma forma para tratamento da matéria orgânica é o uso contínuo e sistemático de probióticos. Evitar pontos mortos dentro do tanques com o  ajuste dos aeradores, bem como o uso de probióticos auxiliam no tratamento da matéria orgânica.</string>
-
-    <string name="checkbox_8">Realiza monitoramento e tratamento da água dos viveiros</string>
-    <string name="resposta_8">• Monitoramento, controle e tratamento da água é uma prática obrigatória nas fazendas de cultivo. Os limites toleráveis dos principais parâmetros da qualidade da água devem ser observados.</string>
-
-    <string name="checkbox_9">As  pessoas envolvidas no processo produtivo foram suficientemente treinadas para suas funções</string>
-    <string name="resposta_9">• O pessoal envolvido nas atividades da fazenda de criação de camarões deverá usar EPIs específicos e receber treinamentos e atualizações para suas funções.</string>
-
-    <string name="checkbox_10">É realizada limpeza e sanitização nas instalações e após despescas</string>
-    <string name="resposta_10">• A limpeza e sanitização deverá ser realizada nas instalações e sempre após despesca. Realizada por pessoal treinado e com uso de Equipamentos de Proteção Individual (EPIs) adequados.</string>
-
-    <string name="acess_escudo">Escudo representando biossegurança</string>
-    <string name="resultado_checklist_dicas_titulo">Confira algumas dicas baseadas em suas marcações para aumentar o nível de biossegurança:</string>
-    <string name="sua_fazenda_esta_x_biossegura">Sua fazenda está x% biossegura!</string>
-    <string name="ok">OK</string>
-    <string name="msg_share">Aprenda sobre sanidade de camarões com o AquaSaúde! Disponível para Android na Play Store: https://play.google.com/store/apps/details?id=br.gov.rs.fepagro.aquasaude_camarao</string>
     <string name="nota_checklist" translatable="false">notachecklist</string>
-    <string name="default_highscore">Você ainda não preencheu o checklist</string>
     <string name="nome_shared_pref" translatable="false">br.gov.rs.fepagro.aquasaude.preferences</string>
     <string name="string_itens" translatable="false">string_itens</string>
-    <string name="resultado_10">Sua fazenda está biossegura!</string>
-    <string name="sua_fazenda_esta">"Sua fazenda está "</string>
-    <string name="porcento_biossegura">% biossegura!</string>
-
-    <string name="pergunta_1">Qual imagem não está relacionada com a entrada de patógenos?</string>
-    <string name="pergunta_2">Qual fator não está associado ao aparecimento de doenças?</string>
-    <string name="pergunta_3">Qual destes animais apresenta IMNV?</string>
-    <string name="pergunta_4">Qual das imagens não é uma medida de biossegurança?</string>
-
-    <string name="pergunta_5"> Quais são os EPIs que devem ser fornecidos ao trabalhador?</string>
-    <string name="pergunta_5_resposta_certa">Luva, bota  e colete salva vidas</string>
-    <string name="pergunta_5_resposta_2">Chapéu, faca, canivete e calça jeans</string>
-    <string name="pergunta_5_resposta_3">O funcionário deve adquirir os itens de proteção individual</string>
-    <string name="pergunta_5_resposta_4">Luva, bota e protetor solar</string>
-
-    <string name="pergunta_6">Sobre a Síndrome da mancha branca, é correto afirmar:</string>
-    <string name="pergunta_6_resposta_certa">Fase aguda com manchas brancas e alta mortalidade em poucos dias </string>
-    <string name="pergunta_6_resposta_2">O agente patogênico é uma  bactéria</string>
-    <string name="pergunta_6_resposta_3">O principal sintoma é redução do crescimento</string>
-    <string name="pergunta_6_resposta_4">Há baixa mortalidade e alta morbidade</string>
-
-    <string name="pergunta_7">Não são sinais clínicos de Mionecrose infecciosa:</string>
-    <string name="pergunta_7_resposta_certa">Liquefação dos músculos e enfraquecido</string>
-    <string name="pergunta_7_resposta_2">Letargia e zonas com aspecto leitoso no corpo</string>
-    <string name="pergunta_7_resposta_3">Manchas brancas na capapaça</string>
-    <string name="pergunta_7_resposta_4">Aspecto de camarão cozido</string>
-
-    <string name="pergunta_8">Qual enfermidade não é de notificação obrigatória?</string>
-    <string name="pergunta_8_resposta_certa">Infecção por herpesvírus</string>
-    <string name="pergunta_8_resposta_2">Sindrome da mancha branca</string>
-    <string name="pergunta_8_resposta_3">Mionecrose infecciosa</string>
-    <string name="pergunta_8_resposta_4">Hepatopancreatite necrosante</string>
-
-    <string name="pergunta_9">São erros no manejo sanitário:</string>
-    <string name="pergunta_9_resposta_certa">Utilizar antibióticos para doenças virais</string>
-    <string name="pergunta_9_resposta_2">Monitoramento da matéria orgânica e pH do solo</string>
-    <string name="pergunta_9_resposta_3">Desinfecção do fundo do viveiro entre os ciclos, com cal seca ou hidratada</string>
-    <string name="pergunta_9_resposta_4">Eliminação de animais vetores</string>
-
-    <string name="pergunta_10"> A ação correta para controle de transmissão de doenças nas fazendas:</string>
-    <string name="pergunta_10_resposta_certa">Controle de pragas e descarte responsável de resíduos</string>
-    <string name="pergunta_10_resposta_2">Descarte indevido de resíduos resultantes de beneficiamento</string>
-    <string name="pergunta_10_resposta_3">Destinar cabeças e carapaças para utilização em aquicultura</string>
-    <string name="pergunta_10_resposta_4">Descartar resíduos diretamente no ambiente</string>
-
-    <string name="finalizar_jogo">Finalizar jogo</string>
-    <string name="voc_tirou_nota">Você tirou nota:</string>
-    <string name="descricao_jogo">Teste seus conhecimentos sobre a aquicultura, para começar toque no botão abaixo:</string>
-    <string name="titulo_quiz">Quiz AquaSaúde</string>
     <string name="nota_quiz" translatable="false">nota_quiz</string>
-    <string name="titulo_email">Aplicativo AquaSaúde</string>
-    <string name="descr_imagem">Imagem do Camarão com a Doença</string>
-    <string name="bibliotecas">BIBLIOTECAS UTILIZADAS</string>
-    <string name="bibliotecas_descricao">
-        " Ícones: flaticon.com\n"
-            "Glide: github.com/bumptech/glide\n"
-            "PhotoView: github.com/chrisbanes/PhotoView\n"
-            "AutoFit TextView: github.com/grantland/android-autofittextview\n"
-    </string>
-
-    <string name="doencas">Doenças</string>
-    <string name="peixes">Peixes</string>
-    <string name="boas_praticas">Boas Práticas</string>
-    <string name="jogos">Jogos</string>
-    <string name="sobre">Sobre</string>
-    <string name="contato">Contato</string>
-    <string name="compartilhar">Compartilhar</string>
-    <string name="fale_conosco">Fale Conosco</string>
-    <string name="principais_doencas">Principais doenças de camarão:</string>
-    <string name="preencher_checklist">Preencher Checklist</string>
-    <string name="rever_resultado">Rever último resultado</string>
     <string name="title_activity_jogo2" translatable="false">Jogo2Activity</string>
-    <string name="maior_nota">Sua maior nota:</string>
-    <string name="erro_selecione">Selecione alguma alternativa</string>
 
 
 </resources>

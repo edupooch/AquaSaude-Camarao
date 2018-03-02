@@ -27,7 +27,7 @@
     <string name="imnv_prevencao">"Prefiera usar animales diagnosticados negativos para IMNV a través de la técnica de reacción en cadena reversa de polimerasa (RT-PCR). Prefiera utilizar animales libres de patógenos específicos (SPF). Si existie infección, realizar el vacío higiénico como se recomienda por la OIE. La utilización de cepas resistentes de camarones también es una buena alternativa prevención al IMNV."</string>
     <string name="text_saiba_mais_imnv">"Más información acerca de la mionecrosis infecciosa:"</string>
 
-    <string name="ihhnv_nome">"Necrosis hipodérmica y hematopoyética infecciosa"</string>
+    <string name="ihhnv_nome">Necrosis hipodérmica y hematopoyética</string>
     <string name="ihhnv_agente">"La infección hipodérmica  y necrosis hematopoyética es causada por un parvovirus no-envuelto. El Comité Internacional de Taxonomía de Virus (ICTV) ha asignado este virus a la familia Parvoviridae, género Brevidensovirus, especie Penaeus stylirostris densovirus (PstDNV) ."</string>
 
     <string name="ihhnv_sinais">"El signo clínico más obvio de esta enfermedad viral es la deformación del rostro y una tamaño reducido de algunos especímenes. A esto se le conoce como Síndrome del Enanismo y Deformacón (RDS, por sus siglas en inglés). Otra característica es una mortalidad cercana al 100%."</string>
