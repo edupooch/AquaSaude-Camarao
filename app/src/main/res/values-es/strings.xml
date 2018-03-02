@@ -128,7 +128,7 @@
     <string name="pergunta_3">"¿Cuál de estos animales tiene IMNV?"</string>
     <string name="pergunta_4">"¿Cuál de las imágenes no es una medida de bioseguridad?"</string>
 
-    <string name="pergunta_5">" ¿Cuáles son los PPE que debe proporcionarse a los empleados?"</string>
+    <string name="pergunta_5">¿Cuáles son los PPE que debe proporcionarse a los empleados?</string>
     <string name="pergunta_5_resposta_certa">"Guante, botas y chaleco salvavidas"</string>
     <string name="pergunta_5_resposta_2">"Sombrero, cuchillo, navaja y pantalones vaqueros"</string>
     <string name="pergunta_5_resposta_3">"El empleado debe comprar artículos de protección personal"</string>
@@ -140,7 +140,7 @@
     <string name="pergunta_6_resposta_3">"El síntoma principal se reduce el crecimiento"</string>
     <string name="pergunta_6_resposta_4">"Hay baja mortalidad y morbilidad alta"</string>
 
-    <string name="pergunta_7">"Hay signos clínicos de mionecrosis infecciosa:"</string>
+    <string name="pergunta_7">No hay signos clínicos de mionecrosis infecciosa:</string>
     <string name="pergunta_7_resposta_certa">"La licuefacción de los músculos y debilitado"</string>
     <string name="pergunta_7_resposta_2">"Letargo y áreas cuerpo lechoso"</string>
     <string name="pergunta_7_resposta_3">"Manchas blancas en el caparazón"</string>
@@ -158,7 +158,7 @@
     <string name="pergunta_9_resposta_3">"Desinfección de fondo del estanque entre ciclos con cal seca o hidratada"</string>
     <string name="pergunta_9_resposta_4">"Eliminación de vectores animales"</string>
 
-    <string name="pergunta_10">" La acción correcta para el control de la transmisión de enfermedades en las granjas:"</string>
+    <string name="pergunta_10">La acción correcta para el control de la transmisión de enfermedades en las granjas:</string>
     <string name="pergunta_10_resposta_certa">"El control de plagas y la eliminación responsable de los residuos"</string>
     <string name="pergunta_10_resposta_2">"la eliminación inadecuada de los residuos resultantes de procesamiento"</string>
     <string name="pergunta_10_resposta_3">"Las cabezas y los depósitos destinados para su uso en la acuicultura"</string>
@@ -188,5 +188,6 @@
     <string name="preencher_checklist">Completar checklist</string>
     <string name="rever_resultado">Rever el último resultado</string>
     <string name="maior_nota">Su mayor nota:</string>
+    <string name="erro_selecione">Seleccione una respuesta</string>
 
 </resources>

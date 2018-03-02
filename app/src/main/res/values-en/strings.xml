@@ -122,14 +122,14 @@
     <string name="sua_fazenda_esta">"Your farm is "</string>
     <string name="porcento_biossegura">"% biosecure!"</string>
 
-    <string name="pergunta_1">"Which image is not related to the entry of pathogens?"</string>
+    <string name="pergunta_1">Which one of the images is not related to the entry of pathogens?</string>
     <string name="pergunta_2">"Which factor is not associated with the onset of diseases?"</string>
-    <string name="pergunta_3">"Which of these animals has NIMV?"</string>
-    <string name="pergunta_4">"Which of the images is not a biosecurity measure?"</string>
+    <string name="pergunta_3">Which one of these animals has NIMV?</string>
+    <string name="pergunta_4">Which one of the images is not a biosecurity measure?</string>
 
-    <string name="pergunta_5">" What are the PPE that should be provided to the worker?"</string>
+    <string name="pergunta_5">What are the PPE that should be provided to the worker?</string>
     <string name="pergunta_5_resposta_certa">"Glove, boot and life jacket"</string>
-    <string name="pergunta_5_resposta_2">"Hat, knife, knife and jeans"</string>
+    <string name="pergunta_5_resposta_2">Hat, knife and jeans</string>
     <string name="pergunta_5_resposta_3">"The employee must purchase the individual protection items"</string>
     <string name="pergunta_5_resposta_4">"Glove, boot and sunscreen"</string>
 
@@ -139,32 +139,32 @@
     <string name="pergunta_6_resposta_3">"The main symptom is reduced growth"</string>
     <string name="pergunta_6_resposta_4">"There is low mortality and high morbidity"</string>
 
-    <string name="pergunta_7">"There are no clinical signs of infectious myonecrosis:"</string>
-    <string name="pergunta_7_resposta_certa">"Liquefaction of muscles and weakened"</string>
+    <string name="pergunta_7">Which signals are NOT a clinical sign of infectious myonecrosis?</string>
+    <string name="pergunta_7_resposta_certa">Liquefaction of muscles and weakness</string>
     <string name="pergunta_7_resposta_2">"Lethargy and areas with a milky appearance in the body"</string>
     <string name="pergunta_7_resposta_3">"White spots on the cap"</string>
     <string name="pergunta_7_resposta_4">"Appearance of cooked shrimp"</string>
 
-    <string name="pergunta_8">"What illness is not mandatory?"</string>
+    <string name="pergunta_8">Which one of the diseases do not require notification?</string>
     <string name="pergunta_8_resposta_certa">"Herpesvirus infection"</string>
     <string name="pergunta_8_resposta_2">"White Spot Syndrome"</string>
     <string name="pergunta_8_resposta_3">"Infectious myonecrosis"</string>
     <string name="pergunta_8_resposta_4">"Necrotizing hepatopancreatitis"</string>
 
-    <string name="pergunta_9">"There are errors in sanitary management:"</string>
+    <string name="pergunta_9">Which one is an error in sanitary management?</string>
     <string name="pergunta_9_resposta_certa">"Use antibiotics for viral diseases"</string>
     <string name="pergunta_9_resposta_2">"Monitoring of organic matter and soil pH"</string>
     <string name="pergunta_9_resposta_3">"Disinfection of the nursery floor between cycles with dry or hydrated lime"</string>
     <string name="pergunta_9_resposta_4">"Elimination of animal vectors"</string>
 
-    <string name="pergunta_10">" The right action to control disease transmission on farms:"</string>
+    <string name="pergunta_10">The right action to control disease transmission on farms is:</string>
     <string name="pergunta_10_resposta_certa">"Pest control and responsible waste disposal"</string>
     <string name="pergunta_10_resposta_2">"Disposal of waste resulting from processing"</string>
     <string name="pergunta_10_resposta_3">"Allocate heads and shells for use in aquaculture"</string>
     <string name="pergunta_10_resposta_4">"Dispose of waste directly into the environment"</string>
 
     <string name="finalizar_jogo">"Finish game"</string>
-    <string name="voc_tirou_nota">"You took note:"</string>
+    <string name="voc_tirou_nota">You scored:</string>
     <string name="descricao_jogo">"Test your knowledge on aquaculture, to start tap the button below:"</string>
     <string name="titulo_quiz">Quiz AquaHealth</string>
     <string name="titulo_email">"AquaSaúde application"</string>
@@ -187,5 +187,6 @@
     <string name="preencher_checklist">Fill Checklist</string>
     <string name="rever_resultado">Review last result</string>
     <string name="maior_nota">Your highest score:</string>
+    <string name="erro_selecione">Select an answer</string>
 
 </resources>

@@ -105,12 +105,12 @@ public class JogoActivity extends AppCompatActivity {
 
             final Button btResponde = (Button) rootView.findViewById(R.id.bt_responde);
             btResponde.setOnClickListener(v -> {
-                if (btResponde.getText().toString().contains("Confirmar")) {
+                if (btResponde.getText().toString().contains(getString(R.string.confirmar))) {
                     // MOSTRAR SE A RESPOSTA ESTÁ CERTA
 
                     int respostaSelecionada = respostasAdapter.getSelectedPosition();
                     if (respostaSelecionada == NENHUMA_RESPOSTA_SELECIONADA) {
-                        Toast.makeText(getActivity(), "Selecione alguma alternativa", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), R.string.erro_selecione, Toast.LENGTH_LONG).show();
                     } else {
                         //VERIFICAR se o usuário acertou ou não
                         btResponde.setText(R.string.proxima);
