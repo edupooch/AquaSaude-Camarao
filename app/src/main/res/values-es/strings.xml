@@ -43,7 +43,8 @@
 
     <string name="title_activity_doenca_scrolling">"Enfermedad"</string>
 
-    <string name="equipe_nomes">"Coordinadora:\n
+    <string name="equipe_nomes">"
+        Coordinadora:\n
         Dra. Lissandra Souto Cavalli (DDPA/SEAPI-RS)\n\n
         Desarrollo de aplicacion móvil:\n
         Eduardo H. P. Pooch (UFCSPA | Bolsista CNPq)\n\n
@@ -58,9 +59,7 @@
         Dra. Kelly Tagliari Brito (DDPA/SEAPI-RS)\n
         Dr. Paulo César Abreu (FURG)\n
         Dr. Luis Alberto Romano (FURG)\n
-        Dr. Arturo Sanchez-Paz (CIBNOR)\n
-       
-        "</string>
+        Dr. Arturo Sanchez-Paz (CIBNOR)\n"</string>
     <string name="icone">"Ícono"</string>
     <string name="instituicoes">"INSTITUCIONES"</string>
     <string name="equipe">"EQUIPO"</string>

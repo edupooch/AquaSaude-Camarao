@@ -8,8 +8,8 @@ android {
         applicationId "br.gov.rs.fepagro.aquasaude_camarao"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 6
-        versionName "1.05"
+        versionCode 7
+        versionName "1.06"
     }
 
     buildTypes {
