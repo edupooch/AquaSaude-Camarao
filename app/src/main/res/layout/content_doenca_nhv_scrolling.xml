@@ -290,5 +290,13 @@
 
             </LinearLayout>
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:text="@string/aviso"
+            android:textSize="12sp" />
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

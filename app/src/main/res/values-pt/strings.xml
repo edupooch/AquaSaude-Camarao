@@ -133,8 +133,8 @@
 
 
     <string name="biosseguranca_intro">
-        " A biossegurança descreve medidas que devem ser tomadas no cultivo animal para evitar o"
-        "desencadeamento de doenças contagiosas na produção, a contaminação do cultivo pode levar a"
+        " A biossegurança descreve medidas que devem ser tomadas na criação animal para evitar o"
+        "desencadeamento de doenças contagiosas na produção, a contaminação da criação pode levar a"
         "uma alta mortalidade dos animais e trazer prejuízos para o produtor.\n"
         "Na aquicultura, biossegurança se resume em criar barreiras que impeçam a entrada de doenças"
         "que contaminem peixes ou camarões. A prevenção é a medida mais importante no combate às"
@@ -142,7 +142,7 @@
     </string>
     <string name="title_activity_checklist">Checklist</string>
     <string name="checklist_selecione">Selecione os procedimentos que são realizados na sua produção e verifique qual o nível de biossegurança aplicado:</string>
-    <string name="comecar">COMEÇAR</string>
+    <string name="comecar">Começar</string>
     <string name="proxima">Próxima</string>
     <string name="confirmar">Confirmar</string>
     <string name="atencao_sair">Deseja sair do jogo?</string>
@@ -268,6 +268,7 @@
     <string name="rever_resultado">Rever último resultado</string>
     <string name="maior_nota">Sua maior nota:</string>
     <string name="erro_selecione">Selecione alguma alternativa</string>
+    <string name="aviso">O objetivo principal do aplicativo é trazer a informação ao usuario. Todavia, ele não substitui o profissional especializado. Sendo assim, havendo suspeita ou indicios de qualquer uma das doenças, o serviço de vigilancia da região ou profissional responsável pela sanidade da fazenda deve ser imediatamente contatado</string>
 
 
 </resources>

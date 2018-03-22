@@ -70,7 +70,7 @@
     <string name="biosseguranca_intro">"La bioseguridad describe medidas que deben tomarse en el cultivo animal para evitar el desencadenamiento de enfermedades contagiosas en la producción, la contaminación del cultivo puede llevar a una alta mortalidad de los animales y traer perjuicios para el productor. En la acuicultura, la bioseguridad se resume en crear barreras que impidan la entrada de enfermedades que contaminen peces o camarones. La prevención es la medida más importante en la lucha contra las enfermedades contagiosas."</string>
     <string name="title_activity_checklist">"Checklist"</string>
     <string name="checklist_selecione">"Seleccione os procedimentos que son realizados en su producción y verifique el nivel de bioseguridad aplicado:"</string>
-    <string name="comecar">"INICIO"</string>
+    <string name="comecar">Inicio</string>
     <string name="proxima">"Siguiente"</string>
     <string name="confirmar">"Confirmar"</string>
     <string name="atencao_sair">"¿Quieres salir del juego?"</string>
@@ -188,5 +188,6 @@
     <string name="rever_resultado">Rever el último resultado</string>
     <string name="maior_nota">Su mayor nota:</string>
     <string name="erro_selecione">Seleccione una respuesta</string>
+    <string name="aviso">El objetivo principal de la aplicación es traer la información al usuario. Sin embargo, no sustituye al profesional especializado. Por lo tanto, habiendo sospechas o indicios de cualquiera de las enfermedades, el servicio de vigilancia de la región o profesional responsable de la sanidad de la granja debe ser inmediatamente contactado.</string>
 
 </resources>

@@ -63,7 +63,6 @@
     <string name="instituicoes">"INSTITUTIONS"</string>
     <string name="equipe">"Staff"</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="sobre_descricao">"The objective of AquaHealth is to bring improvements to world aquaculture through the availability of information about aquatic animal health in an agile and easy to understand way. With the development of the application, scientific information that was distributed in English and different internet sites is now available easily and offline to producers and other interested parties."</string>
 
 
@@ -188,6 +187,8 @@
     <string name="rever_resultado">Review last result</string>
     <string name="maior_nota">Your highest score:</string>
     <string name="erro_selecione">Select an answer</string>
+
+    <string name="aviso">The main purpose of the application is to bring the information to the user. However, it does not replace the specialized professional. Therefore, if there is suspicion or indications of any of the diseases, the surveillance service of the region or professional responsible for the health of the farm should be contacted immediately.</string>
 
     <!--Untranslatable-->
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
